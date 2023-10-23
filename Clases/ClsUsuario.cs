@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SIVARS_BURGUERS.Clases
 {
-    class Class1
+    class ClsUsuario
     {
     }
 }

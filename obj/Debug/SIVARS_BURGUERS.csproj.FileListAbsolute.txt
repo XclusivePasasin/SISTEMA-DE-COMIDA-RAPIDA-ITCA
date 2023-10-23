@@ -1,0 +1,10 @@
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debug\SIVARS_BURGUERS.exe.config
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debug\SIVARS_BURGUERS.exe
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debug\SIVARS_BURGUERS.pdb
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.csproj.AssemblyReference.cache
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.frmInicioSesion.resources
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Properties.Resources.resources
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.csproj.GenerateResource.cache
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.csproj.CoreCompileInputs.cache
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.exe
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.pdb
