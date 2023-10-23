@@ -1,7 +1,7 @@
 ﻿
 namespace SIVARS_BURGUERS.Interfaz
 {
-    partial class Menu
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,330 @@ namespace SIVARS_BURGUERS.Interfaz
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureLogo = new System.Windows.Forms.PictureBox();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.btnCategoria = new System.Windows.Forms.Button();
+            this.btnPlatillo = new System.Windows.Forms.Button();
+            this.btnPedido = new System.Windows.Forms.Button();
+            this.btnOrdenes = new System.Windows.Forms.Button();
+            this.btnOrdenesPendientes = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(117)))));
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnOrdenesPendientes);
+            this.panel1.Controls.Add(this.btnOrdenes);
+            this.panel1.Controls.Add(this.btnPedido);
+            this.panel1.Controls.Add(this.btnPlatillo);
+            this.panel1.Controls.Add(this.btnCategoria);
+            this.panel1.Controls.Add(this.btnUsuario);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(160, 544);
+            this.panel1.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.flowLayoutPanel1.Controls.Add(this.pictureLogo);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(160, 76);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // pictureLogo
+            // 
+            this.pictureLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureLogo.Image")));
+            this.pictureLogo.Location = new System.Drawing.Point(3, 3);
+            this.pictureLogo.Name = "pictureLogo";
+            this.pictureLogo.Size = new System.Drawing.Size(154, 73);
+            this.pictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureLogo.TabIndex = 0;
+            this.pictureLogo.TabStop = false;
+            this.pictureLogo.UseWaitCursor = true;
+            // 
+            // btnUsuario
+            // 
+            this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
+            this.btnUsuario.Location = new System.Drawing.Point(0, 76);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUsuario.Size = new System.Drawing.Size(160, 39);
+            this.btnUsuario.TabIndex = 3;
+            this.btnUsuario.Text = "  Usuario";
+            this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuario.UseVisualStyleBackColor = false;
+            // 
+            // btnCategoria
+            // 
+            this.btnCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCategoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
+            this.btnCategoria.Location = new System.Drawing.Point(0, 115);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCategoria.Size = new System.Drawing.Size(160, 39);
+            this.btnCategoria.TabIndex = 4;
+            this.btnCategoria.Text = " Categoria";
+            this.btnCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCategoria.UseVisualStyleBackColor = false;
+            // 
+            // btnPlatillo
+            // 
+            this.btnPlatillo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnPlatillo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlatillo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPlatillo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPlatillo.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlatillo.ForeColor = System.Drawing.Color.White;
+            this.btnPlatillo.Image = ((System.Drawing.Image)(resources.GetObject("btnPlatillo.Image")));
+            this.btnPlatillo.Location = new System.Drawing.Point(0, 154);
+            this.btnPlatillo.Name = "btnPlatillo";
+            this.btnPlatillo.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnPlatillo.Size = new System.Drawing.Size(160, 39);
+            this.btnPlatillo.TabIndex = 5;
+            this.btnPlatillo.Text = "  Platillo";
+            this.btnPlatillo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlatillo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPlatillo.UseVisualStyleBackColor = false;
+            // 
+            // btnPedido
+            // 
+            this.btnPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPedido.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPedido.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedido.ForeColor = System.Drawing.Color.White;
+            this.btnPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnPedido.Image")));
+            this.btnPedido.Location = new System.Drawing.Point(0, 193);
+            this.btnPedido.Name = "btnPedido";
+            this.btnPedido.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnPedido.Size = new System.Drawing.Size(160, 39);
+            this.btnPedido.TabIndex = 6;
+            this.btnPedido.Text = "  Pedido";
+            this.btnPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedido.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPedido.UseVisualStyleBackColor = false;
+            // 
+            // btnOrdenes
+            // 
+            this.btnOrdenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnOrdenes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrdenes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrdenes.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdenes.ForeColor = System.Drawing.Color.White;
+            this.btnOrdenes.Image = ((System.Drawing.Image)(resources.GetObject("btnOrdenes.Image")));
+            this.btnOrdenes.Location = new System.Drawing.Point(0, 232);
+            this.btnOrdenes.Name = "btnOrdenes";
+            this.btnOrdenes.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnOrdenes.Size = new System.Drawing.Size(160, 39);
+            this.btnOrdenes.TabIndex = 7;
+            this.btnOrdenes.Text = "Ordenes";
+            this.btnOrdenes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrdenes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrdenes.UseVisualStyleBackColor = false;
+            // 
+            // btnOrdenesPendientes
+            // 
+            this.btnOrdenesPendientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnOrdenesPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrdenesPendientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrdenesPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrdenesPendientes.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdenesPendientes.ForeColor = System.Drawing.Color.White;
+            this.btnOrdenesPendientes.Image = ((System.Drawing.Image)(resources.GetObject("btnOrdenesPendientes.Image")));
+            this.btnOrdenesPendientes.Location = new System.Drawing.Point(0, 271);
+            this.btnOrdenesPendientes.Name = "btnOrdenesPendientes";
+            this.btnOrdenesPendientes.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnOrdenesPendientes.Size = new System.Drawing.Size(160, 53);
+            this.btnOrdenesPendientes.TabIndex = 8;
+            this.btnOrdenesPendientes.Text = " Ordenes Pendientes";
+            this.btnOrdenesPendientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrdenesPendientes.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 324);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(160, 59);
+            this.button1.TabIndex = 9;
+            this.button1.Text = " Ordenes Pendientes";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(117)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(160, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(716, 76);
+            this.panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(0, 383);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(160, 48);
+            this.button2.TabIndex = 10;
+            this.button2.Text = " Cobros";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(261, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MENU PRINCIPAL";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(424, 249);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Usuario:";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(0, 431);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(160, 48);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Clientes";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(424, 288);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Rol De Acceso:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(446, 193);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(177, 31);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "BIENVENIDO ";
+            // 
+            // frmMenu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(876, 544);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Name = "frmMenu";
             this.Text = "Menu";
+            this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCategoria;
+        private System.Windows.Forms.Button btnUsuario;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureLogo;
+        private System.Windows.Forms.Button btnOrdenesPendientes;
+        private System.Windows.Forms.Button btnOrdenes;
+        private System.Windows.Forms.Button btnPedido;
+        private System.Windows.Forms.Button btnPlatillo;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
