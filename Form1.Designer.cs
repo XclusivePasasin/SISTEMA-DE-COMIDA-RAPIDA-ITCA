@@ -1,7 +1,7 @@
 ﻿
 namespace SIVARS_BURGUERS
 {
-    partial class Form1
+    partial class frmInicioSesion
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,13 +29,49 @@ namespace SIVARS_BURGUERS
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.panellogo = new System.Windows.Forms.Panel();
+            this.pictureLogo = new System.Windows.Forms.PictureBox();
+            this.panellogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panellogo
+            // 
+            this.panellogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.panellogo.Controls.Add(this.pictureLogo);
+            this.panellogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panellogo.Location = new System.Drawing.Point(0, 0);
+            this.panellogo.Name = "panellogo";
+            this.panellogo.Size = new System.Drawing.Size(328, 387);
+            this.panellogo.TabIndex = 0;
+            // 
+            // pictureLogo
+            // 
+            this.pictureLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureLogo.Location = new System.Drawing.Point(0, 0);
+            this.pictureLogo.Name = "pictureLogo";
+            this.pictureLogo.Size = new System.Drawing.Size(328, 387);
+            this.pictureLogo.TabIndex = 0;
+            this.pictureLogo.TabStop = false;
+            // 
+            // frmInicioSesion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(688, 387);
+            this.Controls.Add(this.panellogo);
+            this.Name = "frmInicioSesion";
             this.Text = "Form1";
+            this.panellogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panellogo;
+        private System.Windows.Forms.PictureBox pictureLogo;
     }
 }
 
