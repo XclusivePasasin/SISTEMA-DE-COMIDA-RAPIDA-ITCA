@@ -8,3 +8,4 @@ C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debu
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.csproj.CoreCompileInputs.cache
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.exe
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.pdb
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmMenu.resources

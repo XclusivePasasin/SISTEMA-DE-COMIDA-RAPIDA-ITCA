@@ -120,6 +120,7 @@ namespace SIVARS_BURGUERS
             this.btnIniciarSesion.TabIndex = 6;
             this.btnIniciarSesion.Text = "Iniciar Sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // frmInicioSesion
             // 
@@ -134,7 +135,8 @@ namespace SIVARS_BURGUERS
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panellogo);
             this.Name = "frmInicioSesion";
-            this.Text = "Form1";
+            this.Text = "Inicio De Sesion";
+            this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             this.panellogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

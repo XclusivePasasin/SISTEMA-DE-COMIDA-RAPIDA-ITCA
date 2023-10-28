@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClsUsuario.cs" />
+    <Compile Include="DAO\ConnectionDataBase.cs" />
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,7 +91,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
     <Folder Include="Reportes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
