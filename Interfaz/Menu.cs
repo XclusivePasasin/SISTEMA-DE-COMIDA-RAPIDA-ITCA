@@ -16,5 +16,18 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             InitializeComponent();
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            string mensaje = "¿Seguro Que Desea Cerrar Sesion?";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            MessageBoxIcon icon = MessageBoxIcon.Question;
+            DialogResult resultado = MessageBox.Show(mensaje, "Cierre De Sesion", buttons, icon);
+            if (resultado == DialogResult.Yes)
+            {
+                //Cerrar Un Formulario De Menu y Mostrar El Formulario De Login
+                this.Close();
+            }
+        }
     }
 }

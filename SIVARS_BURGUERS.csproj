@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\CacheUsuario.cs" />
     <Compile Include="Clases\ClsUsuario.cs" />
     <Compile Include="DAO\ConnectionDataBase.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>

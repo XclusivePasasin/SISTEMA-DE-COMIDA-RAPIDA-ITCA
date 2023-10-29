@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
-namespace MantenimientoDatos.DAO
+namespace SIVARS_BURGUERS.DAO
 {
     public abstract class  ConnectionDataBase
     {
@@ -16,7 +16,7 @@ namespace MantenimientoDatos.DAO
 
         public ConnectionDataBase()
         {
-            connectionString = "Data Source=DESKTOP-0JUU1TS\\SQLEXPRESS; DataBase=; Integrated Security=True";
+            connectionString = "Data Source=DESKTOP-0JUU1TS\\SQLEXPRESS; DataBase=DB_SIVAR_BURGUERS_AVANCE2; Integrated Security=True";
         }
 
         protected SqlConnection GetSqlConnection()

@@ -38,11 +38,11 @@ namespace SIVARS_BURGUERS
             {
                 if (txtContraseña.Text != "")
                 {
-                    ClsUsuario us = new ClsUsuario();
+                    ClsUsuario u = new ClsUsuario();
                     //SET A LOS ATRIBUTOS DE LA CLASE
-                    us.Usuario = txtUsuario.Text;
-                    us.Contraseña = txtContraseña.Text;
-                    var ValidadLogin = us.getLogin();
+                    u.Nombre = txtUsuario.Text;
+                    u.Contraseña = txtContraseña.Text;
+                    var ValidadLogin = u.getLogin();
                     if (ValidadLogin == true)
                     {
                         frmMenu menu = new frmMenu(); //Instancia Al Formulario Menu
