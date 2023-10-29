@@ -51,16 +51,19 @@ namespace SIVARS_BURGUERS.Interfaz
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblAcceso = new System.Windows.Forms.Label();
+            this.lblBienvenida = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panelDeskTop = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panelDeskTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -359,6 +362,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -384,72 +388,100 @@ namespace SIVARS_BURGUERS.Interfaz
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(117)))));
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btnCerrar);
+            this.panel2.Controls.Add(this.lblTitulo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(160, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(716, 76);
             this.panel2.TabIndex = 1;
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(261, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MENU PRINCIPAL";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(261, 21);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(202, 28);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "MENU PRINCIPAL";
             // 
-            // label2
+            // lblUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(424, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Usuario:";
+            this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(424, 249);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(58, 17);
+            this.lblUsuario.TabIndex = 2;
+            this.lblUsuario.Text = "Usuario:";
             // 
-            // label3
+            // lblAcceso
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(424, 288);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Rol De Acceso:";
+            this.lblAcceso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAcceso.AutoSize = true;
+            this.lblAcceso.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcceso.Location = new System.Drawing.Point(424, 288);
+            this.lblAcceso.Name = "lblAcceso";
+            this.lblAcceso.Size = new System.Drawing.Size(98, 17);
+            this.lblAcceso.TabIndex = 3;
+            this.lblAcceso.Text = "Rol De Acceso:";
             // 
-            // label4
+            // lblBienvenida
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(446, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 31);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "BIENVENIDO ";
+            this.lblBienvenida.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenida.Location = new System.Drawing.Point(261, 117);
+            this.lblBienvenida.Name = "lblBienvenida";
+            this.lblBienvenida.Size = new System.Drawing.Size(170, 31);
+            this.lblBienvenida.TabIndex = 4;
+            this.lblBienvenida.Text = "BIENVENIDO";
+            // 
+            // panelDeskTop
+            // 
+            this.panelDeskTop.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelDeskTop.Controls.Add(this.lblBienvenida);
+            this.panelDeskTop.Location = new System.Drawing.Point(160, 76);
+            this.panelDeskTop.Name = "panelDeskTop";
+            this.panelDeskTop.Size = new System.Drawing.Size(713, 570);
+            this.panelDeskTop.TabIndex = 5;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(117)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(629, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 52);
+            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 646);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblAcceso);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelDeskTop);
             this.Name = "frmMenu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panelSubMenu.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelDeskTop.ResumeLayout(false);
+            this.panelDeskTop.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,10 +501,10 @@ namespace SIVARS_BURGUERS.Interfaz
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnCobros;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblAcceso;
+        private System.Windows.Forms.Label lblBienvenida;
         private System.Windows.Forms.Panel panelSubMenu;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
@@ -483,5 +515,7 @@ namespace SIVARS_BURGUERS.Interfaz
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel panelDeskTop;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

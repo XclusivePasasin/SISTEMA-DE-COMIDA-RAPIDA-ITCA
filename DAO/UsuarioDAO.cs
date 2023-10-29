@@ -144,7 +144,7 @@ namespace SIVARS_BURGUERS.DAO
                 cmd.Parameters.AddWithValue("@Usuario", Usuario);
                 cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Usuario WHERE  Nombre = @Usuario AND Contraseña = @Contraseña";
+                cmd.CommandText = "SELECT * FROM v_usuarios WHERE  Nombre = @Usuario AND Contraseña = @Contraseña";
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -153,7 +153,7 @@ namespace SIVARS_BURGUERS.DAO
                         //Set De Datos De La Clase CacheUsuario
                         CacheUsuario.idUsuario = reader.GetInt32(0);
                         CacheUsuario.nombre = reader.GetString(1);
-                        CacheUsuario.rol = reader.GetString(2);
+                        CacheUsuario.rol = reader.GetString(3);
                     }
                     return true;
                 }
