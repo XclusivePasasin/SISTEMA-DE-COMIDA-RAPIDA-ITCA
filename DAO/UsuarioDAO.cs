@@ -153,7 +153,7 @@ namespace SIVARS_BURGUERS.DAO
                         //Set De Datos De La Clase CacheUsuario
                         CacheUsuario.idUsuario = reader.GetInt32(0);
                         CacheUsuario.nombre = reader.GetString(1);
-                        CacheUsuario.rol = reader.GetString(3);
+                        CacheUsuario.rol = reader.GetString(4);
                     }
                     return true;
                 }
