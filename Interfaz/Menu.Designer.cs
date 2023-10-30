@@ -120,6 +120,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panelSubMenu.Name = "panelSubMenu";
             this.panelSubMenu.Size = new System.Drawing.Size(160, 125);
             this.panelSubMenu.TabIndex = 13;
+            this.panelSubMenu.Visible = false;
             // 
             // panel6
             // 
@@ -211,6 +212,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnClientes
             // 

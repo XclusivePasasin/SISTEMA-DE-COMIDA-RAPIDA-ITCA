@@ -91,5 +91,10 @@ namespace SIVARS_BURGUERS.Interfaz
 
             }
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            panelSubMenu.Visible = true;
+        }
     }
 }

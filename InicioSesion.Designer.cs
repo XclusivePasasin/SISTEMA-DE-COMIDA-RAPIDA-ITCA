@@ -105,6 +105,7 @@ namespace SIVARS_BURGUERS
             // 
             this.txtContraseña.Location = new System.Drawing.Point(456, 234);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(129, 20);
             this.txtContraseña.TabIndex = 5;
             // 

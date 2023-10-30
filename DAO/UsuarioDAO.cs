@@ -61,7 +61,7 @@ namespace SIVARS_BURGUERS.DAO
         {
             ClsUsuario u = new ClsUsuario();
             u = (ClsUsuario)objDatos;
-            string sql = "";
+            string sql = "INSERT INTO Usuario VALUES ('"+u.Contraseña+"','"+u.Nombre+"','"+u.Telefono+"','"+u.Rol+"')";
             if (Ejecutar(sql))
             {
                 return true;
@@ -76,7 +76,7 @@ namespace SIVARS_BURGUERS.DAO
         {
             ClsUsuario u = new ClsUsuario();
             u = (ClsUsuario)objDatos;
-            string sql = "";
+            string sql = "UPDATE Usuario SET Contraseña = '"+u.Contraseña+"',Nombre_Empleado = '"+u.Nombre+"',Telefono = '"+u.Telefono+"',Rol = '"+u.Rol+"' WHERE idUsuario =" + u.IdUsuario;
             if (Ejecutar(sql))
             {
                 return true;
@@ -89,7 +89,7 @@ namespace SIVARS_BURGUERS.DAO
         
         public bool Eliminar(string CodigoUsuario)
         {
-            string sql = "DELETE FROM Usuario WHERE Id_Usuario=" + CodigoUsuario;
+            string sql = "DELETE FROM Usuario WHERE idUsuario=" + CodigoUsuario;
             if (Ejecutar(sql))
             {
                 return true;
@@ -107,7 +107,7 @@ namespace SIVARS_BURGUERS.DAO
             string sql = "";
             if (Campo == "Codigo")
             {
-                sql = "SELECT * FROM Usuario WHERE Id_Usuario=" + ValorCampo;
+                sql = "SELECT * FROM Usuario WHERE idUsuario=" + ValorCampo;
             }
             else
             {
@@ -144,7 +144,7 @@ namespace SIVARS_BURGUERS.DAO
                 cmd.Parameters.AddWithValue("@Usuario", Usuario);
                 cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM v_usuarios WHERE  Nombre = @Usuario AND Contraseña = @Contraseña";
+                cmd.CommandText = "SELECT * FROM Usuario WHERE  Nombre_Empleado = @Usuario AND Contraseña = @Contraseña";
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -152,7 +152,7 @@ namespace SIVARS_BURGUERS.DAO
                     {
                         //Set De Datos De La Clase CacheUsuario
                         CacheUsuario.idUsuario = reader.GetInt32(0);
-                        CacheUsuario.nombre = reader.GetString(1);
+                        CacheUsuario.nombre = reader.GetString(2);
                         CacheUsuario.rol = reader.GetString(4);
                     }
                     return true;

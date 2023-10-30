@@ -13,25 +13,30 @@ namespace SIVARS_BURGUERS.Clases
         private int idUsuario;
         private string nombre;
         private string contraseña;
+        private string telefono;
         private string  rol;
 
         public ClsUsuario()
         {
         }
 
-        public ClsUsuario(int idUsuario, string nombre, string contraseña, string rol)
+        public ClsUsuario(int idUsuario, string nombre, string contraseña, string telefono, string rol)
         {
             this.idUsuario = idUsuario;
             this.nombre = nombre;
             this.contraseña = contraseña;
+            this.telefono = telefono;
             this.rol = rol;
         }
+
+        UsuarioDAO u = new UsuarioDAO();
 
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
+        public string Telefono { get => telefono; set => telefono = value; }
         public string Rol { get => rol; set => rol = value; }
-        UsuarioDAO u = new UsuarioDAO();
+
         public DataTable getDatos()
         {
             return u.Consultar();
@@ -58,7 +63,7 @@ namespace SIVARS_BURGUERS.Clases
         }
         public bool getLogin()
         {
-            return u.InicioSesion(this.Nombre, this.Contraseña);
+            return u.InicioSesion(this.nombre, this.contraseña);
         }
     }
 }
