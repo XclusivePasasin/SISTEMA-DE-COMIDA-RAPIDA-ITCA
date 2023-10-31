@@ -24,7 +24,7 @@ namespace SIVARS_BURGUERS.DAO
             }
             else
             {
-                sql = "SELECT * FROM Platillo";
+                sql = "SELECT * FROM V_Platillo";
             }
             SqlConnection con = GetSqlConnection();//Extraer Conexion
             try

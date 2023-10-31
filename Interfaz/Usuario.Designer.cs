@@ -33,6 +33,7 @@ namespace SIVARS_BURGUERS.Interfaz
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTelefonoUsuario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -299,6 +300,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // cbOpcion
             // 
             this.cbOpcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOpcion.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbOpcion.FormattingEnabled = true;
             this.cbOpcion.Items.AddRange(new object[] {
             "Codigo",
@@ -306,7 +308,7 @@ namespace SIVARS_BURGUERS.Interfaz
             "Rol"});
             this.cbOpcion.Location = new System.Drawing.Point(210, 36);
             this.cbOpcion.Name = "cbOpcion";
-            this.cbOpcion.Size = new System.Drawing.Size(101, 27);
+            this.cbOpcion.Size = new System.Drawing.Size(101, 25);
             this.cbOpcion.TabIndex = 6;
             // 
             // txtBuscar
@@ -398,6 +400,14 @@ namespace SIVARS_BURGUERS.Interfaz
             this.dtUsuarios.Location = new System.Drawing.Point(8, 58);
             this.dtUsuarios.MultiSelect = false;
             this.dtUsuarios.Name = "dtUsuarios";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtUsuarios.Size = new System.Drawing.Size(539, 129);
             this.dtUsuarios.TabIndex = 0;

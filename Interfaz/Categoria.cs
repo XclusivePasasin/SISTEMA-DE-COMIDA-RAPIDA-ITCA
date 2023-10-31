@@ -97,11 +97,11 @@ namespace SIVARS_BURGUERS.Interfaz
                 string campo;
                 if (cbOpcion.Text == "Codigo")
                 {
-                    campo = "idCategoria";
+                    campo = "CODIGO";
                 }
                 else if (cbOpcion.Text == "Nombre")
                 {
-                    campo = "Nombre_Categoria";
+                    campo = "NOMBRE_CATEGORIA";
                 }
                 else
                 {
