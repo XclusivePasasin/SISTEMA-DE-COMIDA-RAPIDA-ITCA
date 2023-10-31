@@ -68,8 +68,8 @@ CREATE TABLE Pedido
     idCliente INT NULL,
     idMesa INT NULL,
     idEstado_Pedido INT NULL,
-    FECHA DATE,
-    HORA TIME,
+    Fecha DATE,
+    Hora VARCHAR(50),
 	idPago INT NULL,
     CONSTRAINT PK_PEDIDO PRIMARY KEY(idPedido)
 );
@@ -125,10 +125,6 @@ INSERT INTO Pago VALUES ('Credito'),('Paypal'),('Efectivo');
 --CATEGORIA
 INSERT INTO Categoria VALUES ('Hamburguesas Picantes');
 --USUARIO
-INSERT INTO Usuario VALUES ('','','','')
-UPDATE Usuario SET Contraseña = '',Nombre_Empleado = '',Telefono = '',Rol = '' WHERE idUsuario = 
+INSERT INTO Usuario VALUES ('123','Antonio','7734-2212','Administrador')
 
-CREATE VIEW v_platillo
-AS
-SELECT p.idPlatillo,p.Nombre_Platillo,p.Precio,p.Descripcion,c.Nombre_Categoria FROM Platillo p
-INNER JOIN Categoria c ON p.idCategoria = c.idCategoria
+
