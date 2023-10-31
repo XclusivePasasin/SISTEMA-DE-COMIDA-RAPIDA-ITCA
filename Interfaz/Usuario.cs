@@ -56,7 +56,7 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             cargar();
             //Linea De Codigo Para Ocultar Columnas De La Tabla
-            dtUsuarios.Columns[1].Visible = false;
+            dtUsuarios.Columns[2].Visible = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -106,15 +106,15 @@ namespace SIVARS_BURGUERS.Interfaz
                 string campo;
                 if (cbOpcion.Text == "Codigo")
                 {
-                    campo = "idUsuario";
+                    campo = "CODIGO";
                 }
                 else if (cbOpcion.Text == "Nombre")
                 {
-                    campo = "Nombre_Empleado";
+                    campo = "NOMBRE";
                 }
                 else
                 {
-                    campo = "Rol";
+                    campo = "ROL";
                 }
                 dtUsuarios.DataSource = obj.buscarRegistro(campo, txtBuscar.Text);
             }

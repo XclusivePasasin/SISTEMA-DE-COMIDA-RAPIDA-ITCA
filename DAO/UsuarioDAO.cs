@@ -19,7 +19,7 @@ namespace SIVARS_BURGUERS.DAO
             string sql = "";
             DataTable datos = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
-            sql = "SELECT * FROM Usuario";
+            sql = "SELECT * FROM V_Usuario";
             SqlConnection con = GetSqlConnection();//Extraer Conexion
             try
             {
@@ -107,11 +107,11 @@ namespace SIVARS_BURGUERS.DAO
             string sql = "";
             if (Campo == "Codigo")
             {
-                sql = "SELECT * FROM Usuario WHERE idUsuario=" + ValorCampo;
+                sql = "SELECT * FROM V_Usuario WHERE CODIGO=" + ValorCampo;
             }
             else
             {
-                sql = "SELECT * FROM Usuario WHERE " + Campo +" Like '%"+ ValorCampo +"%'";
+                sql = "SELECT * FROM V_Usuario WHERE " + Campo +" Like '%"+ ValorCampo +"%'";
             }
             SqlConnection con = GetSqlConnection();//Extraemos La Conexion
             try
