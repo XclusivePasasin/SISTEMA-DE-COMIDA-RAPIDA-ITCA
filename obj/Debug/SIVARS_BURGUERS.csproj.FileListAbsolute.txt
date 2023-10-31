@@ -10,3 +10,4 @@ C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debu
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.pdb
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmMenu.resources
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmUsuarios.resources
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmCategoria.resources

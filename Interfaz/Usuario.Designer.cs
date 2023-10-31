@@ -30,6 +30,8 @@ namespace SIVARS_BURGUERS.Interfaz
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTelefonoUsuario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -89,7 +91,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.txtTelefonoUsuario.MaxLength = 9;
             this.txtTelefonoUsuario.Name = "txtTelefonoUsuario";
             this.txtTelefonoUsuario.Size = new System.Drawing.Size(144, 23);
-            this.txtTelefonoUsuario.TabIndex = 8;
+            this.txtTelefonoUsuario.TabIndex = 4;
             // 
             // label7
             // 
@@ -108,7 +110,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.txtContraseñaUsuario.MaxLength = 50;
             this.txtContraseñaUsuario.Name = "txtContraseñaUsuario";
             this.txtContraseñaUsuario.Size = new System.Drawing.Size(144, 23);
-            this.txtContraseñaUsuario.TabIndex = 6;
+            this.txtContraseñaUsuario.TabIndex = 2;
             // 
             // txtNombreUsuario
             // 
@@ -117,13 +119,14 @@ namespace SIVARS_BURGUERS.Interfaz
             this.txtNombreUsuario.MaxLength = 100;
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(144, 23);
-            this.txtNombreUsuario.TabIndex = 5;
+            this.txtNombreUsuario.TabIndex = 1;
             // 
             // cbRolUsuario
             // 
             this.cbRolUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRolUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRolUsuario.FormattingEnabled = true;
+            this.cbRolUsuario.ItemHeight = 17;
             this.cbRolUsuario.Items.AddRange(new object[] {
             "Administrador",
             "Mesero",
@@ -170,7 +173,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.txtCodigoUsuario.Name = "txtCodigoUsuario";
             this.txtCodigoUsuario.ReadOnly = true;
             this.txtCodigoUsuario.Size = new System.Drawing.Size(144, 23);
-            this.txtCodigoUsuario.TabIndex = 1;
+            this.txtCodigoUsuario.TabIndex = 0;
             // 
             // label1
             // 
@@ -307,9 +310,10 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(61, 37);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(106, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(106, 23);
             this.txtBuscar.TabIndex = 6;
             // 
             // label5
@@ -368,7 +372,24 @@ namespace SIVARS_BURGUERS.Interfaz
             this.dtUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtUsuarios.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtUsuarios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtUsuarios.Location = new System.Drawing.Point(8, 58);
             this.dtUsuarios.MultiSelect = false;

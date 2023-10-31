@@ -10,48 +10,53 @@ using System.Windows.Forms;
 using SIVARS_BURGUERS.Clases;
 
 namespace SIVARS_BURGUERS.DAO
-{   
-    class UsuarioDAO : ConnectionDataBase
+{
+    class CategoriaDAO : ConnectionDataBase
     {
-
         public DataTable Consultar()
         {
             string sql = "";
             DataTable datos = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
-            sql = "SELECT * FROM Usuario";
+            sql = "SELECT * FROM Categoria";
             SqlConnection con = GetSqlConnection();//Extraer Conexion
             try
             {
                 con.Open();//Abrimos La Conexion
                 string connectionString = getConnectiontring(); //Extraer Cadena De Conexion
-                adapter = new SqlDataAdapter(sql,connectionString);//Ejecurtar Consulta
+                adapter = new SqlDataAdapter(sql, connectionString);//Ejecurtar Consulta
                 adapter.Fill(datos);
             }
-            catch (SqlException error){
+            catch (SqlException error)
+            {
                 MessageBox.Show("OCURRIO EL SIGUIENTE ERROR: " + error.Message, "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally{
+            finally
+            {
                 con.Close();
             }
 
             return datos;
         }
         //CREAMOS METODOS PARA EL CRUD
-        private bool Ejecutar(string sql )
+        private bool Ejecutar(string sql)
         {
             SqlConnection con = GetSqlConnection();//Extraer Conexion
             SqlCommand cmd = new SqlCommand();
-            try{
+            try
+            {
                 cmd.CommandText = sql;
                 cmd.Connection = con;
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
                 return true;
-            }catch (SqlException err){
+            }
+            catch (SqlException err)
+            {
                 MessageBox.Show("OCURRIO UN ERROR: " + err.Message, "INFORMACION!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
-            }finally
+            }
+            finally
             {
                 cmd.Connection.Close();
             }
@@ -59,9 +64,9 @@ namespace SIVARS_BURGUERS.DAO
 
         public bool Insertar(object objDatos)
         {
-            ClsUsuario u = new ClsUsuario();
-            u = (ClsUsuario)objDatos;
-            string sql = "INSERT INTO Usuario VALUES ('"+u.Contraseña+"','"+u.Nombre+"','"+u.Telefono+"','"+u.Rol+"')";
+            ClsCategoria c = new ClsCategoria();
+            c = (ClsCategoria)objDatos;
+            string sql = "INSERT INTO Categoria VALUES('"+c.NombreCategoria+"'); ";
             if (Ejecutar(sql))
             {
                 return true;
@@ -74,22 +79,9 @@ namespace SIVARS_BURGUERS.DAO
 
         public bool Modificar(object objDatos)
         {
-            ClsUsuario u = new ClsUsuario();
-            u = (ClsUsuario)objDatos;
-            string sql = "UPDATE Usuario SET Nombre_Empleado = '" + u.Nombre + "',Contraseña = '" + u.Contraseña+"',Telefono = '"+u.Telefono+"',Rol = '"+u.Rol+"' WHERE idUsuario =" + u.IdUsuario;
-            if (Ejecutar(sql))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        
-        public bool Eliminar(string CodigoUsuario)
-        {
-            string sql = "DELETE FROM Usuario WHERE idUsuario=" + CodigoUsuario;
+            ClsCategoria c = new ClsCategoria();
+            c = (ClsCategoria)objDatos;
+            string sql = "UPDATE Categoria SET Nombre_Categoria = '"+c.NombreCategoria+"' WHERE idCategoria ="+ c.IdCategoria;
             if (Ejecutar(sql))
             {
                 return true;
@@ -100,18 +92,31 @@ namespace SIVARS_BURGUERS.DAO
             }
         }
 
-        public  DataTable Buscar(string Campo, string ValorCampo)
+        public bool Eliminar(string CodigoUsuario)
+        {
+            string sql = "DELETE FROM Categoria WHERE idCategoria=" + CodigoUsuario;
+            if (Ejecutar(sql))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public DataTable Buscar(string Campo, string ValorCampo)
         {
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
             string sql = "";
             if (Campo == "Codigo")
             {
-                sql = "SELECT * FROM Usuario WHERE idUsuario=" + ValorCampo;
+                sql = "SELECT * FROM Categoria WHERE idCategoria=" + ValorCampo;
             }
             else
             {
-                sql = "SELECT * FROM Usuario WHERE " + Campo +" Like '%"+ ValorCampo +"%'";
+                sql = "SELECT * FROM Categoria WHERE " + Campo + " Like '%" + ValorCampo + "%'";
             }
             SqlConnection con = GetSqlConnection();//Extraemos La Conexion
             try
@@ -123,7 +128,7 @@ namespace SIVARS_BURGUERS.DAO
             }
             catch (SqlException error)
             {
-                MessageBox.Show("OCURRIO AL BUSCAR EL USUARIO : " + error.Message, "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("OCURRIO AL BUSCAR LA CATEGORIA : " + error.Message, "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -132,48 +137,5 @@ namespace SIVARS_BURGUERS.DAO
 
             return data;
         }
-        public bool InicioSesion(string Usuario, string Contraseña)
-        {
-            SqlConnection con = GetSqlConnection();
-            try
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-                //Definir Parametros Para El SQL
-                cmd.Parameters.AddWithValue("@Usuario", Usuario);
-                cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Usuario WHERE  Nombre_Empleado = @Usuario AND Contraseña = @Contraseña";
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows) 
-                {
-                    while (reader.Read())
-                    {
-                        //Set De Datos De La Clase CacheUsuario
-                        CacheUsuario.idUsuario = reader.GetInt32(0);
-                        CacheUsuario.nombre = reader.GetString(2);
-                        CacheUsuario.rol = reader.GetString(4);
-                    }
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (SqlException err)
-            {
-                MessageBox.Show("ERROR AL EXTRAER LA SESION" + err.Message);
-                return false;
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
-
-
-
     }
 }
