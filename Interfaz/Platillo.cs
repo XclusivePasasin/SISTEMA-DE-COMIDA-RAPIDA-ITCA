@@ -44,9 +44,8 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
-                //Mandamos La Informacion Por Medio Del obj y Los Insertamos,Luego Limpiamos Campos y Cargamos Los Nuevos Datos
                 obj.NombrePlatillo = txtNombrePlatillo.Text;
-                obj.Precio = Convert.ToInt32(nPrecio.Text);
+                obj.Precio = Convert.ToDecimal(nPrecio.Text);
                 obj.Descripcion = txtDescripcionPlatillo.Text;
                 obj.IdCategoria = Convert.ToInt32(cbCategoriaPlatillo.SelectedValue);
                 obj.insertarDatos(obj);
@@ -83,7 +82,7 @@ namespace SIVARS_BURGUERS.Interfaz
                 //Mandamos La Informacion Por Medio Del obj y Los Insertamos,Luego Limpiamos Campos y Cargamos Los Nuevos Datos
                 obj.IdPlatillo = Convert.ToInt32(txtCodigoPlatillo.Text);
                 obj.NombrePlatillo = txtNombrePlatillo.Text;
-                obj.Precio = Convert.ToInt32(nPrecio.Text);
+                obj.Precio = Convert.ToDecimal(nPrecio.Text);
                 obj.Descripcion = txtDescripcionPlatillo.Text;
                 obj.IdCategoria = Convert.ToInt32(cbCategoriaPlatillo.SelectedValue);
                 obj.modificarDatos(obj);

@@ -24,7 +24,7 @@ namespace SIVARS_BURGUERS.DAO
             }
             else
             {
-                sql = "SELECT * FROM v_platillo";
+                sql = "SELECT * FROM Platillo";
             }
             SqlConnection con = GetSqlConnection();//Extraer Conexion
             try
@@ -88,7 +88,7 @@ namespace SIVARS_BURGUERS.DAO
         {
             ClsPlatillo p = new ClsPlatillo();
             p = (ClsPlatillo)objDatos;
-            string sql = "UPDATE Platillo SET Nombre_Platillo = '"+p.NombrePlatillo+"',Precio ='"+p.Precio+"',Descripcion = '"+p.Descripcion+"',idCategoria = '"+p.IdCategoria+"' WHERE idPlatillo = " + p.IdPlatillo;
+            string sql = "UPDATE Platillo SET Nombre_Platillo = '"+p.NombrePlatillo+"',Precio ="+p.Precio+",Descripcion = '"+p.Descripcion+"',idCategoria = "+p.IdCategoria+" WHERE idPlatillo = " + p.IdPlatillo;
             if (Ejecutar(sql))
             {
                 return true;

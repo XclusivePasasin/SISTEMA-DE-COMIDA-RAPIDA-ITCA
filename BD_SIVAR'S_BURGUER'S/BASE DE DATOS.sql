@@ -127,3 +127,8 @@ INSERT INTO Categoria VALUES ('Hamburguesas Picantes');
 --USUARIO
 INSERT INTO Usuario VALUES ('','','','')
 UPDATE Usuario SET Contraseña = '',Nombre_Empleado = '',Telefono = '',Rol = '' WHERE idUsuario = 
+
+CREATE VIEW v_platillo
+AS
+SELECT p.idPlatillo,p.Nombre_Platillo,p.Precio,p.Descripcion,c.Nombre_Categoria FROM Platillo p
+INNER JOIN Categoria c ON p.idCategoria = c.idCategoria
