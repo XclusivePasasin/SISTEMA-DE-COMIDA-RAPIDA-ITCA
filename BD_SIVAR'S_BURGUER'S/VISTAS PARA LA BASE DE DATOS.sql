@@ -11,3 +11,7 @@ GO
 CREATE VIEW V_Usuario
 AS 
 SELECT u.idUsuario CODIGO,u.Nombre_Empleado	NOMBRE,u.Contraseña CONTRASEÑA,u.Telefono NUMERO,u.Rol ROL FROM Usuario u
+GO
+CREATE VIEW V_Cliente
+AS
+SELECT c.idCliente CODIGO,CONCAT(c.Nombre,c.Apellido) NOMBRE_COMPLETO,c.Genero GENERO FROM Cliente c
