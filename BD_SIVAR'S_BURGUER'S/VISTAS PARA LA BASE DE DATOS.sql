@@ -11,4 +11,3 @@ GO
 CREATE VIEW V_Usuario
 AS 
 SELECT u.idUsuario CODIGO,u.Nombre_Empleado	NOMBRE,u.Contraseña CONTRASEÑA,u.Telefono NUMERO,u.Rol ROL FROM Usuario u
-
