@@ -58,7 +58,7 @@ namespace SIVARS_BURGUERS.Interfaz
             }
             catch (Exception err)
             {
-                MessageBox.Show("ERROR AL INSERTAR DATOS DEL USUARIO: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR AL INSERTAR DATOS DEL CLIENTE: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,7 +93,7 @@ namespace SIVARS_BURGUERS.Interfaz
             }
             catch (Exception err)
             {
-                MessageBox.Show("ERROR AL INSERTAR DATOS DEL USUARIO: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR AL INSERTAR DATOS DEL CLIENTE: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

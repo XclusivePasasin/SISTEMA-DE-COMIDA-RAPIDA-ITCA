@@ -30,9 +30,9 @@ namespace SIVARS_BURGUERS.Interfaz
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigoCliente = new System.Windows.Forms.TextBox();
@@ -74,9 +74,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox1.Controls.Add(this.txtCodigoCliente);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(26, 13);
+            this.groupBox1.Location = new System.Drawing.Point(45, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(237, 211);
+            this.groupBox1.Size = new System.Drawing.Size(251, 211);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Cliente";
@@ -85,7 +85,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 43);
+            this.label1.Location = new System.Drawing.Point(29, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 0;
@@ -94,7 +94,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // txtCodigoCliente
             // 
             this.txtCodigoCliente.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoCliente.Location = new System.Drawing.Point(63, 39);
+            this.txtCodigoCliente.Location = new System.Drawing.Point(85, 38);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.ReadOnly = true;
             this.txtCodigoCliente.Size = new System.Drawing.Size(140, 23);
@@ -104,7 +104,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 83);
+            this.label2.Location = new System.Drawing.Point(29, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 3;
@@ -113,7 +113,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // txtNombreCliente
             // 
             this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(63, 77);
+            this.txtNombreCliente.Location = new System.Drawing.Point(85, 76);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(140, 23);
             this.txtNombreCliente.TabIndex = 4;
@@ -122,7 +122,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 125);
+            this.label3.Location = new System.Drawing.Point(29, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 16);
             this.label3.TabIndex = 5;
@@ -131,7 +131,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // txtApellidoCliente
             // 
             this.txtApellidoCliente.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoCliente.Location = new System.Drawing.Point(63, 119);
+            this.txtApellidoCliente.Location = new System.Drawing.Point(85, 118);
             this.txtApellidoCliente.Name = "txtApellidoCliente";
             this.txtApellidoCliente.Size = new System.Drawing.Size(140, 23);
             this.txtApellidoCliente.TabIndex = 6;
@@ -140,7 +140,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 160);
+            this.label4.Location = new System.Drawing.Point(29, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 7;
@@ -156,7 +156,7 @@ namespace SIVARS_BURGUERS.Interfaz
             "Masculino",
             "Femenino",
             "No Binario"});
-            this.cbGeneroCliente.Location = new System.Drawing.Point(63, 154);
+            this.cbGeneroCliente.Location = new System.Drawing.Point(85, 153);
             this.cbGeneroCliente.Name = "cbGeneroCliente";
             this.cbGeneroCliente.Size = new System.Drawing.Size(140, 25);
             this.cbGeneroCliente.TabIndex = 8;
@@ -168,9 +168,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(280, 13);
+            this.groupBox2.Location = new System.Drawing.Point(315, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(156, 211);
+            this.groupBox2.Size = new System.Drawing.Size(170, 211);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
@@ -184,7 +184,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(18, 153);
+            this.btnEditar.Location = new System.Drawing.Point(24, 153);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.btnEditar.Size = new System.Drawing.Size(127, 43);
@@ -204,7 +204,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(18, 93);
+            this.btnEliminar.Location = new System.Drawing.Point(24, 93);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.btnEliminar.Size = new System.Drawing.Size(127, 43);
@@ -224,7 +224,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(18, 28);
+            this.btnAgregar.Location = new System.Drawing.Point(24, 28);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.btnAgregar.Size = new System.Drawing.Size(127, 43);
@@ -244,7 +244,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 230);
+            this.groupBox3.Location = new System.Drawing.Point(45, 230);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(440, 77);
             this.groupBox3.TabIndex = 4;
@@ -260,7 +260,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnFiltrar.ForeColor = System.Drawing.Color.White;
             this.btnFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnFiltrar.Image")));
             this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrar.Location = new System.Drawing.Point(312, 24);
+            this.btnFiltrar.Location = new System.Drawing.Point(302, 24);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.btnFiltrar.Size = new System.Drawing.Size(122, 43);
@@ -318,9 +318,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox4.Controls.Add(this.btnActualizar);
             this.groupBox4.Controls.Add(this.dtCliente);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(12, 313);
+            this.groupBox4.Location = new System.Drawing.Point(16, 313);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(455, 192);
+            this.groupBox4.Size = new System.Drawing.Size(489, 192);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tabla Usuarios";
@@ -333,7 +333,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(402, 16);
+            this.btnActualizar.Location = new System.Drawing.Point(433, 16);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.btnActualizar.Size = new System.Drawing.Size(41, 35);
@@ -345,36 +345,36 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             // dtCliente
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtCliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtCliente.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtCliente.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtCliente.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtCliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dtCliente.Location = new System.Drawing.Point(9, 57);
+            this.dtCliente.Location = new System.Drawing.Point(15, 57);
             this.dtCliente.MultiSelect = false;
             this.dtCliente.Name = "dtCliente";
             this.dtCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtCliente.Size = new System.Drawing.Size(434, 129);
+            this.dtCliente.Size = new System.Drawing.Size(459, 129);
             this.dtCliente.TabIndex = 0;
             this.dtCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtUsuarios_CellClick);
             // 
@@ -382,7 +382,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 515);
+            this.ClientSize = new System.Drawing.Size(517, 515);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
