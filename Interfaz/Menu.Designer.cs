@@ -326,6 +326,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnPlatillo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlatillo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPlatillo.UseVisualStyleBackColor = false;
+            this.btnPlatillo.Click += new System.EventHandler(this.btnPlatillo_Click);
             // 
             // btnCategorias
             // 
@@ -396,7 +397,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(160, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(716, 76);
+            this.panel2.Size = new System.Drawing.Size(747, 76);
             this.panel2.TabIndex = 1;
             // 
             // btnCerrar
@@ -427,7 +428,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(424, 249);
+            this.lblUsuario.Location = new System.Drawing.Point(439, 249);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(77, 22);
             this.lblUsuario.TabIndex = 2;
@@ -438,7 +439,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.lblAcceso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAcceso.AutoSize = true;
             this.lblAcceso.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAcceso.Location = new System.Drawing.Point(424, 288);
+            this.lblAcceso.Location = new System.Drawing.Point(439, 288);
             this.lblAcceso.Name = "lblAcceso";
             this.lblAcceso.Size = new System.Drawing.Size(130, 22);
             this.lblAcceso.TabIndex = 3;
@@ -449,7 +450,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.lblBienvenida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblBienvenida.AutoSize = true;
             this.lblBienvenida.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.Location = new System.Drawing.Point(261, 117);
+            this.lblBienvenida.Location = new System.Drawing.Point(278, 117);
             this.lblBienvenida.Name = "lblBienvenida";
             this.lblBienvenida.Size = new System.Drawing.Size(226, 42);
             this.lblBienvenida.TabIndex = 4;
@@ -461,14 +462,14 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panelDeskTop.Controls.Add(this.lblBienvenida);
             this.panelDeskTop.Location = new System.Drawing.Point(160, 76);
             this.panelDeskTop.Name = "panelDeskTop";
-            this.panelDeskTop.Size = new System.Drawing.Size(713, 570);
+            this.panelDeskTop.Size = new System.Drawing.Size(747, 570);
             this.panelDeskTop.TabIndex = 5;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 646);
+            this.ClientSize = new System.Drawing.Size(907, 646);
             this.Controls.Add(this.lblAcceso);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.panel2);

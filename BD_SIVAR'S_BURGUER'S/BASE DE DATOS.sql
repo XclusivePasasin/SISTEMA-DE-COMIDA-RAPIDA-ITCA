@@ -3,12 +3,6 @@ GO
 USE SIVAR_BURGUERS;
 GO
 
-CREATE TABLE Rol
-(
-    idRol INT NOT NULL IDENTITY,
-    Nombre_Rol VARCHAR (25),
-    CONSTRAINT PK_ROL PRIMARY KEY(idRol)
-);
 
 CREATE TABLE Usuario
 (
@@ -16,7 +10,7 @@ CREATE TABLE Usuario
     Contraseña VARCHAR (50) NOT NULL,
     Nombre_Empleado VARCHAR (100) NOT NULL,
     Telefono VARCHAR(9),
-	idRol INT NULL,
+	Rol VARCHAR(25),
     CONSTRAINT PK_USUARIO PRIMARY KEY(idUsuario)
 );
 
@@ -69,7 +63,7 @@ CREATE TABLE Cliente
 
 CREATE TABLE Pedido
 (
-    idPedido INT NOT NULL IDENTITY,
+    idPedido INT NOT NULL,
     idUsuario INT NULL,
     idCliente INT NULL,
     idMesa INT NULL,
@@ -92,10 +86,7 @@ CREATE TABLE Detalle_Pedido
 
 --Llaves Foraneas
 
---Tabla Usuario
-ALTER TABLE Usuario
-ADD CONSTRAINT FK_USUARIO_ROL FOREIGN KEY (idRol) REFERENCES Rol(idRol) ON UPDATE CASCADE ON DELETE CASCADE;
-GO
+
 --Tabla Platillo 
 ALTER TABLE Platillo
 ADD CONSTRAINT FK_CATEGORIA_PLATILLO FOREIGN KEY (idCategoria) REFERENCES Categoria(idCategoria) ON UPDATE CASCADE ON DELETE CASCADE;
@@ -127,15 +118,12 @@ ALTER TABLE Detalle_Pedido
 ADD CONSTRAINT FK_DETALLE_PEDIDO_PEDIDOS FOREIGN KEY (idPedido) REFERENCES Pedido(idPedido) ON UPDATE CASCADE ON DELETE CASCADE;
 GO
 
---DROP DATABASE SIVAR_BURGUERS
 
 --INSERTAR DATOS
---ROL 
-INSERT INTO Rol VALUES ('Administrador'),('Mesero'),('Cajero');
 --PAGO
 INSERT INTO Pago VALUES ('Credito'),('Paypal'),('Efectivo');
 --CATEGORIA
-INSERT INTO Categoria VALUES ('');	
-INSERT INTO Categoria VALUES ('');
-
-
+INSERT INTO Categoria VALUES ('Hamburguesas Picantes');
+--USUARIO
+INSERT INTO Usuario VALUES ('','','','')
+UPDATE Usuario SET Contraseña = '',Nombre_Empleado = '',Telefono = '',Rol = '' WHERE idUsuario = 
