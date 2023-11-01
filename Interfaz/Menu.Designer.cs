@@ -58,6 +58,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelDeskTop = new System.Windows.Forms.Panel();
+            this.btnMesa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -69,6 +70,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(117)))));
+            this.panel1.Controls.Add(this.btnMesa);
             this.panel1.Controls.Add(this.btnCerrarSesion);
             this.panel1.Controls.Add(this.panelSubMenu);
             this.panel1.Controls.Add(this.btnReportes);
@@ -84,7 +86,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 646);
+            this.panel1.Size = new System.Drawing.Size(160, 698);
             this.panel1.TabIndex = 0;
             // 
             // btnCerrarSesion
@@ -96,7 +98,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 598);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 650);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(160, 48);
@@ -426,34 +428,34 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             // lblUsuario
             // 
-            this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(439, 249);
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(390, 333);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(77, 22);
+            this.lblUsuario.Size = new System.Drawing.Size(99, 28);
             this.lblUsuario.TabIndex = 2;
             this.lblUsuario.Text = "Usuario:";
             // 
             // lblAcceso
             // 
-            this.lblAcceso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAcceso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAcceso.AutoSize = true;
-            this.lblAcceso.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAcceso.Location = new System.Drawing.Point(439, 288);
+            this.lblAcceso.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcceso.Location = new System.Drawing.Point(390, 372);
             this.lblAcceso.Name = "lblAcceso";
-            this.lblAcceso.Size = new System.Drawing.Size(130, 22);
+            this.lblAcceso.Size = new System.Drawing.Size(168, 28);
             this.lblAcceso.TabIndex = 3;
             this.lblAcceso.Text = "Rol De Acceso:";
             // 
             // lblBienvenida
             // 
-            this.lblBienvenida.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblBienvenida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBienvenida.AutoSize = true;
-            this.lblBienvenida.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.Location = new System.Drawing.Point(278, 117);
+            this.lblBienvenida.Font = new System.Drawing.Font("Microsoft YaHei", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenida.Location = new System.Drawing.Point(220, 192);
             this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(226, 42);
+            this.lblBienvenida.Size = new System.Drawing.Size(260, 50);
             this.lblBienvenida.TabIndex = 4;
             this.lblBienvenida.Text = "BIENVENIDO";
             // 
@@ -463,14 +465,33 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panelDeskTop.Controls.Add(this.lblBienvenida);
             this.panelDeskTop.Location = new System.Drawing.Point(160, 76);
             this.panelDeskTop.Name = "panelDeskTop";
-            this.panelDeskTop.Size = new System.Drawing.Size(747, 570);
+            this.panelDeskTop.Size = new System.Drawing.Size(747, 622);
             this.panelDeskTop.TabIndex = 5;
+            // 
+            // btnMesa
+            // 
+            this.btnMesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnMesa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMesa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMesa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMesa.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMesa.ForeColor = System.Drawing.Color.White;
+            this.btnMesa.Image = ((System.Drawing.Image)(resources.GetObject("btnMesa.Image")));
+            this.btnMesa.Location = new System.Drawing.Point(0, 593);
+            this.btnMesa.Name = "btnMesa";
+            this.btnMesa.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMesa.Size = new System.Drawing.Size(160, 48);
+            this.btnMesa.TabIndex = 15;
+            this.btnMesa.Text = "Mesas";
+            this.btnMesa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMesa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMesa.UseVisualStyleBackColor = false;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 646);
+            this.ClientSize = new System.Drawing.Size(907, 698);
             this.Controls.Add(this.lblAcceso);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.panel2);
@@ -522,5 +543,6 @@ namespace SIVARS_BURGUERS.Interfaz
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panelDeskTop;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnMesa;
     }
 }

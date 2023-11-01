@@ -121,5 +121,6 @@ INSERT INTO Pago VALUES ('Credito'),('Paypal'),('Efectivo');
 INSERT INTO Categoria VALUES ('Hamburguesas Picantes');
 --USUARIO
 INSERT INTO Usuario VALUES ('123','Antonio','7734-2212','Administrador')
-
+--ESTADO PEDIO
+INSERT INTO Estado_Pedido VALUES ('Pendiente'),('En Proceso'),('Entregado'),('Cancelado'),('Pagado'),('No Pagado');
 

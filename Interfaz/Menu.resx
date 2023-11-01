@@ -311,4 +311,17 @@
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="btnMesa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAGISURBVFhH7ZevS0NRFMef4gRlxSBMRINmMZgELRbTDBr8
+        E7QMBLO6JIuiyWhSXFueVbsGo1jUYDUIwvNz7zlBtvfzXt9L7wMfxs4753sObDAWVFT4EIbhGV7itJbK
+        h+UP+IVjWioPlo7gMvbxBVexpo+Lh2Vb+IyDvGELR7W1GFhwYral0EX78fA6gSspztnwLNC8i1np6Mwk
+        fttKPC27IA0aa/hqR7JhFs/r7L2txLNkl6RB44b05+JQZ0/lbSSfmO07ROOBHcnHlc5uyttIunZBFmie
+        wagvVZKLOjs+UP/rrF2QBE0NXCjBhq4choc9LIOerhzGPJSewkk8oo5T2DGdBWByTX5dV8ZDU9tMwA/e
+        /oMmx9DWFemYZpkJ37XkBTkfEud2xKOWvCDnSeLcjuhryQty7iTO7YhrLXlBzo3EuR1xriUvyLmQOLcj
+        jrTkBTnHEud2xJ6WvCBnX+LcjtjWkhfk7Eic2xFrWvKCnHWJy3dEE83/i/Sf3gyYHM1raqmiIoEg+AUp
+        7vZxegzVIAAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
