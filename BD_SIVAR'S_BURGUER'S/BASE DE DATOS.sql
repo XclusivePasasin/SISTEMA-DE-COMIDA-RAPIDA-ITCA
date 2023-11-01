@@ -19,6 +19,7 @@ CREATE TABLE Mesa
 (
     idMesa INT NOT NULL IDENTITY,
     Numero_Mesa VARCHAR(30) NOT NULL,
+	Estado INT NULL,
     CONSTRAINT PK_MESA PRIMARY KEY(idMesa)
 );
 
@@ -121,6 +122,15 @@ INSERT INTO Pago VALUES ('Credito'),('Paypal'),('Efectivo');
 INSERT INTO Categoria VALUES ('Hamburguesas Picantes');
 --USUARIO
 INSERT INTO Usuario VALUES ('123','Antonio','7734-2212','Administrador')
---ESTADO PEDIO
+--ESTADO PEDIDO
 INSERT INTO Estado_Pedido VALUES ('Pendiente'),('En Proceso'),('Entregado'),('Cancelado'),('Pagado'),('No Pagado');
 
+INSERT INTO Pedido (idPedido,Fecha, idEstado_Pedido)
+VALUES (2,'2023-10-31', 1);
+
+
+DECLARE @Fecha AS DATE = '2023-10-31'; 
+DECLARE @EstadoPedido AS INT = 1; 
+SELECT * FROM Pedido WHERE Fecha = @Fecha AND idEstado_Pedido = @EstadoPedido
+
+SELECT * FROM Pedido WHERE Fecha = '2023-10-31' AND idEstado_Pedido = 1;

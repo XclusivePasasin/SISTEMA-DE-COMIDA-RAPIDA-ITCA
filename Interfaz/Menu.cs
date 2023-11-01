@@ -123,7 +123,10 @@ namespace SIVARS_BURGUERS.Interfaz
 
         private void btnOrdenes_Click(object sender, EventArgs e)
         {
-
+            panelSubMenu.Visible = false;
+            lblUsuario.Visible = false;
+            lblAcceso.Visible = false;
+            OpenChildForm(new frmVerOrdenes(), sender);
         }
     }
 }

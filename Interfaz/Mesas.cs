@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SIVARS_BURGUERS.Interfaz
 {
-    public partial class frmVerOrdenes : Form
+    public partial class frmMesas : Form
     {
-        public frmVerOrdenes()
+        public frmMesas()
         {
             InitializeComponent();
         }
