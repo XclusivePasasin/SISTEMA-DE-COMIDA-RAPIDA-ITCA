@@ -54,6 +54,7 @@
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\ConnectionDataBase.cs" />
+    <Compile Include="DAO\MesaDAO.cs" />
     <Compile Include="DAO\PlatilloDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="InicioSesion.cs">

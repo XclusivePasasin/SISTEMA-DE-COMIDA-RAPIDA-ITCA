@@ -75,7 +75,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox1.Controls.Add(this.txtCodigoCliente);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(30, 33);
+            this.groupBox1.Location = new System.Drawing.Point(47, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(251, 211);
             this.groupBox1.TabIndex = 1;
@@ -128,9 +128,9 @@ namespace SIVARS_BURGUERS.Interfaz
             // txtNombreCliente
             // 
             this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(85, 76);
+            this.txtNombreCliente.Location = new System.Drawing.Point(121, 76);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(140, 23);
+            this.txtNombreCliente.Size = new System.Drawing.Size(104, 23);
             this.txtNombreCliente.TabIndex = 4;
             // 
             // label2
@@ -139,9 +139,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(29, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 16);
+            this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre:";
+            this.label2.Text = "Numero Mesa:";
             // 
             // txtCodigoCliente
             // 
@@ -169,7 +169,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(319, 33);
+            this.groupBox2.Location = new System.Drawing.Point(321, 22);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(170, 211);
             this.groupBox2.TabIndex = 3;
@@ -242,7 +242,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(30, 250);
+            this.groupBox3.Location = new System.Drawing.Point(34, 250);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(459, 77);
             this.groupBox3.TabIndex = 5;
@@ -315,9 +315,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox4.Controls.Add(this.btnActualizar);
             this.groupBox4.Controls.Add(this.dtCliente);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(30, 333);
+            this.groupBox4.Location = new System.Drawing.Point(12, 333);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(459, 192);
+            this.groupBox4.Size = new System.Drawing.Size(502, 192);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tabla Usuarios";
@@ -366,7 +366,7 @@ namespace SIVARS_BURGUERS.Interfaz
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtCliente.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtCliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dtCliente.Location = new System.Drawing.Point(0, 57);
+            this.dtCliente.Location = new System.Drawing.Point(22, 57);
             this.dtCliente.MultiSelect = false;
             this.dtCliente.Name = "dtCliente";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -380,7 +380,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 525);
+            this.ClientSize = new System.Drawing.Size(517, 525);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
