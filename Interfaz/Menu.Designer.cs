@@ -291,6 +291,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnOrdenes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrdenes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdenes.UseVisualStyleBackColor = false;
+            this.btnOrdenes.Click += new System.EventHandler(this.btnOrdenes_Click);
             // 
             // btnPedido
             // 

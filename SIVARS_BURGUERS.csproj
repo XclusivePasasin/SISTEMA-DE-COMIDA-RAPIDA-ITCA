@@ -92,6 +92,12 @@
     <Compile Include="Interfaz\Usuario.Designer.cs">
       <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\VerOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\VerOrdenes.Designer.cs">
+      <DependentUpon>VerOrdenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="InicioSesion.resx">
