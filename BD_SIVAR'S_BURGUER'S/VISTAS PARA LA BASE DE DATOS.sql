@@ -31,6 +31,12 @@ INNER JOIN Estado_Pedido e ON p.idEstado_Pedido = e.idEstado_Pedido
 INNER JOIN Pago pa ON p.idPago = pa.idPago
 INNER JOIN Usuario u ON p.idUsuario = u.idUsuario
 GO
+CREATE VIEW V_DetallePedido
+AS
+SELECT dp.idDetalle_Pedido CODIGO,pl.Nombre_Platillo PLATILLO, dp.Cantidad CANTIDAD, dp.Precio	PRECIO,	(dp.Cantidad * dp.Precio) SUBTOTAL FROM Detalle_Pedido dp
+INNER JOIN Pedido p ON dp.idPedido = p.idPedido
+INNER JOIN Platillo pl ON dp.idPlatillo = pl.idPlatillo
+GO
 CREATE PROCEDURE BuscarPedidosPorFechaYEstado
     @fecha_pedido DATE,
     @id_estado_pedido INT
