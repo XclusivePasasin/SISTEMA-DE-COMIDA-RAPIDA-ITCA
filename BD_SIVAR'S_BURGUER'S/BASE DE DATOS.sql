@@ -71,6 +71,7 @@ CREATE TABLE Pedido
     idMesa INT NULL,
     idEstado_Pedido INT NULL,
     Fecha DATE,
+	Total DECIMAL,
     Hora VARCHAR(50),
 	idPago INT NULL,
     CONSTRAINT PK_PEDIDO PRIMARY KEY(idPedido)
