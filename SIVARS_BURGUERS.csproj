@@ -49,6 +49,7 @@
     <Compile Include="Clases\CacheUsuario.cs" />
     <Compile Include="Clases\ClsCategoria.cs" />
     <Compile Include="Clases\ClsCliente.cs" />
+    <Compile Include="Clases\ClsMesa.cs" />
     <Compile Include="Clases\ClsPlatillo.cs" />
     <Compile Include="Clases\ClsUsuario.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />

@@ -30,18 +30,15 @@ namespace SIVARS_BURGUERS.Interfaz
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMesas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbGeneroCliente = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtApellidoCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.txtNombreMesa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCodigoCliente = new System.Windows.Forms.TextBox();
+            this.txtCodigoMesa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -55,24 +52,26 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.dtCliente = new System.Windows.Forms.DataGridView();
+            this.dtMesa = new System.Windows.Forms.DataGridView();
+            this.nEstadoPedido = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMesa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEstadoPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.cbGeneroCliente);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtApellidoCliente);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.nEstadoPedido);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtNombreCliente);
+            this.groupBox1.Controls.Add(this.txtNombreMesa);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtCodigoCliente);
+            this.groupBox1.Controls.Add(this.txtCodigoMesa);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(47, 22);
@@ -82,56 +81,23 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Mesa";
             // 
-            // cbGeneroCliente
-            // 
-            this.cbGeneroCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGeneroCliente.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cbGeneroCliente.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGeneroCliente.FormattingEnabled = true;
-            this.cbGeneroCliente.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "No Binario"});
-            this.cbGeneroCliente.Location = new System.Drawing.Point(85, 153);
-            this.cbGeneroCliente.Name = "cbGeneroCliente";
-            this.cbGeneroCliente.Size = new System.Drawing.Size(140, 25);
-            this.cbGeneroCliente.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 159);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Genero:";
-            // 
-            // txtApellidoCliente
-            // 
-            this.txtApellidoCliente.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoCliente.Location = new System.Drawing.Point(85, 118);
-            this.txtApellidoCliente.Name = "txtApellidoCliente";
-            this.txtApellidoCliente.Size = new System.Drawing.Size(140, 23);
-            this.txtApellidoCliente.TabIndex = 6;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(29, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 16);
+            this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Apellido:";
+            this.label3.Text = "Estado Mesa:";
             // 
-            // txtNombreCliente
+            // txtNombreMesa
             // 
-            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(121, 76);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(104, 23);
-            this.txtNombreCliente.TabIndex = 4;
+            this.txtNombreMesa.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreMesa.Location = new System.Drawing.Point(121, 76);
+            this.txtNombreMesa.Name = "txtNombreMesa";
+            this.txtNombreMesa.Size = new System.Drawing.Size(104, 23);
+            this.txtNombreMesa.TabIndex = 4;
             // 
             // label2
             // 
@@ -143,14 +109,14 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label2.TabIndex = 3;
             this.label2.Text = "Numero Mesa:";
             // 
-            // txtCodigoCliente
+            // txtCodigoMesa
             // 
-            this.txtCodigoCliente.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoCliente.Location = new System.Drawing.Point(85, 38);
-            this.txtCodigoCliente.Name = "txtCodigoCliente";
-            this.txtCodigoCliente.ReadOnly = true;
-            this.txtCodigoCliente.Size = new System.Drawing.Size(140, 23);
-            this.txtCodigoCliente.TabIndex = 2;
+            this.txtCodigoMesa.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoMesa.Location = new System.Drawing.Point(85, 38);
+            this.txtCodigoMesa.Name = "txtCodigoMesa";
+            this.txtCodigoMesa.ReadOnly = true;
+            this.txtCodigoMesa.Size = new System.Drawing.Size(140, 23);
+            this.txtCodigoMesa.TabIndex = 2;
             // 
             // label1
             // 
@@ -194,6 +160,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -213,6 +180,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -232,6 +200,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // groupBox3
             // 
@@ -267,6 +236,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFiltrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFiltrar.UseVisualStyleBackColor = false;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // cbOpcion
             // 
@@ -313,14 +283,14 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox4.Controls.Add(this.btnActualizar);
-            this.groupBox4.Controls.Add(this.dtCliente);
+            this.groupBox4.Controls.Add(this.dtMesa);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(12, 333);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(502, 192);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tabla Usuarios";
+            this.groupBox4.Text = "Tabla Mesas";
             // 
             // btnActualizar
             // 
@@ -338,43 +308,75 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // dtCliente
+            // dtMesa
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtCliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtCliente.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtCliente.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtCliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dtCliente.Location = new System.Drawing.Point(22, 57);
-            this.dtCliente.MultiSelect = false;
-            this.dtCliente.Name = "dtCliente";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtCliente.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtCliente.Size = new System.Drawing.Size(459, 129);
-            this.dtCliente.TabIndex = 0;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtMesa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtMesa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtMesa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtMesa.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtMesa.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtMesa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtMesa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtMesa.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dtMesa.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dtMesa.Location = new System.Drawing.Point(22, 57);
+            this.dtMesa.MultiSelect = false;
+            this.dtMesa.Name = "dtMesa";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtMesa.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dtMesa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtMesa.Size = new System.Drawing.Size(459, 129);
+            this.dtMesa.TabIndex = 0;
+            this.dtMesa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtMesa_CellClick);
+            // 
+            // nEstadoPedido
+            // 
+            this.nEstadoPedido.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nEstadoPedido.Location = new System.Drawing.Point(121, 115);
+            this.nEstadoPedido.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nEstadoPedido.Name = "nEstadoPedido";
+            this.nEstadoPedido.Size = new System.Drawing.Size(104, 23);
+            this.nEstadoPedido.TabIndex = 6;
+            this.nEstadoPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nEstadoPedido.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(15, 167);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(225, 17);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Estado: 1 = Disponible, 0 = Ocupada";
             // 
             // frmMesas
             // 
@@ -387,13 +389,15 @@ namespace SIVARS_BURGUERS.Interfaz
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMesas";
             this.Text = "Mesas";
+            this.Load += new System.EventHandler(this.frmMesas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMesa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nEstadoPedido)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,13 +405,10 @@ namespace SIVARS_BURGUERS.Interfaz
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cbGeneroCliente;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtApellidoCliente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombreCliente;
+        private System.Windows.Forms.TextBox txtNombreMesa;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCodigoCliente;
+        private System.Windows.Forms.TextBox txtCodigoMesa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnEditar;
@@ -421,6 +422,8 @@ namespace SIVARS_BURGUERS.Interfaz
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.DataGridView dtCliente;
+        private System.Windows.Forms.DataGridView dtMesa;
+        private System.Windows.Forms.NumericUpDown nEstadoPedido;
+        private System.Windows.Forms.Label label7;
     }
 }
