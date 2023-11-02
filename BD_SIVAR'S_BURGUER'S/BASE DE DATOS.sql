@@ -83,6 +83,7 @@ CREATE TABLE Detalle_Pedido
     idPlatillo INT NULL,
     idPedido INT NULL,
     Cantidad INT,
+	Precio DECIMAL(10,2),
     SubTotal DECIMAL (10,2),
     CONSTRAINT PK_DETALLE_PEDIDO PRIMARY KEY(idDetalle_Pedido)
 );

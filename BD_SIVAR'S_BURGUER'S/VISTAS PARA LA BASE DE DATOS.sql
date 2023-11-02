@@ -21,7 +21,16 @@ GO
 CREATE VIEW V_Mesa
 AS
 SELECT m.idMesa CODIGO,m.Numero_Mesa NUMERO_MESA,m.Estado ESTADO FROM Mesa m
-
+GO
+CREATE VIEW V_Pedido
+AS
+SELECT p.idPedido CODIGO,u.Nombre_Empleado USUARIO, CONCAT(c.Nombre,'',c.Apellido) CLIENTE,m.Numero_Mesa MESA,e.Tipo_Estado ESTADO,p.Fecha FECHA, p.Hora HORA,p.Total TOTAL,pa.Tipo_Pago PAGO FROM Pedido p
+INNER JOIN Mesa m ON p.idMesa = m.idMesa
+INNER JOIN Cliente c ON p.idCliente = p.idCliente
+INNER JOIN Estado_Pedido e ON p.idEstado_Pedido = e.idEstado_Pedido
+INNER JOIN Pago pa ON p.idPago = pa.idPago
+INNER JOIN Usuario u ON p.idUsuario = u.idUsuario
+GO
 CREATE PROCEDURE BuscarPedidosPorFechaYEstado
     @fecha_pedido DATE,
     @id_estado_pedido INT
@@ -31,5 +40,5 @@ BEGIN
     FROM Pedido
     WHERE Fecha = @fecha_pedido AND idEstado_Pedido = @id_estado_pedido;
 END
-
+GO
 EXEC BuscarPedidosPorFechaYEstado '2023-10-31',1;
