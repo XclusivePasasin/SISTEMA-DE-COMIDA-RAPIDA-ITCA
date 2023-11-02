@@ -124,6 +124,8 @@ INSERT INTO Categoria VALUES ('Hamburguesas Picantes');
 INSERT INTO Usuario VALUES ('123','Antonio','7734-2212','Administrador')
 --ESTADO PEDIDO
 INSERT INTO Estado_Pedido VALUES ('Pendiente'),('En Proceso'),('Entregado'),('Cancelado'),('Pagado'),('No Pagado');
+--MESA
+INSERT INTO Mesa  VALUES ('NUMERO 1', 1);
 
 INSERT INTO Pedido (idPedido,Fecha, idEstado_Pedido)
 VALUES (2,'2023-10-31', 1);
