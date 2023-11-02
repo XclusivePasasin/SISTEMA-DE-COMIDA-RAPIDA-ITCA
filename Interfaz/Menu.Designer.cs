@@ -31,6 +31,7 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMesa = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelSubMenu = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -58,7 +59,6 @@ namespace SIVARS_BURGUERS.Interfaz
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelDeskTop = new System.Windows.Forms.Panel();
-            this.btnMesa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -88,6 +88,26 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 698);
             this.panel1.TabIndex = 0;
+            // 
+            // btnMesa
+            // 
+            this.btnMesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnMesa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMesa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMesa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMesa.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMesa.ForeColor = System.Drawing.Color.White;
+            this.btnMesa.Image = ((System.Drawing.Image)(resources.GetObject("btnMesa.Image")));
+            this.btnMesa.Location = new System.Drawing.Point(0, 593);
+            this.btnMesa.Name = "btnMesa";
+            this.btnMesa.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMesa.Size = new System.Drawing.Size(160, 48);
+            this.btnMesa.TabIndex = 15;
+            this.btnMesa.Text = "Mesas";
+            this.btnMesa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMesa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMesa.UseVisualStyleBackColor = false;
+            this.btnMesa.Click += new System.EventHandler(this.btnMesa_Click);
             // 
             // btnCerrarSesion
             // 
@@ -468,25 +488,6 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panelDeskTop.Name = "panelDeskTop";
             this.panelDeskTop.Size = new System.Drawing.Size(747, 622);
             this.panelDeskTop.TabIndex = 5;
-            // 
-            // btnMesa
-            // 
-            this.btnMesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
-            this.btnMesa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMesa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMesa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMesa.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMesa.ForeColor = System.Drawing.Color.White;
-            this.btnMesa.Image = ((System.Drawing.Image)(resources.GetObject("btnMesa.Image")));
-            this.btnMesa.Location = new System.Drawing.Point(0, 593);
-            this.btnMesa.Name = "btnMesa";
-            this.btnMesa.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMesa.Size = new System.Drawing.Size(160, 48);
-            this.btnMesa.TabIndex = 15;
-            this.btnMesa.Text = "Mesas";
-            this.btnMesa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMesa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMesa.UseVisualStyleBackColor = false;
             // 
             // frmMenu
             // 

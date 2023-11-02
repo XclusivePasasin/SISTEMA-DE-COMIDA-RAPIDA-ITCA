@@ -20,12 +20,12 @@ namespace SIVARS_BURGUERS.Interfaz
         }
         private void cargar()
         {
-            dtMesa.DataSource = obj.getDatos();
+            dtCliente.DataSource = obj.getDatos();
         }
         private void LimpiarCampos()
         {
-            txtCodigoMesa.Text = "";
-            txtNumeroMesa.Text = "";
+            txtCodigoCliente.Text = "";
+            txtNombreCliente.Text = "";
             txtApellidoCliente.Text = "";
             cbGeneroCliente.Text = "";
             //Colocamos Todos Los Campos Para Limpiar
@@ -35,21 +35,22 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             cargar();
         }
+       
 
         private void dtUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            this.txtCodigoMesa.Text = dtMesa.SelectedRows[0].Cells[0].Value.ToString();
-            this.txtNumeroMesa.Text = dtMesa.SelectedRows[0].Cells[1].Value.ToString();
-            this.txtApellidoCliente.Text = dtMesa.SelectedRows[0].Cells[2].Value.ToString();
-            this.cbGeneroCliente.Text = dtMesa.SelectedRows[0].Cells[3].Value.ToString();
+            this.txtCodigoCliente.Text = dtCliente.SelectedRows[0].Cells[0].Value.ToString();
+            this.txtNombreCliente.Text = dtCliente.SelectedRows[0].Cells[1].Value.ToString();
+            this.txtApellidoCliente.Text = dtCliente.SelectedRows[0].Cells[2].Value.ToString();
+            this.cbGeneroCliente.Text = dtCliente.SelectedRows[0].Cells[3].Value.ToString();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-                obj.Nombre = txtNumeroMesa.Text;
+                obj.Nombre = txtNombreCliente.Text;
                 obj.Apellido = txtApellidoCliente.Text;
                 obj.Genero = cbGeneroCliente.Text;
                 obj.insertarDatos(obj);
@@ -64,7 +65,7 @@ namespace SIVARS_BURGUERS.Interfaz
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoMesa.Text != "")
+            if (txtCodigoCliente.Text != "")
             {
                 string msj = "¿SEGURO QUE DESEA ELIMINAR ESTE REGISTRO?";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -72,7 +73,7 @@ namespace SIVARS_BURGUERS.Interfaz
                 DialogResult resultado = MessageBox.Show(msj, "ELIMINANDO....", buttons, icon);
                 if (resultado == DialogResult.Yes)
                 {
-                    obj.eliminarDatos(txtCodigoMesa.Text);
+                    obj.eliminarDatos(txtCodigoCliente.Text);
                     cargar();
                     LimpiarCampos();
                 }
@@ -83,8 +84,8 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
-                obj.IdCliente = Convert.ToInt32(txtCodigoMesa.Text);
-                obj.Nombre = txtNumeroMesa.Text;
+                obj.IdCliente = Convert.ToInt32(txtCodigoCliente.Text);
+                obj.Nombre = txtNombreCliente.Text;
                 obj.Apellido = txtApellidoCliente.Text;
                 obj.Genero = cbGeneroCliente.Text;
                 obj.modificarDatos(obj);
@@ -110,7 +111,7 @@ namespace SIVARS_BURGUERS.Interfaz
                 {
                     campo = "NOMBRE";
                 }
-                dtMesa.DataSource = obj.buscarRegistro(campo, txtBuscar.Text);
+                dtCliente.DataSource = obj.buscarRegistro(campo, txtBuscar.Text);
             }
             else
             {
