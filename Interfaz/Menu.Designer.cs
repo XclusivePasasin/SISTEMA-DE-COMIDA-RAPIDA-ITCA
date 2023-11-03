@@ -331,6 +331,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPedido.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPedido.UseVisualStyleBackColor = false;
+            this.btnPedido.Click += new System.EventHandler(this.btnPedido_Click);
             // 
             // btnPlatillo
             // 

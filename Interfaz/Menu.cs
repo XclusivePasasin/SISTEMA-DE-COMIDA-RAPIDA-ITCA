@@ -136,5 +136,13 @@ namespace SIVARS_BURGUERS.Interfaz
             lblAcceso.Visible = false;
             OpenChildForm(new frmMesas(), sender);
         }
+
+        private void btnPedido_Click(object sender, EventArgs e)
+        {
+            panelSubMenu.Visible = false;
+            lblUsuario.Visible = false;
+            lblAcceso.Visible = false;
+            OpenChildForm(new frmPedido(), sender);
+        }
     }
 }

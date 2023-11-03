@@ -50,12 +50,14 @@
     <Compile Include="Clases\ClsCategoria.cs" />
     <Compile Include="Clases\ClsCliente.cs" />
     <Compile Include="Clases\ClsMesa.cs" />
+    <Compile Include="Clases\ClsPedido.cs" />
     <Compile Include="Clases\ClsPlatillo.cs" />
     <Compile Include="Clases\ClsUsuario.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\ConnectionDataBase.cs" />
     <Compile Include="DAO\MesaDAO.cs" />
+    <Compile Include="DAO\PedidoDAO.cs" />
     <Compile Include="DAO\PlatilloDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="InicioSesion.cs">
@@ -87,6 +89,12 @@
     </Compile>
     <Compile Include="Interfaz\Mesas.Designer.cs">
       <DependentUpon>Mesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Pedido.Designer.cs">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\Platillo.cs">
       <SubType>Form</SubType>
@@ -122,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Mesas.resx">
       <DependentUpon>Mesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Pedido.resx">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Platillo.resx">
       <DependentUpon>Platillo.cs</DependentUpon>
