@@ -37,9 +37,17 @@ namespace SIVARS_BURGUERS.DAO
             {
                 sql = "SELECT idPago,Tipo_Pago FROM Pago";
             }
-            else
+            else if (tabla == "Categoria")
+            {
+                sql = "SELECT idCategoria,Nombre_Categoria FROM Categoria";
+            }
+            else if (tabla == "Detalle_Pedido")
             {
                 sql = "SELECT * FROM V_DetallePedido";
+            }
+            else
+            {
+                sql = "SELECT idPlatillo,CONCAT(Nombre_Platillo,' $',Precio) AS PLATILLO FROM Platillo WHERE idCategoria =" + tabla;
             }
             SqlConnection con = GetSqlConnection();//Extraer Conexion
             try
@@ -60,6 +68,8 @@ namespace SIVARS_BURGUERS.DAO
 
             return datos;
         }
+
+
         //CREAMOS METODOS PARA EL CRUD
         private bool Ejecutar(string sql)
         {

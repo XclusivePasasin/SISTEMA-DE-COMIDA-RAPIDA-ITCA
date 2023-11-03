@@ -49,6 +49,7 @@
     <Compile Include="Clases\CacheUsuario.cs" />
     <Compile Include="Clases\ClsCategoria.cs" />
     <Compile Include="Clases\ClsCliente.cs" />
+    <Compile Include="Clases\ClsDetallePedido.cs" />
     <Compile Include="Clases\ClsMesa.cs" />
     <Compile Include="Clases\ClsPedido.cs" />
     <Compile Include="Clases\ClsPlatillo.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\ConnectionDataBase.cs" />
+    <Compile Include="DAO\DetallePedidoDAO.cs" />
     <Compile Include="DAO\MesaDAO.cs" />
     <Compile Include="DAO\PedidoDAO.cs" />
     <Compile Include="DAO\PlatilloDAO.cs" />

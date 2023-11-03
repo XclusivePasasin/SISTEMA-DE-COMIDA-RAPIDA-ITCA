@@ -60,14 +60,14 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label11 = new System.Windows.Forms.Label();
             this.cbMenu = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dtDetallePedido = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDetallePedido)).BeginInit();
             this.SuspendLayout();
             // 
@@ -304,7 +304,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnEditar);
             this.groupBox2.Controls.Add(this.btnAgregar);
-            this.groupBox2.Controls.Add(this.numericUpDown1);
+            this.groupBox2.Controls.Add(this.txtCantidad);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.cbMenu);
             this.groupBox2.Controls.Add(this.label11);
@@ -337,6 +337,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(129, 25);
             this.cbCategoria.TabIndex = 19;
+            this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -368,20 +369,20 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label12.TabIndex = 22;
             this.label12.Text = "Cantidad:";
             // 
-            // numericUpDown1
+            // txtCantidad
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(96, 102);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(96, 102);
+            this.txtCantidad.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(131, 23);
-            this.numericUpDown1.TabIndex = 23;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(131, 23);
+            this.txtCantidad.TabIndex = 23;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCantidad.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -397,6 +398,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnAgregar.Size = new System.Drawing.Size(54, 51);
             this.btnAgregar.TabIndex = 24;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEditar
             // 
@@ -472,7 +474,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtDetallePedido)).EndInit();
             this.ResumeLayout(false);
 
@@ -505,7 +507,7 @@ namespace SIVARS_BURGUERS.Interfaz
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbMenu;
         private System.Windows.Forms.Label label11;

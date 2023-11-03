@@ -14,15 +14,13 @@ namespace SIVARS_BURGUERS.Interfaz
     public partial class frmPedido : Form
     {
         ClsPedido obj = new ClsPedido();
+        ClsDetallePedido jbo = new ClsDetallePedido();
         public frmPedido()
         {
             InitializeComponent();
         }
 
-        private void cargar()
-        {
-            dtDetallePedido.DataSource = obj.getDatos();
-        }
+        
         private void ListarUsuario()
         {
             cbUsuario.DisplayMember = "Nombre_Empleado";
@@ -53,6 +51,49 @@ namespace SIVARS_BURGUERS.Interfaz
             cbPago.ValueMember = "idPago";
             cbPago.DataSource = obj.getDatos("Pago");
         }
+        private void ListarCategoria()
+        {
+            cbCategoria.DisplayMember = "Nombre_Categoria";
+            cbCategoria.ValueMember = "idCategoria";
+            cbCategoria.DataSource = obj.getDatos("Categoria");
+        }
+
+        private void cargar()
+        {
+            dtDetallePedido.DataSource = obj.getDatos("Detalle_Pedido");
+        }
+
+        private double Subtotal(double precio, int cantidad)
+        {
+            return precio * cantidad;
+        }
+
+        public bool ValidarProducto(string NombrePlato)
+        {
+            bool existencia = false;
+            string valor;
+            if (dtDetallePedido.RowCount > 0)
+            {
+                foreach (DataGridViewRow fila in dtDetallePedido.Rows)
+                {
+                    if (fila.Cells.Cast<DataGridViewCell>().Any(c => c.Value != null && !string.IsNullOrWhiteSpace(c.Value.ToString()))) 
+                    { 
+                        valor = fila.Cells["Platillo"].Value.ToString();
+                        if (valor == NombrePlato)
+                        {
+                            existencia = true;
+                            break;
+                        }
+
+                    }
+                   
+                }
+            }
+            return existencia;
+        }
+
+        double TotalPedido = 0;
+
         private void LimpiarCampos()
         {
             /*txtCodigoPlatillo.Text = "";
@@ -75,13 +116,75 @@ namespace SIVARS_BURGUERS.Interfaz
             ListarCliente();
             ListarEstado();
             ListarPago();
+            ListarCategoria();
             cargar();
         }
 
+        
         private void dtDetallePedido_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int filaIndex;
+            double precioEdit;
+            double SubTotalEdit;
             btnEditar.Visible = true;
             btnEliminar.Visible = true;
+            if (e.RowIndex >= 0)
+            {
+                filaIndex = e.RowIndex;
+                this.txtCantidad.Value = Convert.ToDecimal(dtDetallePedido.SelectedRows[0].Cells[2].Value);
+                precioEdit = double.Parse(dtDetallePedido.SelectedRows[0].Cells[3].Value.ToString());
+                SubTotalEdit = double.Parse(dtDetallePedido.SelectedRows[0].Cells[4].Value.ToString());
+            }
+        }
+        
+        private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string codigo = cbCategoria.SelectedValue.ToString();
+            ListarMenu(codigo);
+        }
+        private void ListarMenu(string Categoria)
+        {
+            var datos = obj.getDatos(Categoria);
+            if (datos.Rows.Count > 0)
+            {
+                cbMenu.DisplayMember = "PLATILLO";
+                cbMenu.ValueMember = "idPlatillo";
+                cbMenu.DataSource = datos;
+            }
+            else
+            {
+                cbMenu.DataSource = datos;
+                var msj = "No Existen Platillos";
+                MessageBox.Show(msj, "Cambie Otra Categoria", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (cbMenu.Text != "" && txtCantidad.Value > 0)
+            {
+                string platillo = cbMenu.Text;
+                int idPlatillo = Convert.ToInt32(cbMenu.SelectedValue);
+                var data = platillo.Split('$');
+                double subTotal = Subtotal(double.Parse(data[1]), Convert.ToInt32(txtCantidad.Value));
+                string[] DetalleLista = { idPlatillo.ToString(), data[0], txtCantidad.Value.ToString(), data[1], subTotal.ToString() };
+                bool verificacion = ValidarProducto(data[0]);
+                if (verificacion == false)
+                {
+                    dtDetallePedido.Rows.Add(DetalleLista);
+                    TotalPedido += subTotal;
+                    txtTotal.Text = TotalPedido.ToString();
+                    this.txtCantidad.Value = 1;
+                }
+                else
+                {
+                    MessageBox.Show("PRODUCTO AGREGADO", "!!!INFORMACION!!!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("PLATILLO Y CANTIDAD SON CAMPOS OBLIGATORIOS", "INFORMACION");
+            }
         }
     }
 }
