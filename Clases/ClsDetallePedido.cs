@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SIVARS_BURGUERS.DAO;
+using System.Data;
 
 namespace SIVARS_BURGUERS.Clases
 {
@@ -38,5 +39,26 @@ namespace SIVARS_BURGUERS.Clases
         public decimal SubTotal { get => subTotal; set => subTotal = value; }
 
         DetallePedidoDAO dp = new DetallePedidoDAO();
+        public DataTable getDatos(string tabla = null)
+        {
+            return dp.Consultar(tabla);
+        }
+
+        public bool insertarDatos(object datos)
+        {
+            return dp.Insertar(datos);
+        }
+
+        public bool modificarDatos(object datos)
+        {
+            return dp.Modificar(datos);
+        }
+
+        public bool eliminarDatos(string codigo)
+        {
+            return dp.Eliminar(codigo);
+        }
+
+       
     }
 }

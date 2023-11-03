@@ -20,7 +20,7 @@ namespace SIVARS_BURGUERS.Interfaz
             InitializeComponent();
         }
 
-        
+
         private void ListarUsuario()
         {
             cbUsuario.DisplayMember = "Nombre_Empleado";
@@ -76,8 +76,8 @@ namespace SIVARS_BURGUERS.Interfaz
             {
                 foreach (DataGridViewRow fila in dtDetallePedido.Rows)
                 {
-                    if (fila.Cells.Cast<DataGridViewCell>().Any(c => c.Value != null && !string.IsNullOrWhiteSpace(c.Value.ToString()))) 
-                    { 
+                    if (fila.Cells.Cast<DataGridViewCell>().Any(c => c.Value != null && !string.IsNullOrWhiteSpace(c.Value.ToString())))
+                    {
                         valor = fila.Cells["Platillo"].Value.ToString();
                         if (valor == NombrePlato)
                         {
@@ -86,7 +86,7 @@ namespace SIVARS_BURGUERS.Interfaz
                         }
 
                     }
-                   
+
                 }
             }
             return existencia;
@@ -120,12 +120,12 @@ namespace SIVARS_BURGUERS.Interfaz
             cargar();
         }
 
-        
+        int filaIndex;
+        double precioEdit;
+        double SubTotalEdit;
         private void dtDetallePedido_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int filaIndex;
-            double precioEdit;
-            double SubTotalEdit;
+
             btnEditar.Visible = true;
             btnEliminar.Visible = true;
             if (e.RowIndex >= 0)
@@ -136,7 +136,7 @@ namespace SIVARS_BURGUERS.Interfaz
                 SubTotalEdit = double.Parse(dtDetallePedido.SelectedRows[0].Cells[4].Value.ToString());
             }
         }
-        
+
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
             string codigo = cbCategoria.SelectedValue.ToString();
@@ -161,30 +161,6 @@ namespace SIVARS_BURGUERS.Interfaz
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (cbMenu.Text != "" && txtCantidad.Value > 0)
-            {
-                string platillo = cbMenu.Text;
-                int idPlatillo = Convert.ToInt32(cbMenu.SelectedValue);
-                var data = platillo.Split('$');
-                double subTotal = Subtotal(double.Parse(data[1]), Convert.ToInt32(txtCantidad.Value));
-                string[] DetalleLista = { idPlatillo.ToString(), data[0], txtCantidad.Value.ToString(), data[1], subTotal.ToString() };
-                bool verificacion = ValidarProducto(data[0]);
-                if (verificacion == false)
-                {
-                    dtDetallePedido.Rows.Add(DetalleLista);
-                    TotalPedido += subTotal;
-                    txtTotal.Text = TotalPedido.ToString();
-                    this.txtCantidad.Value = 1;
-                }
-                else
-                {
-                    MessageBox.Show("PRODUCTO AGREGADO", "!!!INFORMACION!!!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("PLATILLO Y CANTIDAD SON CAMPOS OBLIGATORIOS", "INFORMACION");
-            }
         }
     }
 }
