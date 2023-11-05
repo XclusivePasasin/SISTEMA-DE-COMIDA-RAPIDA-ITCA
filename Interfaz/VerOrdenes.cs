@@ -16,5 +16,31 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             InitializeComponent();
         }
+
+        private void cargar()
+        {
+            dtVerPedidos.DataSource = obj.getDatos();
+        }
+
+
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtFecha.Text) && cbEstado.SelectedIndex >= 0)
+            {
+                DateTime fecha = DateTime.Now;
+                string dataFecha = fecha.ToString("yyyy-mm-dd");
+                txtFecha.Text = dataFecha;
+
+            }
+        }
+
+        private void frmVerOrdenes_Load(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Now;
+            string dataFecha = fecha.ToString("yyyy-mm-dd");
+
+            cargar();
+        }
     }
 }

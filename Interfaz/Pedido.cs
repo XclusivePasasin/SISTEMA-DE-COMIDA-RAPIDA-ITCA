@@ -13,8 +13,8 @@ namespace SIVARS_BURGUERS.Interfaz
 {
     public partial class frmPedido : Form
     {
-        ClsPedido obj = new ClsPedido();
-        ClsDetallePedido jbo = new ClsDetallePedido();
+        ClsPedido p = new ClsPedido();
+        ClsDetallePedido dp = new ClsDetallePedido();
         public frmPedido()
         {
             InitializeComponent();
@@ -25,42 +25,42 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             cbUsuario.DisplayMember = "Nombre_Empleado";
             cbUsuario.ValueMember = "idUsuario";
-            cbUsuario.DataSource = obj.getDatos("Usuario");
+            cbUsuario.DataSource = p.getDatos("Usuario");
         }
         private void ListarMesa()
         {
             cbMesa.DisplayMember = "Numero_Mesa";
             cbMesa.ValueMember = "idMesa";
-            cbMesa.DataSource = obj.getDatos("Mesa");
+            cbMesa.DataSource = p.getDatos("Mesa");
         }
         private void ListarCliente()
         {
             cbCliente.DisplayMember = "Nombre";
             cbCliente.ValueMember = "idCliente";
-            cbCliente.DataSource = obj.getDatos("Cliente");
+            cbCliente.DataSource = p.getDatos("Cliente");
         }
         private void ListarEstado()
         {
             cbEstado.DisplayMember = "Tipo_Estado";
             cbEstado.ValueMember = "idEstado_Pedido";
-            cbEstado.DataSource = obj.getDatos("Estado_Pedido");
+            cbEstado.DataSource = p.getDatos("Estado_Pedido");
         }
         private void ListarPago()
         {
             cbPago.DisplayMember = "Tipo_Pago";
             cbPago.ValueMember = "idPago";
-            cbPago.DataSource = obj.getDatos("Pago");
+            cbPago.DataSource = p.getDatos("Pago");
         }
         private void ListarCategoria()
         {
             cbCategoria.DisplayMember = "Nombre_Categoria";
             cbCategoria.ValueMember = "idCategoria";
-            cbCategoria.DataSource = obj.getDatos("Categoria");
+            cbCategoria.DataSource = p.getDatos("Categoria");
         }
 
         private void cargar()
         {
-            dtDetallePedido.DataSource = obj.getDatos("Detalle_Pedido");
+            dtDetallePedido.DataSource = p.getDatos("Detalle_Pedido");
         }
 
         private double Subtotal(double precio, int cantidad)
@@ -144,7 +144,7 @@ namespace SIVARS_BURGUERS.Interfaz
         }
         private void ListarMenu(string Categoria)
         {
-            var datos = obj.getDatos(Categoria);
+            var datos = p.getDatos(Categoria);
             if (datos.Rows.Count > 0)
             {
                 cbMenu.DisplayMember = "PLATILLO";
@@ -161,6 +161,19 @@ namespace SIVARS_BURGUERS.Interfaz
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            string platillo = cbMenu.Text;
+            int idPlatillo = Convert.ToInt32(cbMenu.SelectedValue);
+            var data = platillo.Split('$');
+            double subtotal = Subtotal(double.Parse(data[1]), Convert.ToInt32(txtCantidad.Value));
+            string[] Arreglo = { idPlatillo.ToString(), data[0], txtCantidad.Value.ToString(), data[1], subtotal.ToString() };
+            bool verificacion = ValidarProducto(data[0]);
+            if(verificacion == false)
+            {
+                dtDetallePedido.Rows.Add(Arreglo);
+                TotalPedido += subtotal;
+                txtTotal.Text = TotalPedido.ToString();
+                this.txtCantidad.Value = 1;
+            }
         }
     }
 }

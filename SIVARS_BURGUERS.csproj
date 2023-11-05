@@ -54,6 +54,7 @@
     <Compile Include="Clases\ClsPedido.cs" />
     <Compile Include="Clases\ClsPlatillo.cs" />
     <Compile Include="Clases\ClsUsuario.cs" />
+    <Compile Include="Clases\ClsVerPedido.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\ConnectionDataBase.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="DAO\PedidoDAO.cs" />
     <Compile Include="DAO\PlatilloDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="DAO\VerPedidosDAO.cs" />
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
