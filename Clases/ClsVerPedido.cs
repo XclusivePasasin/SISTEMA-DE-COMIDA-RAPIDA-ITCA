@@ -52,5 +52,13 @@ namespace SIVARS_BURGUERS.Clases
         {
             return vp.Consultar(tabla);
         }
+        public DataTable buscarRegistro(DateTime fecha, int idEstadoPeddo)
+        {
+            return vp.Buscar(fecha, idEstadoPeddo);
+        }
+        public bool modificarDatos(object datos)
+        {
+            return vp.Modificar(datos);
+        }
     }
 }

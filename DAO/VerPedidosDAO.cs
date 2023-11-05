@@ -7,6 +7,7 @@ using SIVARS_BURGUERS.DAO;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using SIVARS_BURGUERS.Clases;
 
 namespace SIVARS_BURGUERS.DAO
 {
@@ -45,45 +46,61 @@ namespace SIVARS_BURGUERS.DAO
 
             return datos;
         }
+        private bool Ejecutar(string sql)
+        {
+            SqlConnection con = GetSqlConnection();//Extraer Conexion
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (SqlException err)
+            {
+                MessageBox.Show("OCURRIO UN ERROR: " + err.Message, "INFORMACION!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+        }
+        //UPDATE Pedido SET idEstado_Pedido =   WHERE idPedido =  
+        public bool Modificar(object objDatos)
+        {
+            ClsVerPedido vp = new ClsVerPedido();
+            vp = (ClsVerPedido)objDatos;
+            string sql = "UPDATE Pedido SET idEstado_Pedido = "+vp.IdEstadoPedido+"   WHERE idPedido = " + vp.IdPedido;
+            if (Ejecutar(sql))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-        public DataTable Buscar(string Campo, string ValorCampo, DateTime Fecha, int IdEstadoPedido)
+        public DataTable Buscar(DateTime fecha, int idEstadoPedido)
         {
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string sql = "";
+            // Utiliza parámetros en la consulta SQL para evitar la inyección de SQL.
+            string sql = "SELECT * FROM V_VerPedido WHERE FECHA = @Fecha AND ESTADO = @IdEstadoPedido";
 
-            SqlConnection con = GetSqlConnection(); // Extraemos La Conexion
+            SqlConnection con = GetSqlConnection();
             try
             {
-                con.Open(); // Abrimos La Conexión
-                string connectionString = getConnectiontring(); // Extraer Cadena De Conexion
+                con.Open();
 
-                if (Campo == "idPedido")
-                {
-                    sql = "SELECT * FROM Pedido WHERE idPedido = @ValorCampo";
-                    adapter = new SqlDataAdapter(sql, connectionString);
-                    adapter.SelectCommand.Parameters.AddWithValue("@ValorCampo", ValorCampo);
-                }
-                else if (Campo == "Fecha")
-                {
-                    sql = "SELECT * FROM Pedido WHERE Fecha = @Fecha";
-                    adapter = new SqlDataAdapter(sql, connectionString);
-                    adapter.SelectCommand.Parameters.AddWithValue("@Fecha", Fecha);
-                }
-                else if (Campo == "Estado")
-                {
-                    sql = "SELECT * FROM Pedido WHERE idEstado_Pedido = @IdEstadoPedido";
-                    adapter = new SqlDataAdapter(sql, connectionString);
-                    adapter.SelectCommand.Parameters.AddWithValue("@IdEstadoPedido", IdEstadoPedido);
-                }
-                else
-                {
-                    // Búsqueda por otro campo (por ejemplo, idUsuario, idCliente, idMesa, idPago)
-                    sql = "SELECT * FROM Pedido WHERE " + Campo + " = @ValorCampo";
-                    adapter = new SqlDataAdapter(sql, connectionString);
-                    adapter.SelectCommand.Parameters.AddWithValue("@ValorCampo", ValorCampo);
-                }
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@Fecha", fecha);
+                cmd.Parameters.AddWithValue("@IdEstadoPedido", idEstadoPedido);
 
+                adapter.SelectCommand = cmd;
                 adapter.Fill(data);
             }
             catch (SqlException error)
