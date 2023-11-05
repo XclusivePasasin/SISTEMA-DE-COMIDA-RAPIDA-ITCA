@@ -108,7 +108,7 @@ namespace SIVARS_BURGUERS.Interfaz
         private void frmPedido_Load(object sender, EventArgs e)
         {
             DateTime fecha = DateTime.Now;
-            string dataFecha = fecha.ToString("yyyy-mm-dd");
+            string dataFecha = fecha.ToString("yyyy-MM-dd");
             txtFecha.Text = dataFecha;
             txtHora.Text = DateTime.Now.ToString("h:mm:ss tt");
             ListarUsuario();

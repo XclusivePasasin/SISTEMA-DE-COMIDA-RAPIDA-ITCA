@@ -18,13 +18,13 @@ namespace SIVARS_BURGUERS.DAO
             string sql = "";
             DataTable datos = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
-            if (tabla == "Pedido")
+            if (tabla == "Estado_Pedido")
             {
-                sql = "SELECT * FROM V_VerPedido";
+                sql = "SELECT idEstado_Pedido, Tipo_Estado FROM Estado_Pedido";
             }
             else
             {
-                sql = "SELECT idPlatillo,CONCAT(Nombre_Platillo,' $',Precio) AS PLATILLO FROM Platillo WHERE idCategoria =" + tabla;
+                sql = "SELECT * FROM V_VerPedido";
             }
             SqlConnection con = GetSqlConnection();//Extraer Conexion
             try

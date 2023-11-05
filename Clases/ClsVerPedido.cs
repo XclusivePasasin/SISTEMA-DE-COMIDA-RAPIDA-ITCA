@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SIVARS_BURGUERS.DAO;
+using System.Data;
 
 namespace SIVARS_BURGUERS.Clases
 {
@@ -47,5 +48,9 @@ namespace SIVARS_BURGUERS.Clases
         public int IdPago { get => idPago; set => idPago = value; }
 
         VerPedidosDAO vp = new VerPedidosDAO();
+        public DataTable getDatos(string tabla = null)
+        {
+            return vp.Consultar(tabla);
+        }
     }
 }

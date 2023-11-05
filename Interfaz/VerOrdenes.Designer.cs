@@ -42,9 +42,14 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.dtVerPedidos = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtVerPedidos)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -56,7 +61,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(44, 39);
+            this.groupBox3.Location = new System.Drawing.Point(54, 31);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(562, 94);
             this.groupBox3.TabIndex = 5;
@@ -96,10 +101,13 @@ namespace SIVARS_BURGUERS.Interfaz
             // txtFecha
             // 
             this.txtFecha.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.ForeColor = System.Drawing.Color.Navy;
             this.txtFecha.Location = new System.Drawing.Point(81, 37);
             this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(106, 23);
             this.txtFecha.TabIndex = 6;
+            this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -117,9 +125,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(26, 39);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 16);
+            this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Buscar:";
+            this.label6.Text = "Fecha:";
             // 
             // groupBox4
             // 
@@ -127,9 +135,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox4.Controls.Add(this.btnActualizar);
             this.groupBox4.Controls.Add(this.dtVerPedidos);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(44, 150);
+            this.groupBox4.Location = new System.Drawing.Point(12, 228);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(562, 267);
+            this.groupBox4.Size = new System.Drawing.Size(659, 267);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ordenes";
@@ -142,7 +150,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(510, 17);
+            this.btnActualizar.Location = new System.Drawing.Point(602, 17);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.btnActualizar.Size = new System.Drawing.Size(41, 35);
@@ -182,14 +190,65 @@ namespace SIVARS_BURGUERS.Interfaz
             this.dtVerPedidos.MultiSelect = false;
             this.dtVerPedidos.Name = "dtVerPedidos";
             this.dtVerPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtVerPedidos.Size = new System.Drawing.Size(539, 192);
+            this.dtVerPedidos.Size = new System.Drawing.Size(631, 192);
             this.dtVerPedidos.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(120, 147);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(437, 75);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Actualizar Estado";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(126, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(117, 23);
+            this.textBox1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Estado Pedido:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(181)))), ((int)(((byte)(56)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(268, 26);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 12, 0);
+            this.button1.Size = new System.Drawing.Size(149, 43);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Buscar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmVerOrdenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 450);
+            this.ClientSize = new System.Drawing.Size(683, 498);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Name = "frmVerOrdenes";
@@ -199,6 +258,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtVerPedidos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -214,5 +275,9 @@ namespace SIVARS_BURGUERS.Interfaz
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridView dtVerPedidos;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
