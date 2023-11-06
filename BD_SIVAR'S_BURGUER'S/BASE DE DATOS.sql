@@ -134,8 +134,8 @@ INSERT INTO Mesa  VALUES ('NUMERO 1', 1);
 INSERT INTO Pedido (idPedido,Fecha, idEstado_Pedido)
 VALUES (2,'2023-10-31', 1);
 
-INSERT INTO Pedido (idPedido, idUsuario, idCliente, idMesa, idEstado_Pedido, Fecha, Total, Hora, idPago)
-VALUES (1, 1, 2, 1, 1, '2023-11-05', 50.00, '10:30 AM', 1);
+--INSERT INTO Pedido (idPedido, idUsuario, idCliente, idMesa, idEstado_Pedido, Fecha, Total, Hora, idPago)
+--VALUES (1, 1, 2, 1, 1, '2023-11-05', 50.00, '10:30 AM', 1);
 
 SELECT * FROM Pedido
 

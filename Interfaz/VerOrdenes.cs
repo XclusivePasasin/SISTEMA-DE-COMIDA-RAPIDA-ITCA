@@ -76,9 +76,11 @@ namespace SIVARS_BURGUERS.Interfaz
         }
         private void dtVerPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnEditar.Visible = true;
             ListarEstadosNuevos();
             this.txtCodigoPedido.Text = dtVerPedidos.SelectedRows[0].Cells[0].Value.ToString();
             this.cbEstadoNuevo.Text = dtVerPedidos.SelectedRows[0].Cells[4].Value.ToString();
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -91,6 +93,7 @@ namespace SIVARS_BURGUERS.Interfaz
                 vp.modificarDatos(vp);
                 LimpiarCampos();
                 cargar();
+                btnEditar.Visible = false;
             }
             catch (Exception err)
             {

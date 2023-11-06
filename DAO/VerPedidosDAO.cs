@@ -89,7 +89,7 @@ namespace SIVARS_BURGUERS.DAO
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
             // Utiliza parámetros en la consulta SQL para evitar la inyección de SQL.
-            string sql = "SELECT * FROM V_VerPedido WHERE Fecha = @Fecha AND idEstado_Pedido = @IdEstadoPedido";
+            string sql = "SELECT * FROM V_VerPedido WHERE FECHA = @Fecha AND CODIGO_ESTADO = @IdEstadoPedido";
 
             SqlConnection con = GetSqlConnection();
             try

@@ -422,7 +422,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(160, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(747, 76);
+            this.panel2.Size = new System.Drawing.Size(785, 76);
             this.panel2.TabIndex = 1;
             // 
             // btnCerrar
@@ -487,14 +487,14 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panelDeskTop.Controls.Add(this.lblBienvenida);
             this.panelDeskTop.Location = new System.Drawing.Point(160, 76);
             this.panelDeskTop.Name = "panelDeskTop";
-            this.panelDeskTop.Size = new System.Drawing.Size(747, 622);
+            this.panelDeskTop.Size = new System.Drawing.Size(785, 622);
             this.panelDeskTop.TabIndex = 5;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 698);
+            this.ClientSize = new System.Drawing.Size(945, 698);
             this.Controls.Add(this.lblAcceso);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.panel2);
