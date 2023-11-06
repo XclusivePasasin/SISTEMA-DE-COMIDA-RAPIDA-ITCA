@@ -48,3 +48,12 @@ BEGIN
 END
 GO
 EXEC BuscarPedidosPorFechaYEstado '2023-10-31',1;
+
+CREATE VIEW V_VerPedido
+AS
+SELECT p.idPedido CODIGO,CONCAT(c.Nombre,' ',c.Apellido) CLIENTE,m.Numero_Mesa MESA, P.Fecha FECHA,p.Hora HORA,ep.Tipo_Estado ESTADO,ep.idEstado_Pedido CODIGO_ESTADO FROM Pedido p 
+INNER JOIN Cliente c ON p.idCliente = c.idCliente
+INNER JOIN Mesa m ON p.idMesa = m.idMesa
+INNER JOIN Estado_Pedido ep ON p.idEstado_Pedido = ep.idEstado_Pedido
+INNER JOIN Pago pa ON p.idPago = pa.idPago
+

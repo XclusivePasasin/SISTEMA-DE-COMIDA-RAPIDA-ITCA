@@ -70,7 +70,7 @@ CREATE TABLE Pedido
     idCliente INT NULL,
     idMesa INT NULL,
     idEstado_Pedido INT NULL,
-    Fecha DATE,
+    Fecha  VARCHAR(20),
 	Total DECIMAL,
     Hora VARCHAR(50),
 	idPago INT NULL,
@@ -129,24 +129,13 @@ INSERT INTO Estado_Pedido VALUES ('Pendiente'),('En Proceso'),('Entregado'),('Ca
 --MESA
 INSERT INTO Mesa  VALUES ('NUMERO 1', 1);
 --PEDIDO
-UPDATE Pedido SET idEstado_Pedido =   WHERE idPedido =  
-
+--UPDATE Pedido SET idEstado_Pedido =   WHERE idPedido =  
 
 INSERT INTO Pedido (idPedido,Fecha, idEstado_Pedido)
 VALUES (2,'2023-10-31', 1);
 
 INSERT INTO Pedido (idPedido, idUsuario, idCliente, idMesa, idEstado_Pedido, Fecha, Total, Hora, idPago)
-VALUES (
-    01, 
-    1, 
-    1, 
-    2,  
-    1, 
-    '2023-11-05',
-    42.90, 
-    '19:15:00 PM',
-    2 
-);
+VALUES (1, 1, 2, 1, 1, '2023-11-05', 50.00, '10:30 AM', 1);
 
 SELECT * FROM Pedido
 

@@ -40,18 +40,25 @@ namespace SIVARS_BURGUERS.Interfaz
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            if (DateTime.TryParse(txtFecha.Text, out DateTime fecha))
+            if (!string.IsNullOrEmpty(txtFecha.Text) && !string.IsNullOrEmpty(cbEstado.SelectedValue.ToString()))
             {
-                int idEstadoPedido = (int)cbEstado.SelectedValue; // Obtén el ID del estado seleccionado desde el ComboBox.
-
-                dtVerPedidos.DataSource = vp.buscarRegistro(fecha, idEstadoPedido);
-
-                // Procede a mostrar los resultados en tu aplicación.
+                if (DateTime.TryParse(txtFecha.Text, out DateTime fecha) && int.TryParse(cbEstado.SelectedValue.ToString(), out int idEstadoPedido))
+                {
+                    // Las conversiones se realizaron con éxito y los valores son válidos.
+                    
+                    dtVerPedidos.DataSource = vp.buscarRegistro(fecha, idEstadoPedido);
+                    // Procede a mostrar los resultados en tu aplicación.
+                }
+                else
+                {
+                    MessageBox.Show("La fecha ingresada no es válida o el estado seleccionado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("La fecha ingresada no es válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La fecha y el estado deben ser ingresados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void frmVerOrdenes_Load(object sender, EventArgs e)
@@ -89,6 +96,11 @@ namespace SIVARS_BURGUERS.Interfaz
             {
                 MessageBox.Show("ERROR AL ACTUALIZAR PEDIDO: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            cargar();
         }
     }
 }
