@@ -33,8 +33,8 @@ namespace SIVARS_BURGUERS.Interfaz
         }
         private void Reset()//Metodo para cargar inicio de nuevo
         {
-            lblTitulo.Text = "MENU PRINCIPAL";
-            lblBienvenida.Text = "BIENVENIDO";
+            lblTitulo.Text = "Inicio";
+            lblBienvenida.Text = "Bienvenido";
             lblUsuario.Visible = true; 
             lblAcceso.Visible = true;
             btnCerrar.Visible = false;
@@ -72,6 +72,8 @@ namespace SIVARS_BURGUERS.Interfaz
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
+            btnCerrar.Visible = false;
+            tiempo.Enabled = true;
             lblUsuario.Text = "Usuario: " + CacheUsuario.nombre;
             lblAcceso.Text = "Nivel De Acceso: " + CacheUsuario.rol;
             if (CacheUsuario.rol == "Cajero")
@@ -126,7 +128,7 @@ namespace SIVARS_BURGUERS.Interfaz
             panelSubMenu.Visible = false;
             lblUsuario.Visible = false;
             lblAcceso.Visible = false;
-            OpenChildForm(new frmVerOrdenes(), sender);
+            OpenChildForm(new frmVerPedidos(), sender);
         }
 
         private void btnMesa_Click(object sender, EventArgs e)
@@ -143,6 +145,20 @@ namespace SIVARS_BURGUERS.Interfaz
             lblUsuario.Visible = false;
             lblAcceso.Visible = false;
             OpenChildForm(new frmPedido(), sender);
+        }
+
+        private void tiempo_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lbFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnOrdenesPendientes_Click(object sender, EventArgs e)
+        {
+            panelSubMenu.Visible = false;
+            lblUsuario.Visible = false;
+            lblAcceso.Visible = false;
+            OpenChildForm(new frmVerPedidosPendientes(), sender);
         }
     }
 }

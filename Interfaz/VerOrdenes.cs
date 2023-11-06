@@ -11,10 +11,10 @@ using SIVARS_BURGUERS.Clases;
 
 namespace SIVARS_BURGUERS.Interfaz
 {
-    public partial class frmVerOrdenes : Form
+    public partial class frmVerPedidos : Form
     {
         ClsVerPedido vp = new ClsVerPedido();
-        public frmVerOrdenes()
+        public frmVerPedidos()
         {
             InitializeComponent();
         }

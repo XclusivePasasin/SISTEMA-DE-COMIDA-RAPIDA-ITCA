@@ -118,6 +118,12 @@
     <Compile Include="Interfaz\VerOrdenes.Designer.cs">
       <DependentUpon>VerOrdenes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\VerOrdenesPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\VerOrdenesPendientes.Designer.cs">
+      <DependentUpon>VerOrdenesPendientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="InicioSesion.resx">
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\VerOrdenes.resx">
       <DependentUpon>VerOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\VerOrdenesPendientes.resx">
+      <DependentUpon>VerOrdenesPendientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
