@@ -82,6 +82,12 @@
     <Compile Include="Interfaz\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\Cobros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Cobros.Designer.cs">
+      <DependentUpon>Cobros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Cobros.resx">
+      <DependentUpon>Cobros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

@@ -60,9 +60,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelDeskTop = new System.Windows.Forms.Panel();
-            this.pLogo = new System.Windows.Forms.PictureBox();
-            this.lbHora = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
+            this.lbHora = new System.Windows.Forms.Label();
+            this.pLogo = new System.Windows.Forms.PictureBox();
             this.tiempo = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
@@ -280,6 +280,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnCobros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCobros.UseVisualStyleBackColor = false;
+            this.btnCobros.Click += new System.EventHandler(this.btnCobros_Click);
             // 
             // btnOrdenesPendientes
             // 
@@ -506,16 +507,17 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panelDeskTop.Size = new System.Drawing.Size(785, 622);
             this.panelDeskTop.TabIndex = 5;
             // 
-            // pLogo
+            // lbFecha
             // 
-            this.pLogo.ErrorImage = null;
-            this.pLogo.Image = ((System.Drawing.Image)(resources.GetObject("pLogo.Image")));
-            this.pLogo.Location = new System.Drawing.Point(-181, 54);
-            this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(768, 534);
-            this.pLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pLogo.TabIndex = 5;
-            this.pLogo.TabStop = false;
+            this.lbFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbFecha.AutoSize = true;
+            this.lbFecha.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.lbFecha.Location = new System.Drawing.Point(218, 93);
+            this.lbFecha.Name = "lbFecha";
+            this.lbFecha.Size = new System.Drawing.Size(81, 31);
+            this.lbFecha.TabIndex = 7;
+            this.lbFecha.Text = "Fecha";
             // 
             // lbHora
             // 
@@ -529,17 +531,16 @@ namespace SIVARS_BURGUERS.Interfaz
             this.lbHora.TabIndex = 6;
             this.lbHora.Text = "Hora";
             // 
-            // lbFecha
+            // pLogo
             // 
-            this.lbFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbFecha.AutoSize = true;
-            this.lbFecha.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
-            this.lbFecha.Location = new System.Drawing.Point(218, 93);
-            this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(81, 31);
-            this.lbFecha.TabIndex = 7;
-            this.lbFecha.Text = "Fecha";
+            this.pLogo.ErrorImage = null;
+            this.pLogo.Image = ((System.Drawing.Image)(resources.GetObject("pLogo.Image")));
+            this.pLogo.Location = new System.Drawing.Point(-181, 54);
+            this.pLogo.Name = "pLogo";
+            this.pLogo.Size = new System.Drawing.Size(768, 534);
+            this.pLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pLogo.TabIndex = 5;
+            this.pLogo.TabStop = false;
             // 
             // tiempo
             // 
