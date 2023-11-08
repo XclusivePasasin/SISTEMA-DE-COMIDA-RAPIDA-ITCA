@@ -79,18 +79,25 @@ namespace SIVARS_BURGUERS.Interfaz
             if (CacheUsuario.rol == "Cajero")
             {
                 panelSubMenu.Visible = false;
+                btnClientes.Visible = false;
+                btnReportes.Visible = false;
+                btnCategorias.Visible = false;
+                btnPedido.Visible = false;
+                btnPlatillo.Visible = false;
+                btnUsuarios.Visible = false;
+                btnMesa.Visible = false;
+                btnOrdenesPendientes.Visible = false;
             }
             else if (CacheUsuario.rol == "Mesero")
             {
-                btnClientes.Visible = false;
+                btnUsuarios.Visible = false;
                 btnCobros.Visible = false;
                 btnPlatillo.Visible = false;
                 btnReportes.Visible = false;
                 panelSubMenu.Visible = false;
                 btnCategorias.Visible = false;
                 btnOrdenes.Visible = false;
-
-
+                btnMesa.Visible = false;
             }
         }
 
