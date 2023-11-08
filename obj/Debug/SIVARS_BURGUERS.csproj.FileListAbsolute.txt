@@ -18,3 +18,23 @@ C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debu
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmVerPedidos.resources
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmVerPedidosPendientes.resources
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmCobros.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debug\SIVARS_BURGUERS.exe.config
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debug\SIVARS_BURGUERS.exe
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debug\SIVARS_BURGUERS.pdb
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.csproj.AssemblyReference.cache
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.frmInicioSesion.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmCategoria.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmCliente.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmCobros.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmMenu.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmMesas.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmPedido.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmPlatillo.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmUsuarios.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmVerPedidos.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmVerPedidosPendientes.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Properties.Resources.resources
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.csproj.GenerateResource.cache
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.csproj.CoreCompileInputs.cache
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.exe
+C:\Users\DAVID\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.pdb
