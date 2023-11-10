@@ -16,7 +16,7 @@ namespace SIVARS_BURGUERS.Clases
         private int idMesa;
         private int idEstadoPedido;
         private decimal total;
-        private DateTime fecha;
+        private string fecha;
         private string hora;
         private int idPago;
 
@@ -26,7 +26,7 @@ namespace SIVARS_BURGUERS.Clases
         {
         }
 
-        public ClsPedido(int idPedido, int idUsuario, int idCliente, int idMesa, int idEstadoPedido, decimal total, DateTime fecha, string hora, int idPago)
+        public ClsPedido(int idPedido, int idUsuario, int idCliente, int idMesa, int idEstadoPedido, decimal total, string fecha, string hora, int idPago)
         {
             this.idPedido = idPedido;
             this.idUsuario = idUsuario;
@@ -38,33 +38,25 @@ namespace SIVARS_BURGUERS.Clases
             this.hora = hora;
             this.idPago = idPago;
         }
-
         public int IdPedido { get => idPedido; set => idPedido = value; }
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
         public int IdCliente { get => idCliente; set => idCliente = value; }
         public int IdMesa { get => idMesa; set => idMesa = value; }
         public int IdEstadoPedido { get => idEstadoPedido; set => idEstadoPedido = value; }
         public decimal Total { get => total; set => total = value; }
-        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public string Fecha { get => fecha; set => fecha = value; }
         public string Hora { get => hora; set => hora = value; }
         public int IdPago { get => idPago; set => idPago = value; }
 
-
         PedidoDAO p = new PedidoDAO();
-
         public DataTable getDatos(string tabla = null)
         {
             return p.Consultar(tabla);
         }
 
-        public bool insertarDatos(object datos)
+        public bool insertarDatos(object ordenaredit)
         {
-            return p.Insertar(datos);
-        }
-
-        public bool modificarDatos(object datos)
-        {
-            return p.Modificar(datos);
+            return p.Insertar(ordenaredit);
         }
 
         public bool eliminarDatos(string codigo)
@@ -72,7 +64,7 @@ namespace SIVARS_BURGUERS.Clases
             return p.Eliminar(codigo);
         }
 
-        public DataTable buscarRegistro(string campo, string valorCampo, DateTime Fecha, int idEtadoPedido)
+        public DataTable buscarRegistro(string campo, string valorCampo, string Fecha, int idEtadoPedido)
         {
             return p.Buscar(campo, valorCampo,Fecha,idEtadoPedido);
         }

@@ -94,11 +94,11 @@ namespace SIVARS_BURGUERS.DAO
             }
         }
 
-        public bool Insertar(object objDatos)
+        public bool Insertar(object Pedido)
         {
             ClsPedido p = new ClsPedido();
-            p = (ClsPedido)objDatos;
-            string sql = "";
+            p = (ClsPedido)Pedido;
+            string sql = "INSERT INTO Pedido VALUES ("+p.IdPedido+", "+p.IdUsuario+","+p.IdCliente+","+p.IdMesa+","+p.IdEstadoPedido+",'"+p.Fecha+"',"+p.Total+", '"+p.Hora+"',"+p.IdPago+")";
             if (Ejecutar(sql))
             {
                 return true;
@@ -109,11 +109,11 @@ namespace SIVARS_BURGUERS.DAO
             }
         }
 
-        public bool Modificar(object objDatos)
+        
+
+        public bool Eliminar(string CodigoPedido)
         {
-            ClsPedido p = new ClsPedido();
-            p = (ClsPedido)objDatos;
-            string sql = "";
+            string sql = "DELETE FROM Pedido WHERE =" + CodigoPedido;
             if (Ejecutar(sql))
             {
                 return true;
@@ -124,20 +124,7 @@ namespace SIVARS_BURGUERS.DAO
             }
         }
 
-        public bool Eliminar(string CodigoUsuario)
-        {
-            string sql = "DELETE FROM Categoria WHERE =" + CodigoUsuario;
-            if (Ejecutar(sql))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public DataTable Buscar(string Campo, string ValorCampo, DateTime Fecha, int IdEstadoPedido)
+        public DataTable Buscar(string Campo, string ValorCampo, string Fecha, int IdEstadoPedido)
         {
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();

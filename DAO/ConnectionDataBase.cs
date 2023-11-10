@@ -16,7 +16,7 @@ namespace SIVARS_BURGUERS.DAO
 
         public ConnectionDataBase()
         {
-            connectionString = "Data Source=DESKTOP-UHOQIP5\\SQLEXPRESS; DataBase=SIVAR_BURGUERS; Integrated Security=True";
+            connectionString = "Data Source=DESKTOP-UHOQIP5\\SQLEXPRESS ; DataBase=SIVAR_BURGUERS; Integrated Security=True";
         }
 
         protected SqlConnection GetSqlConnection()
