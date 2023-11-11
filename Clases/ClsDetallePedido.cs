@@ -44,10 +44,16 @@ namespace SIVARS_BURGUERS.Clases
             return dp.Consultar(tabla);
         }
 
-        public bool insertarDetalle(object datos)
+        public bool insertarDetalle(List<ClsDetallePedido> listaDatos)
         {
-            return dp.Insertar(datos);
-        }   
+
+            foreach (object row in listaDatos)
+            {
+                dp.insertar(row);
+            }
+            return true;
+
+        }
 
         public bool modificarDatos(object datos)
         {

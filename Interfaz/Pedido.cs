@@ -300,9 +300,19 @@ namespace SIVARS_BURGUERS.Interfaz
 
         private void btnRegistrarOrden_Click(object sender, EventArgs e)
         {
+            int idPedido;
+            if (int.TryParse(txtCodigoPedido.Text, out idPedido))
+            {
+                p.IdPedido = idPedido;
+            }
+            else
+            {
+                //MOSTRAR MENSAJE DE ALERTA 
+                MessageBox.Show("EL CODIGO DEL PEDIDO ES INCORRECTO", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DateTime fecha = DateTime.Now;
             string dataFecha = fecha.ToString("yyyy-MM-dd");
-            p.IdPedido = Convert.ToInt32(txtCodigoPedido.Text);
             p.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
             p.IdMesa = Convert.ToInt32(cbMesa.SelectedValue);
             p.IdUsuario = Convert.ToInt32(cbUsuario.SelectedValue);
@@ -312,9 +322,9 @@ namespace SIVARS_BURGUERS.Interfaz
             p.IdEstadoPedido = Convert.ToInt32(cbEstado.SelectedValue);
             p.Total = Convert.ToDecimal(txtTotal.Text);
             //MANDAMOS LOS DATOS HACIA EL METODO PARA QUE INSERTE LOS DATOS
-            bool insertOrden = p.insertarDatos(p);
+            bool insertPedido = p.insertarDatos(p);
 
-            if (insertOrden)
+            if (insertPedido)
             {
                 if (dtPedido.RowCount > 0)
                 {
@@ -322,38 +332,38 @@ namespace SIVARS_BURGUERS.Interfaz
 
                     foreach (DataGridViewRow row in dtPedido.Rows)
                     {
-                        ClsDetallePedido arreglo = new ClsDetallePedido();
-                        arreglo.IdPedido = Convert.ToInt32(txtCodigoPedido.Text);
-                        arreglo.IdPlatillo = Convert.ToInt32(row.Cells["codigo"].Value);
-                        arreglo.Cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
-                        arreglo.SubTotal = Convert.ToDecimal(row.Cells["subt"].Value);
+                        ClsDetallePedido dp = new ClsDetallePedido();
+                        dp.IdPedido = Convert.ToInt32(txtCodigoPedido.Text);
+                        dp.IdPlatillo = Convert.ToInt32(row.Cells["codigo"].Value);
+                        dp.Cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
+                        dp.Precio = Convert.ToDecimal(row.Cells["precio"].Value);
+                        dp.SubTotal = Convert.ToDecimal(row.Cells["subt"].Value);
 
-                        detalle_pedido.Add(arreglo);
+                        detalle_pedido.Add(dp);
                     }
-
                     // Inserta los detalles de la orden en la base de datos
                     bool insertDetalle = dp.insertarDetalle(detalle_pedido);
 
                     if (insertDetalle)
                     {
-                        MessageBox.Show("Orden creada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("EL PEDIDO SE HA CREADO CON EXITO.", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
                         dtPedido.Rows.Clear();
 
                     }
                     else
                     {
-                        MessageBox.Show("Error al insertar los detalles de la orden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("ERROR AL INSERTAR LOS DATOS DEL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Agrega al menos un producto a la orden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("AGREGUE PLATILLOS PARA CREAR EL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Error al crear la orden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR AL CREAR EL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

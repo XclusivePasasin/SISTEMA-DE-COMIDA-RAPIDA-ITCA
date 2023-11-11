@@ -93,13 +93,14 @@ namespace SIVARS_BURGUERS.DAO
                 cmd.Connection.Close();
             }
         }
-        public bool Insertar(object DetallePedido)
+        public bool insertar(object insert)
         {
             ClsDetallePedido dp = new ClsDetallePedido();
-            dp = (ClsDetallePedido)DetallePedido;
-            string sql = "INSERT INTO Detalle_Pedido VALUES ("+dp.IdPlatillo+", "+dp.IdPedido+","+dp.Cantidad+", "+dp.Precio+", "+dp.SubTotal+")";
+            dp = (ClsDetallePedido)insert;
+            string sql = "insert into Detalle_Pedido values (" + dp.IdPlatillo + "," + dp.IdPedido+ "," + dp.Cantidad + "," + dp.Precio + ","+ dp.SubTotal +")";
             if (Ejecutar(sql))
             {
+
                 return true;
             }
             else
