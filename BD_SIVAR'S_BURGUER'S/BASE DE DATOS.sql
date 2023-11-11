@@ -124,27 +124,13 @@ GO
 --PAGO
 INSERT INTO Pago VALUES ('Credito'),('Paypal'),('Efectivo');
 --CATEGORIA
-INSERT INTO Categoria VALUES ('Hamburguesas Picantes');
+INSERT INTO Categoria VALUES ('Hamburguesas Picantes'),('Hamburguesas Clasicas'),('Bebidas Frias'),('Bebidas Calientes');
 --USUARIO
-INSERT INTO Usuario VALUES ('123','Antonio','7734-2212','Administrador')
+INSERT INTO Usuario VALUES ('123','Antonio','7734-2212','Administrador'),('123','Camila','7934-2222','Mesero'),('123','Daniel','5443-4221','Cajero');
 --ESTADO PEDIDO
 INSERT INTO Estado_Pedido VALUES ('Pendiente'),('En Proceso'),('Entregado'),('Cancelado'),('Pagado'),('No Pagado');
 --MESA
-INSERT INTO Mesa  VALUES ('NUMERO 1', 1);
---PEDIDO
---UPDATE Pedido SET idEstado_Pedido =   WHERE idPedido =  
+INSERT INTO Mesa  VALUES ('NUMERO 1', 1),('NUMERO 2', 1),('NUMERO 3', 0),('NUMERO 4', 1	);
 
-INSERT INTO Pedido (idPedido,Fecha, idEstado_Pedido)
-VALUES (2,'2023-10-31', 1);
 
---INSERT INTO Pedido (idPedido, idUsuario, idCliente, idMesa, idEstado_Pedido, Fecha, Total, Hora, idPago)
---VALUES (1, 1, 2, 1, 1, '2023-11-05', 50.00, '10:30 AM', 1);
 
-SELECT * FROM Pedido
-INSERT INTO Pedido VALUES (idPedido, idUsuario, idCliente, idMesa, idEstado, '2023-11-10', 50.00, '14:30', idpago);
-
-DECLARE @Fecha AS DATE = '2023-10-31'; 
-DECLARE @EstadoPedido AS INT = 1; 
-SELECT * FROM Pedido WHERE Fecha = @Fecha AND idEstado_Pedido = @EstadoPedido
-
-SELECT * FROM Pedido WHERE Fecha = '2023-10-31' AND idEstado_Pedido = 1;

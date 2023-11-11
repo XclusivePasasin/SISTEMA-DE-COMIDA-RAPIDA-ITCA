@@ -56,4 +56,22 @@ INNER JOIN Cliente c ON p.idCliente = c.idCliente
 INNER JOIN Mesa m ON p.idMesa = m.idMesa
 INNER JOIN Estado_Pedido ep ON p.idEstado_Pedido = ep.idEstado_Pedido
 INNER JOIN Pago pa ON p.idPago = pa.idPago
-
+GO
+CREATE PROCEDURE ObtenerDatosFactura
+    @idPedido INT
+AS
+BEGIN
+    SELECT
+        P.idPedido,
+        P.Fecha,
+        P.Hora,
+        DETALLES.Cantidad,
+        DETALLES.Precio,
+        DETALLES.SubTotal
+    FROM
+        Pedido AS P
+    INNER JOIN
+        Detalle_Pedido AS DETALLES ON P.idPedido = DETALLES.idPedido
+    WHERE
+        P.idPedido = @idPedido;
+END;
