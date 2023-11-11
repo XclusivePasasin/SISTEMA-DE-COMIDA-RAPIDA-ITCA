@@ -79,10 +79,10 @@ namespace SIVARS_BURGUERS.Interfaz
             if (CacheUsuario.rol == "Cajero")
             {
                 panelSubMenu.Visible = false;
-                btnClientes.Visible = false;
+                btnClientes.Visible = true;
                 btnReportes.Visible = false;
                 btnCategorias.Visible = false;
-                btnPedido.Visible = false;
+                btnPedido.Visible = true;
                 btnPlatillo.Visible = false;
                 btnUsuarios.Visible = false;
                 btnMesa.Visible = false;
