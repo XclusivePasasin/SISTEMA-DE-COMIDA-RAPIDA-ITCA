@@ -88,6 +88,8 @@ CREATE TABLE Detalle_Pedido
     CONSTRAINT PK_DETALLE_PEDIDO PRIMARY KEY(idDetalle_Pedido)
 );
 
+
+ALTER TABLE Pedido ALTER COLUMN Fecha VARCHAR(20)
 --Llaves Foraneas
 
 --Tabla Platillo 
@@ -140,7 +142,7 @@ VALUES (2,'2023-10-31', 1);
 --VALUES (1, 1, 2, 1, 1, '2023-11-05', 50.00, '10:30 AM', 1);
 
 SELECT * FROM Pedido
-
+INSERT INTO Pedido VALUES (idPedido, idUsuario, idCliente, idMesa, idEstado, '2023-11-10', 50.00, '14:30', idpago);
 
 DECLARE @Fecha AS DATE = '2023-10-31'; 
 DECLARE @EstadoPedido AS INT = 1; 
