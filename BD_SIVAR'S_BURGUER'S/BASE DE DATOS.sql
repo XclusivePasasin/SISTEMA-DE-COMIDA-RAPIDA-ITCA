@@ -89,7 +89,6 @@ CREATE TABLE Detalle_Pedido
 );
 
 
-ALTER TABLE Pedido ALTER COLUMN Fecha VARCHAR(20)
 --Llaves Foraneas
 
 --Tabla Platillo 
