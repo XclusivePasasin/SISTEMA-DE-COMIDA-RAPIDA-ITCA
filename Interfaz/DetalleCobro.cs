@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SIVARS_BURGUERS.Interfaz
 {
-    public partial class frmCobros : Form
+    public partial class frmDetalleCobro : Form
     {
-        public frmCobros()
+        public frmDetalleCobro()
         {
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
