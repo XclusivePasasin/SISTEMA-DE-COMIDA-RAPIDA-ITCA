@@ -34,16 +34,16 @@ namespace SIVARS_BURGUERS.Interfaz
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nTotal = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nRecibido = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.btnCobrar = new System.Windows.Forms.Button();
+            this.nDevuelto = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nRecibido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDevuelto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,19 +84,20 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label3.TabIndex = 3;
             this.label3.Text = "Total:";
             // 
-            // numericUpDown1
+            // nTotal
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.nTotal.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nTotal.Increment = new decimal(new int[] {
             10,
             0,
             0,
             131072});
-            this.numericUpDown1.Location = new System.Drawing.Point(129, 190);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(121, 23);
-            this.numericUpDown1.TabIndex = 4;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nTotal.Location = new System.Drawing.Point(129, 190);
+            this.nTotal.Name = "nTotal";
+            this.nTotal.ReadOnly = true;
+            this.nTotal.Size = new System.Drawing.Size(121, 23);
+            this.nTotal.TabIndex = 4;
+            this.nTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -108,19 +109,20 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label4.TabIndex = 5;
             this.label4.Text = "Recibido:";
             // 
-            // numericUpDown2
+            // nRecibido
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Increment = new decimal(new int[] {
-            10,
+            this.nRecibido.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nRecibido.Increment = new decimal(new int[] {
+            25,
             0,
             0,
             131072});
-            this.numericUpDown2.Location = new System.Drawing.Point(129, 237);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(121, 23);
-            this.numericUpDown2.TabIndex = 6;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nRecibido.Location = new System.Drawing.Point(129, 237);
+            this.nRecibido.Name = "nRecibido";
+            this.nRecibido.Size = new System.Drawing.Size(121, 23);
+            this.nRecibido.TabIndex = 6;
+            this.nRecibido.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nRecibido.ValueChanged += new System.EventHandler(this.nRecibido_ValueChanged);
             // 
             // label5
             // 
@@ -131,20 +133,6 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label5.Size = new System.Drawing.Size(73, 19);
             this.label5.TabIndex = 7;
             this.label5.Text = "Devuelto:";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            131072});
-            this.numericUpDown3.Location = new System.Drawing.Point(129, 285);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(121, 23);
-            this.numericUpDown3.TabIndex = 8;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnCobrar
             // 
@@ -164,6 +152,27 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnCobrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCobrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCobrar.UseVisualStyleBackColor = false;
+            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
+            // 
+            // nDevuelto
+            // 
+            this.nDevuelto.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nDevuelto.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            131072});
+            this.nDevuelto.Location = new System.Drawing.Point(129, 285);
+            this.nDevuelto.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.nDevuelto.Name = "nDevuelto";
+            this.nDevuelto.ReadOnly = true;
+            this.nDevuelto.Size = new System.Drawing.Size(121, 23);
+            this.nDevuelto.TabIndex = 10;
+            this.nDevuelto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmDetalleCobro
             // 
@@ -171,22 +180,24 @@ namespace SIVARS_BURGUERS.Interfaz
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(337, 450);
+            this.Controls.Add(this.nDevuelto);
             this.Controls.Add(this.btnCobrar);
-            this.Controls.Add(this.numericUpDown3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.nRecibido);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmDetalleCobro";
             this.Text = "Detalle Cobro";
+            this.Load += new System.EventHandler(this.frmDetalleCobro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nRecibido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nDevuelto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,11 +209,11 @@ namespace SIVARS_BURGUERS.Interfaz
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nTotal;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nRecibido;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Button btnCobrar;
+        private System.Windows.Forms.NumericUpDown nDevuelto;
     }
 }

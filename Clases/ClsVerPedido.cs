@@ -58,11 +58,15 @@ namespace SIVARS_BURGUERS.Clases
         }
         public DataTable TodasOrdenes(string tabla = null)
         {
-            return vp.consultarOrdenes(tabla); // Pendiente Agregar DAO
+            return vp.Consultar(tabla); // Pendiente Agregar DAO
         }
         public bool modificarDatos(object datos)
         {
             return vp.Modificar(datos);
+        }
+        public DataTable buscarRegistro(string campo, string valorCampo)
+        {
+            return vp.Buscar(campo, valorCampo);
         }
     }
 }

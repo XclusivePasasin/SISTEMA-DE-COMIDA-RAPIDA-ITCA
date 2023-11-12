@@ -109,7 +109,20 @@ namespace SIVARS_BURGUERS.DAO
             }
         }
 
-        
+        public bool ActualizarCobros(int Codigo)
+        {
+            string sql = "UPDATE Pedido SET idEstado_Pedido = 5  WHERE idPedido = " + Codigo;
+
+            if (Ejecutar(sql))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
         public bool Eliminar(string CodigoPedido)
         {

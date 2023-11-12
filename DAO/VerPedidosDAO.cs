@@ -21,7 +21,19 @@ namespace SIVARS_BURGUERS.DAO
             SqlDataAdapter adapter = new SqlDataAdapter();
             if (tabla == "Estado_Pedido")
             {
-                sql = "SELECT idEstado_Pedido, Tipo_Estado FROM Estado_Pedido";
+                sql = "SELECT idEstado_Pedido, Tipo_Estado FROM Estado_Pedido WHERE idEstado_Pedido IN (1, 2, 3, 4)";
+            }
+            else if(tabla == "V_VerPedidosCobro")
+            {
+                sql = "SELECT * FROM V_VerPedidosCobro";
+            }
+            else if (tabla == "V_DetallesPlatillosPedidos")
+            {
+                sql = "SELECT * FROM V_DetallesPlatillosPedidos  WHERE ESTADO = 'Pendiente'";
+            }
+            else if (tabla == "V_VerPedidoMesero")
+            {
+                sql = "SELECT * FROM V_VerPedidoMesero  WHERE ESTADO = 'Pendiente'";
             }
             else
             {
@@ -106,6 +118,38 @@ namespace SIVARS_BURGUERS.DAO
             catch (SqlException error)
             {
                 MessageBox.Show("OCURRIO UN ERROR AL BUSCAR EL PEDIDO: " + error.Message, "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return data;
+        }
+        public DataTable Buscar(string Campo, string ValorCampo)
+        {
+            DataTable data = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            string sql = "";
+            if (Campo == "Codigo")
+            {
+                sql = "SELECT * FROM V_VerPedidosCobro WHERE CODIGO=" + ValorCampo;
+            }
+            else
+            {
+                sql = "SELECT * FROM V_VerPedidosCobro WHERE " + Campo + " Like '%" + ValorCampo + "%'";
+            }
+            SqlConnection con = GetSqlConnection();//Extraemos La Conexion
+            try
+            {
+                con.Open();//Abrimos La Conexión
+                string connectionString = getConnectiontring(); //Extraer Cadena De Conexion
+                adapter = new SqlDataAdapter(sql, connectionString);//Ejecutar La Consulta
+                adapter.Fill(data);
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show("OCURRIO AL BUSCAR LA CATEGORIA : " + error.Message, "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

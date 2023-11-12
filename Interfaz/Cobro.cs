@@ -18,11 +18,14 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             InitializeComponent();
         }
-        private void cargarOrdenes()
+
+        private void cargarPedidos()
         {
 
-            dtVerPedidos.DataSource = p.TodasOrdenes("Pedido");
+            dtVerPedidos.DataSource = p.TodasOrdenes("V_VerPedidosCobro");
         }
+
+       
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -35,33 +38,73 @@ namespace SIVARS_BURGUERS.Interfaz
             {
                 int indiceFilaSeleccionada = dtVerPedidos.SelectedRows[0].Index;
 
-                if (dtVerPedidos.Columns.Contains("Total_Orden"))
+                if (dtVerPedidos.Columns.Contains("TOTAL"))
                 {
-                    object valorCeldaEstado = dtVerPedidos["Estado_Orden", indiceFilaSeleccionada].Value; // Supongamos que la columna de estado se llama "Estado".
+                    object valorCeldaEstado = dtVerPedidos["ESTADO", indiceFilaSeleccionada].Value; 
 
-                    if (valorCeldaEstado != null && valorCeldaEstado.ToString() == "Entregada")
+                    if (valorCeldaEstado != null && valorCeldaEstado.ToString() == "Entregado")
                     {
-                        int orderId = (int)dtVerPedidos["Codigo", indiceFilaSeleccionada].Value;
-                        decimal total = Convert.ToDecimal(dtVerPedidos["Total_Orden", indiceFilaSeleccionada].Value);
+                        int Codigo = (int)dtVerPedidos["CODIGO", indiceFilaSeleccionada].Value;
+                        decimal total = Convert.ToDecimal(dtVerPedidos["TOTAL", indiceFilaSeleccionada].Value);
 
-                        frmDetalleCobro formularioCobra = new frmDetalleCobro(orderId, total);
-                        formularioCobra.ShowDialog(); // Puedes usar ShowDialog para abrir el formulario de cobro como un diálogo modal.
+                       frmDetalleCobro formularioCobra = new frmDetalleCobro(Codigo, total);
+                       formularioCobra.ShowDialog(); 
                     }
                     else
                     {
-                        MessageBox.Show("No se puede cobrar una orden que no esté en estado 'Entregada'.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("NO ES POSIBLE COBRAR ESTE PEDIDO DEBIDO QUE AUN NO TIENE EL ESTADO DE 'ENTREGADA'.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, seleccione una orden antes de cobrar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("SELECCIONE UN PEDIDO A COBRAR", "ANUNCIO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void frmCobros_Load(object sender, EventArgs e)
+        private void frmCobros_Load(object sender, EventArgs e) 
+        {
+            cargarPedidos();
+        }
+
+        private void dtVerPedidos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            cargarPedidos();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
         {
 
+            if (txtBuscar.Text != "" && cbOpcion.Text != "")
+            {
+                string campo;
+                if (cbOpcion.Text == "Codigo")
+                {
+                    campo = "CODIGO";
+                }
+                else if (cbOpcion.Text == "Nombre")
+                {
+                    campo = "CLIENTE";
+                }
+                else if (cbOpcion.Text == "Estado")
+                {
+                    campo = "ESTADO";
+                }
+                else
+                {
+                    campo = "FECHA";
+                }
+                dtVerPedidos.DataSource = p.buscarRegistro(campo, txtBuscar.Text);
+            }
+            else
+            {
+                string msj = "COMPLETAR LOS DATOS PARA FILTRAR";
+                MessageBox.Show(msj, "INFORMACION!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

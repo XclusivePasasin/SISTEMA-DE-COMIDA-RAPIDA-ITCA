@@ -63,6 +63,10 @@ namespace SIVARS_BURGUERS.Clases
         {
             return p.Eliminar(codigo);
         }
+        public bool ActualizarEstado(int Codigo)
+        {
+            return p.ActualizarCobros(Codigo);
+        }
 
         public DataTable buscarRegistro(string campo, string valorCampo, string Fecha, int idEtadoPedido)
         {
