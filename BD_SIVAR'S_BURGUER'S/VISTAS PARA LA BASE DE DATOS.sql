@@ -62,19 +62,24 @@ CREATE PROCEDURE ObtenerDatosFactura
 AS
 BEGIN
     SELECT
-        P.idPedido,
-        P.Fecha,
-        P.Hora,
-        DETALLES.Cantidad,
-        DETALLES.Precio,
-        DETALLES.SubTotal
-    FROM
-        Pedido AS P
-    INNER JOIN
-        Detalle_Pedido AS DETALLES ON P.idPedido = DETALLES.idPedido
-    WHERE
-        P.idPedido = @idPedido;
+        P.idPedido AS CODIGO,
+        C.Nombre AS CLIENTE,
+        P.Fecha AS FECHA,
+        P.Hora AS HORA,
+        M.Numero_Mesa AS MESA,
+        DP.Cantidad AS CANTIDAD,
+        PL.Nombre_Platillo AS DESCRIPCION,
+        PL.Precio AS PRECIO,
+        DP.SubTotal AS SUBTOTAL,
+        P.Total AS TOTAL
+    FROM Pedido AS P
+    INNER JOIN Cliente AS C ON P.idCliente = C.idCliente
+    INNER JOIN Mesa AS M ON P.idMesa = M.idMesa
+    INNER JOIN Detalle_Pedido AS DP ON P.idPedido = DP.idPedido
+    INNER JOIN Platillo AS PL ON DP.idPlatillo = PL.idPlatillo
+    WHERE P.idPedido = @idPedido;
 END;
+
 GO 
 CREATE VIEW V_VerPedidosCobro
 AS

@@ -106,5 +106,30 @@ namespace SIVARS_BURGUERS.Interfaz
                 MessageBox.Show(msj, "INFORMACION!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            if (dtVerPedidos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dtVerPedidos.SelectedRows[0];
+
+                // OBTIENE EL VALOR DE LA COLUMNA ESTADO PARA LUEGO SER VERIFICADA
+                string estadoPedido = selectedRow.Cells["Estado"].Value.ToString();
+                if (estadoPedido == "Pagada")
+                {
+                    // Aquí debes generar la factura utilizando Crystal Reports
+                    // Puedes abrir un informe de Crystal Reports y pasar los datos necesarios a través de parámetros o de otra manera que prefieras.
+                    // El código específico para generar el informe de Crystal Reports dependerá de tu configuración y de cómo estés utilizando Crystal Reports en tu proyecto.
+                }
+                else
+                {
+                    MessageBox.Show("NO ES POSIBLE GENERAR LA FACTURA, DEBIDO QUE EL PEDIDO AUN NO HA SIDO COBRADO.","ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("SELECCIONE UN PEDIDO PARA REALIZAR ESTA OPERACION","INFORMACION",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
