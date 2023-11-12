@@ -82,7 +82,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(666, 17);
+            this.btnActualizar.Location = new System.Drawing.Point(688, 13);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.btnActualizar.Size = new System.Drawing.Size(41, 35);
@@ -90,6 +90,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // dtVerPedidos
             // 
@@ -118,11 +119,11 @@ namespace SIVARS_BURGUERS.Interfaz
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtVerPedidos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtVerPedidos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dtVerPedidos.Location = new System.Drawing.Point(26, 54);
+            this.dtVerPedidos.Location = new System.Drawing.Point(5, 54);
             this.dtVerPedidos.MultiSelect = false;
             this.dtVerPedidos.Name = "dtVerPedidos";
             this.dtVerPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtVerPedidos.Size = new System.Drawing.Size(681, 131);
+            this.dtVerPedidos.Size = new System.Drawing.Size(724, 131);
             this.dtVerPedidos.TabIndex = 0;
             this.dtVerPedidos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtVerPedidos_CellClick);
             // 
@@ -160,6 +161,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFiltrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFiltrar.UseVisualStyleBackColor = false;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // cbOpcion
             // 
@@ -169,7 +171,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cbOpcion.Items.AddRange(new object[] {
             "Codigo",
             "Nombre",
-            "Rol"});
+            "Estado"});
             this.cbOpcion.Location = new System.Drawing.Point(333, 35);
             this.cbOpcion.Name = "cbOpcion";
             this.cbOpcion.Size = new System.Drawing.Size(122, 25);
@@ -269,6 +271,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Visible = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // label1
             // 
@@ -319,11 +322,11 @@ namespace SIVARS_BURGUERS.Interfaz
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtDetallesPedido.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtDetallesPedido.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dtDetallesPedido.Location = new System.Drawing.Point(26, 37);
+            this.dtDetallesPedido.Location = new System.Drawing.Point(6, 37);
             this.dtDetallesPedido.MultiSelect = false;
             this.dtDetallesPedido.Name = "dtDetallesPedido";
             this.dtDetallesPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtDetallesPedido.Size = new System.Drawing.Size(681, 149);
+            this.dtDetallesPedido.Size = new System.Drawing.Size(723, 149);
             this.dtDetallesPedido.TabIndex = 0;
             // 
             // frmVerPedidosPendientes

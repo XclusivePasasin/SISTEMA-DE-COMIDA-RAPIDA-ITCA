@@ -33,7 +33,7 @@ namespace SIVARS_BURGUERS.DAO
             }
             else if (tabla == "V_VerPedidoMesero")
             {
-                sql = "SELECT * FROM V_VerPedidoMesero  WHERE ESTADO = 'Pendiente'";
+                sql = "SELECT * FROM V_VerPedidoMesero  WHERE ESTADO = 'Pendiente' OR ESTADO = 'En Proceso'";
             }
             else
             {
