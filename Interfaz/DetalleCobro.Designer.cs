@@ -192,7 +192,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmDetalleCobro";
-            this.Text = "Detalle Cobro";
+            this.Text = "DETALLE COBRO";
             this.Load += new System.EventHandler(this.frmDetalleCobro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nTotal)).EndInit();

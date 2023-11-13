@@ -61,7 +61,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.ClientSize = new System.Drawing.Size(839, 650);
             this.Controls.Add(this.viewFactura);
             this.Name = "frmFactura";
-            this.Text = "Factura";
+            this.Text = "FACTURA";
             this.Load += new System.EventHandler(this.frmFactura_Load);
             this.ResumeLayout(false);
 

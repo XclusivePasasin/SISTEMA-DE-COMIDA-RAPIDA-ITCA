@@ -537,7 +537,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPedido";
-            this.Text = "Pedido";
+            this.Text = "GESTION DE PEDIDOS";
             this.Load += new System.EventHandler(this.frmPedido_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
