@@ -103,5 +103,30 @@ SELECT d.idPedido CODIGO, pa.Nombre_Platillo NOMBRE_PLATILLO, d.Cantidad CANTIDA
 INNER JOIN Platillo pa ON d.idPlatillo = pa.idPlatillo
 LEFT JOIN Pedido p ON d.idPedido = p.idPedido
 LEFT JOIN Cliente c ON p.idCliente = c.idCliente;
+GO
+CREATE PROCEDURE ObtenerPedidosPorDiaActualizado
+    @FechaConsulta VARCHAR(20) 
+AS
+BEGIN
+   SELECT
+    P.idPedido AS CODIGO,
+    U.Nombre_Empleado AS USUARIO,
+    P.Fecha AS FECHA,
+    P.Total AS SUBTOTAL
+FROM
+    Pedido AS P
+JOIN
+    Usuario AS U ON P.idUsuario = U.idUsuario
+WHERE
+    P.idEstado_Pedido = 5
+    AND P.Fecha = @FechaConsulta;	
 
+SELECT
+    SUM(P.Total) AS TOTAL_FINAL
+FROM
+    Pedido AS P
+WHERE
+    P.idEstado_Pedido = 5
+    AND P.Fecha = @FechaConsulta;
+END
 
