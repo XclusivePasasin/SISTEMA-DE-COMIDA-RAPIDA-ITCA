@@ -34,7 +34,7 @@ namespace SIVARS_BURGUERS.Interfaz
             txtCodigoPlatillo.Text = "";
             txtNombrePlatillo.Text = "";
             txtDescripcionPlatillo.Text = "";
-            nPrecio.Text = "";
+            nPrecio.Text = "0.00";
             cbCategoriaPlatillo.Text = "";
             ListarCategoria();
             //Colocamos Todos Los Campos Para Limpiar
@@ -102,15 +102,15 @@ namespace SIVARS_BURGUERS.Interfaz
                 string campo;
                 if (cbOpcion.Text == "Codigo")
                 {
-                    campo = "idPlatillo";
+                    campo = "CODIGO";
                 }
                 else if (cbOpcion.Text == "Nombre")
                 {
-                    campo = "Nombre_Platillo";
+                    campo = "NOMBRE";
                 }
                 else
                 {
-                    campo = "Categoria";
+                    campo = "CATEGORIA";
                 }
                 dtPlatillo.DataSource = obj.buscarRegistro(campo, txtBuscar.Text);
             }

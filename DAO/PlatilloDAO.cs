@@ -117,13 +117,13 @@ namespace SIVARS_BURGUERS.DAO
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
             string sql = "";
-            if (Campo == "Codigo")
+            if (Campo == "CODIGO")
             {
-                sql = "SELECT * FROM Platillo WHERE idPlatillo=" + ValorCampo;
+                sql = "SELECT * FROM V_Platillo WHERE idPlatillo=" + ValorCampo;
             }
             else
             {
-                sql = "SELECT * FROM Platillo WHERE " + Campo + " Like '%" + ValorCampo + "%'";
+                sql = "SELECT * FROM V_Platillo WHERE " + Campo + " Like '%" + ValorCampo + "%'";
             }
             SqlConnection con = GetSqlConnection();//Extraemos La Conexion
             try

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIVARS_BURGUERS.Clases;
+using System.Data.SqlClient;
 
 namespace SIVARS_BURGUERS.Interfaz
 {
@@ -71,7 +72,30 @@ namespace SIVARS_BURGUERS.Interfaz
             ListarEstado();
             ListarPago();
             ListarCategoria();
-        }
+            //SECCION PARA CONOCER EL ULTIMO PEDIDO INGRESADO
+            string connectionString = "Data Source=DESKTOP-0JUU1TS\\SQLEXPRESS; DataBase=SIVAR_BURGUERS; Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string sqlQuery = "SELECT MAX(idPedido) FROM Pedido"; 
+
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        int ultimoPedido = Convert.ToInt32(result);
+                        lblUltimoPedido.Text = "Último Pedido: " + ultimoPedido.ToString();
+                    }
+                    else
+                    {
+                        lblUltimoPedido.Text = "NO HAY PEDIDOS INGRESADOS";
+                    }
+                }
+            }
+         }
 
         private double Subtotal(double precio, int cantidad)
         {
@@ -118,16 +142,17 @@ namespace SIVARS_BURGUERS.Interfaz
             //Colocamos Todos Los Campos Para Limpiar
         }
 
+
         private void frmPedido_Load(object sender, EventArgs e)
         {
-            
+
             cargar();
         }
 
         int filaIndex;
         double precioEdit;
         double SubTotalEdit;
-      
+
 
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -176,7 +201,7 @@ namespace SIVARS_BURGUERS.Interfaz
                     txtCantidad.Value = 1;
                 }
             }
-            
+
         }
 
         private void dtPedido_SelectionChanged(object sender, EventArgs e)
@@ -348,9 +373,10 @@ namespace SIVARS_BURGUERS.Interfaz
                     {
                         MessageBox.Show("EL PEDIDO SE HA CREADO CON EXITO.", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
+                        cargar();
                         dtPedido.Rows.Clear();
-
                     }
+                    
                     else
                     {
                         MessageBox.Show("ERROR AL INSERTAR LOS DATOS DEL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -366,5 +392,7 @@ namespace SIVARS_BURGUERS.Interfaz
                 MessageBox.Show("ERROR AL CREAR EL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+        }
     }
-}

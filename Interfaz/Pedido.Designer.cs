@@ -70,6 +70,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblUltimoPedido = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
@@ -99,11 +100,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox1.Controls.Add(this.txtCodigoPedido);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(37, 34);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(28, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(924, 245);
+            this.groupBox1.Size = new System.Drawing.Size(693, 199);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Pedido";
@@ -116,11 +115,10 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnRegistrarOrden.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarOrden.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarOrden.Image")));
             this.btnRegistrarOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarOrden.Location = new System.Drawing.Point(629, 176);
-            this.btnRegistrarOrden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrarOrden.Location = new System.Drawing.Point(472, 143);
             this.btnRegistrarOrden.Name = "btnRegistrarOrden";
-            this.btnRegistrarOrden.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnRegistrarOrden.Size = new System.Drawing.Size(244, 49);
+            this.btnRegistrarOrden.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.btnRegistrarOrden.Size = new System.Drawing.Size(183, 40);
             this.btnRegistrarOrden.TabIndex = 18;
             this.btnRegistrarOrden.Text = "Registrar Pedido";
             this.btnRegistrarOrden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,10 +131,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(407, 36);
-            this.cbEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEstado.Location = new System.Drawing.Point(305, 29);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(151, 28);
+            this.cbEstado.Size = new System.Drawing.Size(114, 25);
             this.cbEstado.TabIndex = 17;
             // 
             // cbPago
@@ -144,20 +141,18 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cbPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPago.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPago.FormattingEnabled = true;
-            this.cbPago.Location = new System.Drawing.Point(735, 36);
-            this.cbPago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbPago.Location = new System.Drawing.Point(551, 29);
             this.cbPago.Name = "cbPago";
-            this.cbPago.Size = new System.Drawing.Size(128, 28);
+            this.cbPago.Size = new System.Drawing.Size(97, 25);
             this.cbPago.TabIndex = 16;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(632, 39);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(474, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 20);
+            this.label9.Size = new System.Drawing.Size(71, 17);
             this.label9.TabIndex = 15;
             this.label9.Text = "Tipo Pago:";
             // 
@@ -165,21 +160,19 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(340, 39);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(255, 32);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 20);
+            this.label8.Size = new System.Drawing.Size(51, 17);
             this.label8.TabIndex = 14;
             this.label8.Text = "Estado:";
             // 
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(715, 137);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotal.Location = new System.Drawing.Point(536, 111);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(148, 27);
+            this.txtTotal.Size = new System.Drawing.Size(112, 23);
             this.txtTotal.TabIndex = 13;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -187,21 +180,19 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(632, 140);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(474, 114);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 20);
+            this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Total:";
             // 
             // txtHora
             // 
             this.txtHora.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHora.Location = new System.Drawing.Point(407, 137);
-            this.txtHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHora.Location = new System.Drawing.Point(305, 111);
             this.txtHora.Name = "txtHora";
             this.txtHora.ReadOnly = true;
-            this.txtHora.Size = new System.Drawing.Size(151, 27);
+            this.txtHora.Size = new System.Drawing.Size(114, 23);
             this.txtHora.TabIndex = 11;
             this.txtHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -209,10 +200,9 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(340, 140);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(255, 114);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 20);
+            this.label6.Size = new System.Drawing.Size(40, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Hora:";
             // 
@@ -221,20 +211,18 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUsuario.FormattingEnabled = true;
-            this.cbUsuario.Location = new System.Drawing.Point(715, 87);
-            this.cbUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbUsuario.Location = new System.Drawing.Point(536, 71);
             this.cbUsuario.Name = "cbUsuario";
-            this.cbUsuario.Size = new System.Drawing.Size(148, 28);
+            this.cbUsuario.Size = new System.Drawing.Size(112, 25);
             this.cbUsuario.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(632, 91);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(474, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 20);
+            this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Usuario:";
             // 
@@ -243,31 +231,28 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cbMesa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMesa.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMesa.FormattingEnabled = true;
-            this.cbMesa.Location = new System.Drawing.Point(407, 87);
-            this.cbMesa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMesa.Location = new System.Drawing.Point(305, 71);
             this.cbMesa.Name = "cbMesa";
-            this.cbMesa.Size = new System.Drawing.Size(148, 28);
+            this.cbMesa.Size = new System.Drawing.Size(112, 25);
             this.cbMesa.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(341, 91);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(256, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.Size = new System.Drawing.Size(43, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Mesa:";
             // 
             // txtFecha
             // 
             this.txtFecha.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFecha.Location = new System.Drawing.Point(120, 137);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFecha.Location = new System.Drawing.Point(90, 111);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.ReadOnly = true;
-            this.txtFecha.Size = new System.Drawing.Size(151, 27);
+            this.txtFecha.Size = new System.Drawing.Size(114, 23);
             this.txtFecha.TabIndex = 5;
             this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -275,10 +260,9 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(49, 140);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(37, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.Size = new System.Drawing.Size(44, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Fecha:";
             // 
@@ -287,20 +271,18 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCliente.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(120, 87);
-            this.cbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCliente.Location = new System.Drawing.Point(90, 71);
             this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(148, 28);
+            this.cbCliente.Size = new System.Drawing.Size(112, 25);
             this.cbCliente.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 91);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(33, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 20);
+            this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cliente:";
             // 
@@ -308,20 +290,18 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.txtCodigoPedido.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtCodigoPedido.Location = new System.Drawing.Point(124, 36);
-            this.txtCodigoPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigoPedido.Location = new System.Drawing.Point(93, 29);
             this.txtCodigoPedido.Name = "txtCodigoPedido";
-            this.txtCodigoPedido.Size = new System.Drawing.Size(147, 27);
+            this.txtCodigoPedido.Size = new System.Drawing.Size(111, 23);
             this.txtCodigoPedido.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(33, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo:";
             // 
@@ -338,11 +318,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox2.Controls.Add(this.cbCategoria);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(99, 288);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(74, 234);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(800, 172);
+            this.groupBox2.Size = new System.Drawing.Size(600, 140);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalle Pedido";
@@ -352,10 +330,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(39)))), ((int)(((byte)(27)))));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(588, 43);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(484, 35);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(72, 63);
+            this.btnEliminar.Size = new System.Drawing.Size(54, 51);
             this.btnEliminar.TabIndex = 26;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Visible = false;
@@ -366,10 +343,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnEditar.BackColor = System.Drawing.Color.Teal;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(500, 43);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Location = new System.Drawing.Point(418, 35);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(72, 63);
+            this.btnEditar.Size = new System.Drawing.Size(54, 51);
             this.btnEditar.TabIndex = 25;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Visible = false;
@@ -380,10 +356,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(154)))), ((int)(((byte)(67)))));
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(409, 43);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Location = new System.Drawing.Point(350, 35);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(72, 63);
+            this.btnAgregar.Size = new System.Drawing.Size(54, 51);
             this.btnAgregar.TabIndex = 24;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -391,15 +366,14 @@ namespace SIVARS_BURGUERS.Interfaz
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(128, 126);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Location = new System.Drawing.Point(96, 102);
             this.txtCantidad.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(175, 27);
+            this.txtCantidad.Size = new System.Drawing.Size(131, 23);
             this.txtCantidad.TabIndex = 23;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCantidad.Value = new decimal(new int[] {
@@ -412,10 +386,9 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(32, 128);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(24, 104);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 20);
+            this.label12.Size = new System.Drawing.Size(63, 17);
             this.label12.TabIndex = 22;
             this.label12.Text = "Cantidad:";
             // 
@@ -424,20 +397,18 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cbMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMenu.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMenu.FormattingEnabled = true;
-            this.cbMenu.Location = new System.Drawing.Point(128, 85);
-            this.cbMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMenu.Location = new System.Drawing.Point(96, 69);
             this.cbMenu.Name = "cbMenu";
-            this.cbMenu.Size = new System.Drawing.Size(217, 28);
+            this.cbMenu.Size = new System.Drawing.Size(197, 25);
             this.cbMenu.TabIndex = 21;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(29, 85);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(22, 69);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 20);
+            this.label11.Size = new System.Drawing.Size(44, 17);
             this.label11.TabIndex = 20;
             this.label11.Text = "Menu:";
             // 
@@ -446,10 +417,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(128, 41);
-            this.cbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCategoria.Location = new System.Drawing.Point(96, 33);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(217, 28);
+            this.cbCategoria.Size = new System.Drawing.Size(197, 25);
             this.cbCategoria.TabIndex = 19;
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
@@ -457,10 +427,9 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(29, 44);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(22, 36);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 20);
+            this.label10.Size = new System.Drawing.Size(68, 17);
             this.label10.TabIndex = 19;
             this.label10.Text = "Categoria:";
             // 
@@ -494,8 +463,8 @@ namespace SIVARS_BURGUERS.Interfaz
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtPedido.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtPedido.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dtPedido.Location = new System.Drawing.Point(37, 476);
-            this.dtPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtPedido.Location = new System.Drawing.Point(28, 387);
+            this.dtPedido.Margin = new System.Windows.Forms.Padding(2);
             this.dtPedido.MultiSelect = false;
             this.dtPedido.Name = "dtPedido";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -509,7 +478,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.dtPedido.RowHeadersWidth = 51;
             this.dtPedido.RowTemplate.Height = 24;
             this.dtPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtPedido.Size = new System.Drawing.Size(924, 272);
+            this.dtPedido.Size = new System.Drawing.Size(693, 221);
             this.dtPedido.TabIndex = 2;
             this.dtPedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtPedido_CellClick);
             this.dtPedido.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtPedido_CellEndEdit);
@@ -548,15 +517,25 @@ namespace SIVARS_BURGUERS.Interfaz
             this.subt.MinimumWidth = 6;
             this.subt.Name = "subt";
             // 
+            // lblUltimoPedido
+            // 
+            this.lblUltimoPedido.AutoSize = true;
+            this.lblUltimoPedido.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimoPedido.Location = new System.Drawing.Point(586, 9);
+            this.lblUltimoPedido.Name = "lblUltimoPedido";
+            this.lblUltimoPedido.Size = new System.Drawing.Size(77, 22);
+            this.lblUltimoPedido.TabIndex = 3;
+            this.lblUltimoPedido.Text = "CODIGO";
+            // 
             // frmPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 762);
+            this.ClientSize = new System.Drawing.Size(748, 609);
+            this.Controls.Add(this.lblUltimoPedido);
             this.Controls.Add(this.dtPedido);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPedido";
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.frmPedido_Load);
@@ -567,6 +546,7 @@ namespace SIVARS_BURGUERS.Interfaz
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtPedido)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -609,5 +589,6 @@ namespace SIVARS_BURGUERS.Interfaz
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn subt;
+        private System.Windows.Forms.Label lblUltimoPedido;
     }
 }

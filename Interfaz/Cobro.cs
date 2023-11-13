@@ -8,12 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIVARS_BURGUERS.Clases;
+using SIVARS_BURGUERS.Reportes;
+using SIVARS_BURGUERS.Interfaz;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace SIVARS_BURGUERS.Interfaz
 {
     public partial class frmCobros : Form
     {
         ClsVerPedido p = new ClsVerPedido();
+         
         public frmCobros()
         {
             InitializeComponent();
@@ -112,14 +117,17 @@ namespace SIVARS_BURGUERS.Interfaz
             if (dtVerPedidos.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dtVerPedidos.SelectedRows[0];
-
-                // OBTIENE EL VALOR DE LA COLUMNA ESTADO PARA LUEGO SER VERIFICADA
-                string estadoPedido = selectedRow.Cells["Estado"].Value.ToString();
-                if (estadoPedido == "Pagada")
+                int idPedido = Convert.ToInt32(selectedRow.Cells["CODIGO"].Value);
+                string estadoPedido = selectedRow.Cells["ESTADO"].Value.ToString();
+                if (estadoPedido == "Pagado")
                 {
-                    // Aquí debes generar la factura utilizando Crystal Reports
-                    // Puedes abrir un informe de Crystal Reports y pasar los datos necesarios a través de parámetros o de otra manera que prefieras.
-                    // El código específico para generar el informe de Crystal Reports dependerá de tu configuración y de cómo estés utilizando Crystal Reports en tu proyecto.
+                    ReportDocument reportDocument = new ReportDocument();
+                    reportDocument.Load("C:\\Users\\Antonio Pasasin\\Documents\\GitHub\\SISTEMA-DE-COMIDA-RAPIDA-ITCA\\Reportes\\rptFactura.rpt"); // Reemplaza con la ruta de tu informe
+
+                    reportDocument.SetParameterValue("@idPedido", idPedido);
+
+                    frmFactura frmCobros = new frmFactura(idPedido);
+                    frmCobros.Show();
                 }
                 else
                 {

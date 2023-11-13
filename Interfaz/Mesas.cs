@@ -102,7 +102,7 @@ namespace SIVARS_BURGUERS.Interfaz
                 }
                 else if (cbOpcion.Text == "Nombre")
                 {
-                    campo = "NOMBRE_MESA";
+                    campo = "NUMERO_MESA";
                 }
                 else
                 {
