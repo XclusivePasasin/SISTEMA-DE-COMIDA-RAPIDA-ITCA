@@ -60,3 +60,4 @@ C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debu
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debug\stdole.dll
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmFactura.resources
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.csproj.CopyComplete
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmVentasPorDia.resources

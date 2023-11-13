@@ -221,6 +221,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.button4.Text = "Ventas Del Dia";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnReportes
             // 
