@@ -129,4 +129,19 @@ WHERE
     P.idEstado_Pedido = 5
     AND P.Fecha = @FechaConsulta;
 END
-
+GO
+CREATE PROCEDURE GenerarReporteVentasSemanales
+    @FechaInicio VARCHAR(20),
+    @FechaFin VARCHAR(20)
+AS
+BEGIN
+    SELECT
+        P.idPedido AS Codigo_Pedido,
+        U.Nombre_Empleado AS Nombre_Usuario,
+        P.Fecha AS Fecha,
+        DP.SubTotal AS Subtotal
+    FROM Pedido AS P
+    INNER JOIN Usuario AS U ON P.idUsuario = U.idUsuario
+    INNER JOIN Detalle_Pedido AS DP ON P.idPedido = DP.idPedido
+    WHERE P.Fecha BETWEEN @FechaInicio AND @FechaFin
+END

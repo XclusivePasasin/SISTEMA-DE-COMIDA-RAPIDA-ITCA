@@ -137,6 +137,12 @@
     <Compile Include="Interfaz\ReporteVentasPorDia.Designer.cs">
       <DependentUpon>ReporteVentasPorDia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\ReporteVentasSemanales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\ReporteVentasSemanales.Designer.cs">
+      <DependentUpon>ReporteVentasSemanales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz\Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptVentasPorDia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptVentasPorSemanas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVentasPorSemanas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="InicioSesion.resx">
@@ -202,6 +214,9 @@
     <EmbeddedResource Include="Interfaz\ReporteVentasPorDia.resx">
       <DependentUpon>ReporteVentasPorDia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\ReporteVentasSemanales.resx">
+      <DependentUpon>ReporteVentasSemanales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +242,10 @@
     <EmbeddedResource Include="Reportes\rptVentasPorDia.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptVentasPorDia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptVentasPorSemanas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentasPorSemanas.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
