@@ -86,6 +86,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             // nTotal
             // 
+            this.nTotal.DecimalPlaces = 2;
             this.nTotal.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nTotal.Increment = new decimal(new int[] {
             10,
@@ -93,6 +94,11 @@ namespace SIVARS_BURGUERS.Interfaz
             0,
             131072});
             this.nTotal.Location = new System.Drawing.Point(129, 190);
+            this.nTotal.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nTotal.Name = "nTotal";
             this.nTotal.ReadOnly = true;
             this.nTotal.Size = new System.Drawing.Size(121, 23);
@@ -118,6 +124,11 @@ namespace SIVARS_BURGUERS.Interfaz
             0,
             131072});
             this.nRecibido.Location = new System.Drawing.Point(129, 237);
+            this.nRecibido.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nRecibido.Name = "nRecibido";
             this.nRecibido.Size = new System.Drawing.Size(121, 23);
             this.nRecibido.TabIndex = 6;
@@ -163,6 +174,11 @@ namespace SIVARS_BURGUERS.Interfaz
             0,
             131072});
             this.nDevuelto.Location = new System.Drawing.Point(129, 285);
+            this.nDevuelto.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nDevuelto.Minimum = new decimal(new int[] {
             1000,
             0,

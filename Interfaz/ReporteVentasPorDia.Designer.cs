@@ -33,7 +33,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.viewVentasPorDia = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // viewVentasPorDia
@@ -52,7 +52,6 @@ namespace SIVARS_BURGUERS.Interfaz
             this.viewVentasPorDia.ShowGotoPageButton = false;
             this.viewVentasPorDia.ShowGroupTreeButton = false;
             this.viewVentasPorDia.ShowLogo = false;
-            this.viewVentasPorDia.ShowPageNavigateButtons = false;
             this.viewVentasPorDia.ShowParameterPanelButton = false;
             this.viewVentasPorDia.ShowRefreshButton = false;
             this.viewVentasPorDia.ShowTextSearchButton = false;
@@ -80,35 +79,36 @@ namespace SIVARS_BURGUERS.Interfaz
             this.txtFecha.TabIndex = 2;
             this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // btnGenerar
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(382, 32);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(168, 49);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Crear Reporte";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGenerar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGenerar.BackColor = System.Drawing.Color.Blue;
+            this.btnGenerar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar.ForeColor = System.Drawing.Color.White;
+            this.btnGenerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerar.Image")));
+            this.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerar.Location = new System.Drawing.Point(382, 32);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnGenerar.Size = new System.Drawing.Size(168, 49);
+            this.btnGenerar.TabIndex = 3;
+            this.btnGenerar.Text = "Crear Reporte";
+            this.btnGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGenerar.UseVisualStyleBackColor = false;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // frmVentasPorDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 611);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewVentasPorDia);
             this.Name = "frmVentasPorDia";
-            this.Text = "ReporteVentasPorDia";
+            this.Text = "Reporte";
             this.Load += new System.EventHandler(this.ReporteVentasPorDia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,6 +120,6 @@ namespace SIVARS_BURGUERS.Interfaz
         private CrystalDecisions.Windows.Forms.CrystalReportViewer viewVentasPorDia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFecha;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGenerar;
     }
 }
