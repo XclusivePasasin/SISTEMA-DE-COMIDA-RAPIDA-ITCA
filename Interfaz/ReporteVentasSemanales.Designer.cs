@@ -1,7 +1,7 @@
 ﻿
 namespace SIVARS_BURGUERS.Interfaz
 {
-    partial class Reporte
+    partial class frmReporteVentasSemanales
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace SIVARS_BURGUERS.Interfaz
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reporte));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteVentasSemanales));
             this.viewVentasSemanales = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFechaInicio = new System.Windows.Forms.TextBox();
@@ -91,6 +91,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGenerar.UseVisualStyleBackColor = false;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // txtFechaFinal
             // 
@@ -108,7 +109,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.label2.TabIndex = 4;
             this.label2.Text = "Fecha Final:";
             // 
-            // Reporte
+            // frmReporteVentasSemanales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,8 +120,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.Controls.Add(this.txtFechaInicio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewVentasSemanales);
-            this.Name = "Reporte";
-            this.Text = "ReporteVentasSemanales";
+            this.Name = "frmReporteVentasSemanales";
+            this.Text = "Reporte";
             this.Load += new System.EventHandler(this.Reporte_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
