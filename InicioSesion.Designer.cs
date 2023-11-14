@@ -135,7 +135,11 @@ namespace SIVARS_BURGUERS
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panellogo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmInicioSesion";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio De Sesion";
             this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             this.panellogo.ResumeLayout(false);
