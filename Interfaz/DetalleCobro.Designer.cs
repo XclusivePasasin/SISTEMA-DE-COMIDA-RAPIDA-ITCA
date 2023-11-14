@@ -95,7 +95,7 @@ namespace SIVARS_BURGUERS.Interfaz
             131072});
             this.nTotal.Location = new System.Drawing.Point(129, 190);
             this.nTotal.Maximum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             0});
@@ -125,7 +125,7 @@ namespace SIVARS_BURGUERS.Interfaz
             131072});
             this.nRecibido.Location = new System.Drawing.Point(129, 237);
             this.nRecibido.Maximum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             0});
@@ -175,12 +175,12 @@ namespace SIVARS_BURGUERS.Interfaz
             131072});
             this.nDevuelto.Location = new System.Drawing.Point(129, 285);
             this.nDevuelto.Maximum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             0});
             this.nDevuelto.Minimum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             -2147483648});
