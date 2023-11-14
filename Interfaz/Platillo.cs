@@ -44,6 +44,18 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtNombrePlatillo.Text))
+                {
+                    MessageBox.Show("POR FAVOR, INGRESE UN NOMBRE PARA EL PLATILLO.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; 
+                }
+
+                if (Convert.ToDecimal(nPrecio.Text) <= 0)
+                {
+                    MessageBox.Show("EL CAMPO PRECIO DEBE CONTENER UN VALOR VALIDO MAYOR A CERO.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; 
+                }
+
                 obj.NombrePlatillo = txtNombrePlatillo.Text;
                 obj.Precio = Convert.ToDecimal(nPrecio.Text);
                 obj.Descripcion = txtDescripcionPlatillo.Text;
@@ -79,7 +91,18 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
-                //Mandamos La Informacion Por Medio Del obj y Los Insertamos,Luego Limpiamos Campos y Cargamos Los Nuevos Datos
+                if (string.IsNullOrWhiteSpace(txtNombrePlatillo.Text))
+                {
+                    MessageBox.Show("POR FAVOR, INGRESE UN NOMBRE PARA EL PLATILLO.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; 
+                }
+
+                if (Convert.ToDecimal(nPrecio.Text) <= 0)
+                {
+                    MessageBox.Show("EL CAMPO PRECIO DEBE CONTENER UN VALOR VALIDO MAYOR A CERO.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; 
+                }
+
                 obj.IdPlatillo = Convert.ToInt32(txtCodigoPlatillo.Text);
                 obj.NombrePlatillo = txtNombrePlatillo.Text;
                 obj.Precio = Convert.ToDecimal(nPrecio.Text);
@@ -91,7 +114,7 @@ namespace SIVARS_BURGUERS.Interfaz
             }
             catch (Exception err)
             {
-                MessageBox.Show("ERROR AL INSERTAR DATOS DEL PLATILLO: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR AL MODIFICAR DATOS DEL PLATILLO: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

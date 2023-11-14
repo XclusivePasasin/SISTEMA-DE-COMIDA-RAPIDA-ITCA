@@ -44,12 +44,18 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
-                //Mandamos La Informacion Por Medio Del obj y Los Insertamos,Luego Limpiamos Campos y Cargamos Los Nuevos Datos
-                obj.NumeroMesa = txtNombreMesa.Text;
-                obj.Estado = (int)nEstadoPedido.Value;
-                obj.insertarDatos(obj);
-                LimpiarCampos();
-                cargar();
+                if (string.IsNullOrWhiteSpace(txtNombreMesa.Text))
+                {
+                    MessageBox.Show("POR FAVOR, INGRESE NOMBRE PARA LA MESA.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                    obj.NumeroMesa = txtNombreMesa.Text;
+                    obj.Estado = (int)nEstadoPedido.Value;
+                    obj.insertarDatos(obj);
+                    LimpiarCampos();
+                    cargar();
+                
             }
             catch (Exception err)
             {
@@ -78,12 +84,19 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
-                obj.IdMesa = int.Parse(txtCodigoMesa.Text); 
+                if (string.IsNullOrWhiteSpace(txtNombreMesa.Text))
+                {
+                    MessageBox.Show("POR FAVOR, INGRESE NOMBRE PARA LA MESA.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                obj.IdMesa = int.Parse(txtCodigoMesa.Text);
                 obj.NumeroMesa = txtNombreMesa.Text;
                 obj.Estado = (int)nEstadoPedido.Value;
                 obj.modificarDatos(obj);
                 LimpiarCampos();
                 cargar();
+
             }
             catch (Exception err)
             {

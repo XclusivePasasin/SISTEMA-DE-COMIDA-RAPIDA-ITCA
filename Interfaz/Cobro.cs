@@ -45,19 +45,27 @@ namespace SIVARS_BURGUERS.Interfaz
 
                 if (dtVerPedidos.Columns.Contains("TOTAL"))
                 {
-                    object valorCeldaEstado = dtVerPedidos["ESTADO", indiceFilaSeleccionada].Value; 
+                    object valorCeldaEstado = dtVerPedidos["ESTADO", indiceFilaSeleccionada].Value;
 
-                    if (valorCeldaEstado != null && valorCeldaEstado.ToString() == "Entregado")
+                    if (valorCeldaEstado != null)
                     {
-                        int Codigo = (int)dtVerPedidos["CODIGO", indiceFilaSeleccionada].Value;
-                        decimal total = Convert.ToDecimal(dtVerPedidos["TOTAL", indiceFilaSeleccionada].Value);
+                        if (valorCeldaEstado.ToString() == "Entregado")
+                        {
+                            int Codigo = (int)dtVerPedidos["CODIGO", indiceFilaSeleccionada].Value;
+                            decimal total = Convert.ToDecimal(dtVerPedidos["TOTAL", indiceFilaSeleccionada].Value);
 
-                       frmDetalleCobro formularioCobra = new frmDetalleCobro(Codigo, total);
-                       formularioCobra.ShowDialog(); 
-                    }
-                    else
-                    {
-                        MessageBox.Show("NO ES POSIBLE COBRAR ESTE PEDIDO DEBIDO QUE AUN NO TIENE EL ESTADO DE 'ENTREGADA'.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            frmDetalleCobro formularioCobra = new frmDetalleCobro(Codigo, total);
+                            formularioCobra.ShowDialog();
+                            cargarPedidos();
+                        }
+                        else if (valorCeldaEstado.ToString() == "Pagado")
+                        {
+                            MessageBox.Show("EL PEDIDO YA FUE COBRADO ANTERIORMENTE.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            MessageBox.Show("NO ES POSIBLE COBRAR ESTE PEDIDO DEBIDO QUE AUN NO TIENE EL ESTADO DE 'ENTREGADA'.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }

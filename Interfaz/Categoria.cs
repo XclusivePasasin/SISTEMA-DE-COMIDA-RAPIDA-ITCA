@@ -44,7 +44,11 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
-                //Mandamos La Informacion Por Medio Del obj y Los Insertamos,Luego Limpiamos Campos y Cargamos Los Nuevos Datos
+                if (string.IsNullOrWhiteSpace(txtNombreCategoria.Text))
+                {
+                    MessageBox.Show("POR FAVOR, INGRESE UN NOMBRE PARA LA CATEGORIA", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; 
+                }
                 obj.NombreCategoria = txtNombreCategoria.Text;
                 obj.insertarDatos(obj);
                 LimpiarCampos();
@@ -60,8 +64,11 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
-                //Mandamos La Informacion Por Medio Del obj y Los Insertamos,Luego Limpiamos Campos y Cargamos Los Nuevos Datos
-                obj.IdCategoria = int.Parse(txtCodigoCategoria.Text);
+                if (string.IsNullOrWhiteSpace(txtNombreCategoria.Text))
+                {
+                    MessageBox.Show("POR FAVOR, INGRESE UN NOMBRE PARA LA CATEGORIA", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 obj.NombreCategoria = txtNombreCategoria.Text;
                 obj.modificarDatos(obj);
                 LimpiarCampos();
@@ -69,7 +76,7 @@ namespace SIVARS_BURGUERS.Interfaz
             }
             catch (Exception err)
             {
-                MessageBox.Show("ERROR AL MODIFICAR LOS DATOS LA CATEGORIA: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR AL MODIFICAR DATOS LA CATEGORIA: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

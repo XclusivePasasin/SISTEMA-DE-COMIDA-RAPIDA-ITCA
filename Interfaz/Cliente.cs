@@ -50,6 +50,14 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtNombreCliente.Text) ||
+                    string.IsNullOrWhiteSpace(txtApellidoCliente.Text) ||
+                    string.IsNullOrWhiteSpace(cbGeneroCliente.Text))
+                {
+                    MessageBox.Show("POR FAVOR, COMPLETE TODOS LOS CAMPOS.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; 
+                }
+
                 obj.Nombre = txtNombreCliente.Text;
                 obj.Apellido = txtApellidoCliente.Text;
                 obj.Genero = cbGeneroCliente.Text;
@@ -84,7 +92,14 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
-                obj.IdCliente = Convert.ToInt32(txtCodigoCliente.Text);
+                if (string.IsNullOrWhiteSpace(txtNombreCliente.Text) ||
+                    string.IsNullOrWhiteSpace(txtApellidoCliente.Text) ||
+                    string.IsNullOrWhiteSpace(cbGeneroCliente.Text))
+                {
+                    MessageBox.Show("POR FAVOR, COMPLETE TODOS LOS CAMPOS.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 obj.Nombre = txtNombreCliente.Text;
                 obj.Apellido = txtApellidoCliente.Text;
                 obj.Genero = cbGeneroCliente.Text;
@@ -94,7 +109,7 @@ namespace SIVARS_BURGUERS.Interfaz
             }
             catch (Exception err)
             {
-                MessageBox.Show("ERROR AL INSERTAR DATOS DEL CLIENTE: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR AL MODIFICAR DATOS DEL CLIENTE: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

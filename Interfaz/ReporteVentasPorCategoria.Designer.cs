@@ -106,7 +106,12 @@ namespace SIVARS_BURGUERS.Interfaz
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewReporteCategoria);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmReportePorCategoria";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reporte";
             this.Load += new System.EventHandler(this.ReporteVentasPorCategoria_Load);
             this.ResumeLayout(false);

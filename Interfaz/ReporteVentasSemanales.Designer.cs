@@ -121,7 +121,11 @@ namespace SIVARS_BURGUERS.Interfaz
             this.Controls.Add(this.txtFechaInicio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewVentasSemanales);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmReporteVentasSemanales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reporte";
             this.Load += new System.EventHandler(this.Reporte_Load);
             this.ResumeLayout(false);

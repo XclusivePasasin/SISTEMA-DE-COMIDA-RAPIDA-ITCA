@@ -35,7 +35,15 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             try
             {
-                //Mandamos La Informacion Por Medio Del obj y Los Insertamos,Luego Limpiamos Campos y Cargamos Los Nuevos Datos
+                if (string.IsNullOrWhiteSpace(txtNombreUsuario.Text) ||
+                    string.IsNullOrWhiteSpace(txtContraseñaUsuario.Text) ||
+                    string.IsNullOrWhiteSpace(cbRolUsuario.Text) ||
+                    string.IsNullOrWhiteSpace(txtTelefonoUsuario.Text))
+                {
+                    MessageBox.Show("POR FAVOR, COMPLETAR TODOS LOS CAMPOS.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; 
+                }
+
                 obj.Nombre = txtNombreUsuario.Text;
                 obj.Contraseña = txtContraseñaUsuario.Text;
                 obj.Rol = cbRolUsuario.Text;
@@ -55,24 +63,33 @@ namespace SIVARS_BURGUERS.Interfaz
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             cargar();
-            //Linea De Codigo Para Ocultar Columnas De La Tabla
             dtUsuarios.Columns[2].Visible = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoUsuario.Text != "")
+            try
             {
-                string msj = "¿SEGURO QUE DESEA ELIMINAR ESTE REGISTRO?";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                MessageBoxIcon icon = MessageBoxIcon.Question;
-                DialogResult resultado = MessageBox.Show(msj, "ELIMINANDO....", buttons, icon);
-                if (resultado == DialogResult.Yes)
+                if (string.IsNullOrWhiteSpace(txtNombreUsuario.Text) ||
+                    string.IsNullOrWhiteSpace(txtContraseñaUsuario.Text) ||
+                    string.IsNullOrWhiteSpace(cbRolUsuario.Text) ||
+                    string.IsNullOrWhiteSpace(txtTelefonoUsuario.Text))
                 {
-                    obj.eliminarDatos(txtCodigoUsuario.Text);
-                    cargar();
-                    LimpiarCampos();
+                    MessageBox.Show("POR FAVOR, COMPLETAR TODOS LOS CAMPOS.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
+
+                obj.Nombre = txtNombreUsuario.Text;
+                obj.Contraseña = txtContraseñaUsuario.Text;
+                obj.Rol = cbRolUsuario.Text;
+                obj.Telefono = txtTelefonoUsuario.Text;
+                obj.modificarDatos(obj);
+                LimpiarCampos();
+                cargar();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("ERROR AL MODIFICAR  DATOS DEL USUARIO: " + err.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

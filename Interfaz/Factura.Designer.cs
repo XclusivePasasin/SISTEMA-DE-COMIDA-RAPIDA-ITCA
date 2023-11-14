@@ -43,6 +43,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.viewFactura.Name = "viewFactura";
             this.viewFactura.ReportSource = "C:\\Users\\Antonio Pasasin\\Documents\\GitHub\\SISTEMA-DE-COMIDA-RAPIDA-ITCA\\Reportes\\" +
     "rptFactura.rpt";
+            this.viewFactura.ShowCloseButton = false;
             this.viewFactura.ShowCopyButton = false;
             this.viewFactura.ShowGotoPageButton = false;
             this.viewFactura.ShowGroupTreeButton = false;
@@ -60,7 +61,10 @@ namespace SIVARS_BURGUERS.Interfaz
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 650);
             this.Controls.Add(this.viewFactura);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmFactura";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FACTURA";
             this.Load += new System.EventHandler(this.frmFactura_Load);
             this.ResumeLayout(false);
