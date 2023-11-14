@@ -119,6 +119,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -368,6 +369,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.btnCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCategorias.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCategorias.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -439,6 +441,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(117)))));
+            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.Location = new System.Drawing.Point(697, 12);
@@ -557,7 +560,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelDeskTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenu";
+            this.ShowIcon = false;
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panel1.ResumeLayout(false);
