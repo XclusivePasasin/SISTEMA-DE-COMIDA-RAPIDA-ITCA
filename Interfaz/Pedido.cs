@@ -79,7 +79,7 @@ namespace SIVARS_BURGUERS.Interfaz
             {
                 connection.Open();
 
-                string sqlQuery = "SELECT MAX(idPedido) FROM Pedido"; 
+                string sqlQuery = "SELECT MAX(idPedido) FROM Pedido";
 
                 using (SqlCommand command = new SqlCommand(sqlQuery, connection))
                 {
@@ -95,7 +95,7 @@ namespace SIVARS_BURGUERS.Interfaz
                     }
                 }
             }
-         }
+        }
 
         private double Subtotal(double precio, int cantidad)
         {
@@ -139,7 +139,7 @@ namespace SIVARS_BURGUERS.Interfaz
             cbUsuario.Text = "";
             txtTotal.Text = "";
             ListarCategoria();
-            //Colocamos Todos Los Campos Para Limpiar
+            //COLOCAMOS LOS CAMPOS A LIMPIAR
         }
 
 
@@ -211,7 +211,6 @@ namespace SIVARS_BURGUERS.Interfaz
 
 
         int rowIndex;
-        //double precioEdit;
         double subtotalEdit;
         private void dtPedido_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -257,14 +256,14 @@ namespace SIVARS_BURGUERS.Interfaz
                     btnEditar.Visible = false;
                     btnAgregar.Visible = true;
                     txtCantidad.Value = 1;
-                    // Recalcular el total general
+                    // RECALCULA EL TOTAL
                     RecalcularTotal();
 
                 }
             }
         }
 
-        // Método para recalcular el total general
+        //METODO PARA RECALCULAR EL TOTAL
         private void RecalcularTotal()
         {
             double nuevoTotal = 0;
@@ -282,14 +281,11 @@ namespace SIVARS_BURGUERS.Interfaz
         {
             if (e.ColumnIndex == dtPedido.Columns["cantidad"].Index || e.ColumnIndex == dtPedido.Columns["precio"].Index)
             {
-                // Asegúrate de que estás en la columna de "Cantidad" o "Precio"
                 int cantidad = Convert.ToInt32(dtPedido.Rows[e.RowIndex].Cells["cantidad"].Value);
                 decimal precio = Convert.ToDecimal(dtPedido.Rows[e.RowIndex].Cells["precio"].Value);
 
-                // Calcula el nuevo subtotal
                 decimal subtotal = cantidad * precio;
 
-                // Actualiza el valor en la columna "Subtotal"
                 dtPedido.Rows[e.RowIndex].Cells["subt"].Value = subtotal;
             }
         }
@@ -323,6 +319,22 @@ namespace SIVARS_BURGUERS.Interfaz
             }
         }
 
+        private bool ComprobarSiPedidoExiste(int idPedido)
+        {
+            string connectionString = "Data Source=DESKTOP-0JUU1TS\\SQLEXPRESS; DataBase=SIVAR_BURGUERS; Integrated Security=True"; 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM Pedido WHERE idPedido = @IdPedido";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@IdPedido", idPedido);
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
         private void btnRegistrarOrden_Click(object sender, EventArgs e)
         {
             int idPedido;
@@ -332,10 +344,18 @@ namespace SIVARS_BURGUERS.Interfaz
             }
             else
             {
-                //MOSTRAR MENSAJE DE ALERTA 
-                MessageBox.Show("EL CODIGO DEL PEDIDO ES INCORRECTO", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EL CÓDIGO DEL PEDIDO ES INCORRECTO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            //VALIDACION PARA COMPROBAR QUE EL PEDIDO YA EXISTE O NO EXISTE
+            bool esDuplicado = ComprobarSiPedidoExiste(idPedido);
+            if (esDuplicado)
+            {
+                MessageBox.Show("EL PEDIDO YA EXISTE. INGRESE UN ID DE PEDIDO DIFERENTE.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DateTime fecha = DateTime.Now;
             string dataFecha = fecha.ToString("yyyy-MM-dd");
             p.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
@@ -345,54 +365,60 @@ namespace SIVARS_BURGUERS.Interfaz
             p.Fecha = dataFecha;
             p.Hora = DateTime.Now.ToString("hh:mm:ss");
             p.IdEstadoPedido = Convert.ToInt32(cbEstado.SelectedValue);
-            p.Total = Convert.ToDecimal(txtTotal.Text);
-            //MANDAMOS LOS DATOS HACIA EL METODO PARA QUE INSERTE LOS DATOS
-            bool insertPedido = p.insertarDatos(p);
 
-            if (insertPedido)
+            decimal total;
+            if (decimal.TryParse(txtTotal.Text, out total) && total > 0)
             {
-                if (dtPedido.RowCount > 0)
+                p.Total = total;
+
+                bool insertPedido = p.insertarDatos(p);
+
+                if (insertPedido)
                 {
-                    List<ClsDetallePedido> detalle_pedido = new List<ClsDetallePedido>();
-
-                    foreach (DataGridViewRow row in dtPedido.Rows)
+                    if (dtPedido.RowCount > 0)
                     {
-                        ClsDetallePedido dp = new ClsDetallePedido();
-                        dp.IdPedido = Convert.ToInt32(txtCodigoPedido.Text);
-                        dp.IdPlatillo = Convert.ToInt32(row.Cells["codigo"].Value);
-                        dp.Cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
-                        dp.Precio = Convert.ToDecimal(row.Cells["precio"].Value);
-                        dp.SubTotal = Convert.ToDecimal(row.Cells["subt"].Value);
+                        List<ClsDetallePedido> detalle_pedido = new List<ClsDetallePedido>();
 
-                        detalle_pedido.Add(dp);
-                    }
-                    // Inserta los detalles de la orden en la base de datos
-                    bool insertDetalle = dp.insertarDetalle(detalle_pedido);
+                        foreach (DataGridViewRow row in dtPedido.Rows)
+                        {
+                            ClsDetallePedido dp = new ClsDetallePedido();
+                            dp.IdPedido = Convert.ToInt32(txtCodigoPedido.Text);
+                            dp.IdPlatillo = Convert.ToInt32(row.Cells["codigo"].Value);
+                            dp.Cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
+                            dp.Precio = Convert.ToDecimal(row.Cells["precio"].Value);
+                            dp.SubTotal = Convert.ToDecimal(row.Cells["subt"].Value);
 
-                    if (insertDetalle)
-                    {
-                        MessageBox.Show("EL PEDIDO SE HA CREADO CON EXITO.", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LimpiarCampos();
-                        cargar();
-                        dtPedido.Rows.Clear();
+                            detalle_pedido.Add(dp);
+                        }
+
+                        bool insertDetalle = dp.insertarDetalle(detalle_pedido);
+
+                        if (insertDetalle)
+                        {
+                            MessageBox.Show("EL PEDIDO SE HA CREADO CON ÉXITO.", "NOTIFICACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpiarCampos();
+                            cargar();
+                            dtPedido.Rows.Clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERROR AL INSERTAR LOS DATOS DEL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    
                     else
                     {
-                        MessageBox.Show("ERROR AL INSERTAR LOS DATOS DEL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("AGREGUE PLATILLOS PARA CREAR EL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("AGREGUE PLATILLOS PARA CREAR EL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ERROR AL CREAR EL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("ERROR AL CREAR EL PEDIDO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EL CAMPO 'TOTAL' DEBE SER UN VALOR VÁLIDO Y MAYOR QUE CERO.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-        }
     }
+}
