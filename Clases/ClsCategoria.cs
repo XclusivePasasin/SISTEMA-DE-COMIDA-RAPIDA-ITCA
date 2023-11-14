@@ -28,9 +28,9 @@ namespace SIVARS_BURGUERS.Clases
         public int IdCategoria { get => idCategoria; set => idCategoria = value; }
         public string NombreCategoria { get => nombreCategoria; set => nombreCategoria = value; }
 
-        public DataTable getDatos()
+        public DataTable getDatos(string tabla = null)
         {
-            return c.Consultar();
+            return c.Consultar(tabla);
         }
 
         public bool insertarDatos(object datos)

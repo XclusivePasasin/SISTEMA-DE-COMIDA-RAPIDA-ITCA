@@ -145,3 +145,22 @@ BEGIN
     INNER JOIN Detalle_Pedido AS DP ON P.idPedido = DP.idPedido
     WHERE P.Fecha BETWEEN @FechaInicio AND @FechaFin
 END
+GO
+CREATE PROCEDURE GenerarReportePedidosPorCategoria
+    @NombreCategoria VARCHAR(100)
+AS
+BEGIN
+    SELECT
+        P.idPedido AS Codigo_Pedido,
+        U.Nombre_Empleado AS Nombre_Usuario,
+        P.Fecha AS Fecha,
+        DP.Cantidad AS Cantidad,
+        DP.Precio AS Precio,
+        DP.SubTotal AS Subtotal
+    FROM Pedido AS P
+    INNER JOIN Usuario AS U ON P.idUsuario = U.idUsuario
+    INNER JOIN Detalle_Pedido AS DP ON P.idPedido = DP.idPedido
+    INNER JOIN Platillo AS PL ON DP.idPlatillo = PL.idPlatillo
+    INNER JOIN Categoria AS C ON PL.idCategoria = C.idCategoria
+    WHERE C.Nombre_Categoria = @NombreCategoria;
+END

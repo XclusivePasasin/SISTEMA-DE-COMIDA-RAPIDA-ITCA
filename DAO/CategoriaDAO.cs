@@ -13,12 +13,19 @@ namespace SIVARS_BURGUERS.DAO
 {
     class CategoriaDAO : ConnectionDataBase
     {
-        public DataTable Consultar()
+        public DataTable Consultar(string tabla)
         {
             string sql = "";
             DataTable datos = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
-            sql = "SELECT * FROM V_Categoria";
+            if (tabla == "Categoria")
+            {
+                sql = "SELECT idCategoria, Nombre_Categoria FROM Categoria";
+            }
+            else
+            {
+                sql = "SELECT * FROM V_Categoria";
+            }
             SqlConnection con = GetSqlConnection();//Extraer Conexion
             try
             {

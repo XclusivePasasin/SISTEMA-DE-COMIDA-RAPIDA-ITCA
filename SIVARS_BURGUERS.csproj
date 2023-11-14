@@ -131,6 +131,12 @@
     <Compile Include="Interfaz\Platillo.Designer.cs">
       <DependentUpon>Platillo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\ReporteVentasPorCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\ReporteVentasPorCategoria.Designer.cs">
+      <DependentUpon>ReporteVentasPorCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz\ReporteVentasPorDia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptVentasPorCategoria.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVentasPorCategoria.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\rptVentasPorDia.cs">
@@ -211,6 +223,9 @@
     <EmbeddedResource Include="Interfaz\Platillo.resx">
       <DependentUpon>Platillo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\ReporteVentasPorCategoria.resx">
+      <DependentUpon>ReporteVentasPorCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\ReporteVentasPorDia.resx">
       <DependentUpon>ReporteVentasPorDia.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +253,10 @@
     <EmbeddedResource Include="Reportes\rptFactura.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptFactura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptVentasPorCategoria.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentasPorCategoria.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptVentasPorDia.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

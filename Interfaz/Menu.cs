@@ -191,5 +191,13 @@ namespace SIVARS_BURGUERS.Interfaz
             lblAcceso.Visible = false;
             OpenChildForm(new frmReporteVentasSemanales(), sender);
         }
+
+        private void btnReportePorCategoria_Click(object sender, EventArgs e)
+        {
+            panelSubMenu.Visible = true;
+            lblUsuario.Visible = false;
+            lblAcceso.Visible = false;
+            OpenChildForm(new frmReportePorCategoria(), sender);
+        }
     }
 }

@@ -38,9 +38,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnReportePorCategoria = new System.Windows.Forms.Button();
+            this.btnReportePorSemana = new System.Windows.Forms.Button();
+            this.btnReportePorDia = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnCobros = new System.Windows.Forms.Button();
@@ -140,9 +140,9 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panelSubMenu.Controls.Add(this.panel6);
             this.panelSubMenu.Controls.Add(this.panel5);
             this.panelSubMenu.Controls.Add(this.panel4);
-            this.panelSubMenu.Controls.Add(this.button6);
-            this.panelSubMenu.Controls.Add(this.button5);
-            this.panelSubMenu.Controls.Add(this.button4);
+            this.panelSubMenu.Controls.Add(this.btnReportePorCategoria);
+            this.panelSubMenu.Controls.Add(this.btnReportePorSemana);
+            this.panelSubMenu.Controls.Add(this.btnReportePorDia);
             this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenu.Location = new System.Drawing.Point(0, 468);
             this.panelSubMenu.Name = "panelSubMenu";
@@ -174,55 +174,56 @@ namespace SIVARS_BURGUERS.Interfaz
             this.panel4.Size = new System.Drawing.Size(10, 24);
             this.panel4.TabIndex = 16;
             // 
-            // button6
+            // btnReportePorCategoria
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 62);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(160, 55);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Ventas Por Categoria";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnReportePorCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnReportePorCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportePorCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReportePorCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportePorCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnReportePorCategoria.Location = new System.Drawing.Point(0, 62);
+            this.btnReportePorCategoria.Name = "btnReportePorCategoria";
+            this.btnReportePorCategoria.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnReportePorCategoria.Size = new System.Drawing.Size(160, 55);
+            this.btnReportePorCategoria.TabIndex = 15;
+            this.btnReportePorCategoria.Text = "Ventas Por Categoria";
+            this.btnReportePorCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportePorCategoria.UseVisualStyleBackColor = false;
+            this.btnReportePorCategoria.Click += new System.EventHandler(this.btnReportePorCategoria_Click);
             // 
-            // button5
+            // btnReportePorSemana
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 31);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(160, 31);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "   Ventas Semanales";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnReportePorSemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnReportePorSemana.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportePorSemana.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReportePorSemana.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportePorSemana.ForeColor = System.Drawing.Color.White;
+            this.btnReportePorSemana.Location = new System.Drawing.Point(0, 31);
+            this.btnReportePorSemana.Name = "btnReportePorSemana";
+            this.btnReportePorSemana.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnReportePorSemana.Size = new System.Drawing.Size(160, 31);
+            this.btnReportePorSemana.TabIndex = 14;
+            this.btnReportePorSemana.Text = "   Ventas Semanales";
+            this.btnReportePorSemana.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportePorSemana.UseVisualStyleBackColor = false;
+            this.btnReportePorSemana.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnReportePorDia
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(160, 31);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Ventas Del Dia";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnReportePorDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnReportePorDia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportePorDia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReportePorDia.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportePorDia.ForeColor = System.Drawing.Color.White;
+            this.btnReportePorDia.Location = new System.Drawing.Point(0, 0);
+            this.btnReportePorDia.Name = "btnReportePorDia";
+            this.btnReportePorDia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnReportePorDia.Size = new System.Drawing.Size(160, 31);
+            this.btnReportePorDia.TabIndex = 13;
+            this.btnReportePorDia.Text = "Ventas Del Dia";
+            this.btnReportePorDia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportePorDia.UseVisualStyleBackColor = false;
+            this.btnReportePorDia.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnReportes
             // 
@@ -594,9 +595,9 @@ namespace SIVARS_BURGUERS.Interfaz
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnReportePorCategoria;
+        private System.Windows.Forms.Button btnReportePorSemana;
+        private System.Windows.Forms.Button btnReportePorDia;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;

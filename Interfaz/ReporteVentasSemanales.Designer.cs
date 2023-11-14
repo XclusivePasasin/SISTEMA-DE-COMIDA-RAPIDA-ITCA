@@ -41,6 +41,7 @@ namespace SIVARS_BURGUERS.Interfaz
             // viewVentasSemanales
             // 
             this.viewVentasSemanales.ActiveViewIndex = 0;
+            this.viewVentasSemanales.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.viewVentasSemanales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewVentasSemanales.Cursor = System.Windows.Forms.Cursors.Default;
             this.viewVentasSemanales.DisplayStatusBar = false;
