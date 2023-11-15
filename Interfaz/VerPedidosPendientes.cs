@@ -54,15 +54,10 @@ namespace SIVARS_BURGUERS.Interfaz
                     btnEditar.Visible = true;
                     this.txtCodigoPedido.Text = dtVerPedidos.SelectedRows[0].Cells[0].Value.ToString();
                     this.cbEstadoNuevo.Text = dtVerPedidos.SelectedRows[0].Cells[4].Value.ToString();
-                    // Obtén el ID de la orden seleccionada desde el DataGridView
                     int idPedido = Convert.ToInt32(dtVerPedidos.Rows[e.RowIndex].Cells["CODIGO"].Value);
 
-                    // Consulta SQL para obtener los detalles de la orden
                     string sql = "SELECT * FROM V_DetallesPlatillosPedidos WHERE CODIGO = @idPedido";
 
-                    // Ejecuta la consulta y carga los detalles en otro DataGridView o control apropiado
-                    // Recuerda utilizar parámetros para evitar SQL Injection.
-                    // Aquí se asume que tienes una conexión de base de datos configurada (por ejemplo, SqlConnection).
                     string connectionString = "Data Source=DESKTOP-0JUU1TS\\SQLEXPRESS; DataBase=SIVAR_BURGUERS; Integrated Security=True";
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     using (SqlCommand command = new SqlCommand(sql, connection))
@@ -72,7 +67,7 @@ namespace SIVARS_BURGUERS.Interfaz
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable detallesTable = new DataTable();
                         adapter.Fill(detallesTable);
-                        dtDetallesPedido.DataSource = detallesTable; // Carga los detalles en un DataGridView separado.
+                        dtDetallesPedido.DataSource = detallesTable; 
                     }
                 }
                 else

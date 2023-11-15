@@ -100,6 +100,7 @@ namespace SIVARS_BURGUERS.Interfaz
                     return;
                 }
 
+                obj.IdCliente = Convert.ToInt32(txtCodigoCliente.Text);
                 obj.Nombre = txtNombreCliente.Text;
                 obj.Apellido = txtApellidoCliente.Text;
                 obj.Genero = cbGeneroCliente.Text;

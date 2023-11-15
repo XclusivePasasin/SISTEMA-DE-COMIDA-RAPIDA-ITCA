@@ -69,6 +69,7 @@ namespace SIVARS_BURGUERS.Interfaz
                     MessageBox.Show("POR FAVOR, INGRESE UN NOMBRE PARA LA CATEGORIA", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                obj.IdCategoria = Convert.ToInt32(txtCodigoCategoria.Text);
                 obj.NombreCategoria = txtNombreCategoria.Text;
                 obj.modificarDatos(obj);
                 LimpiarCampos();
