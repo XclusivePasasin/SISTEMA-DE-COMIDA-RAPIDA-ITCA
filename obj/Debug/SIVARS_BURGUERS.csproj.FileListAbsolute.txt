@@ -63,3 +63,7 @@ C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debu
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmVentasPorDia.resources
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmReporteVentasSemanales.resources
 C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.Interfaz.frmReportePorCategoria.resources
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debug\SIVARS_BURGUERS.exe.manifest
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\bin\Debug\SIVARS_BURGUERS.application
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.exe.manifest
+C:\Users\Antonio Pasasin\Documents\GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\obj\Debug\SIVARS_BURGUERS.application

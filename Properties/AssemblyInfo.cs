@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("SIVARS_BURGUERS")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("SIVARS BURGUERS")]
+[assembly: AssemblyDescription("PROYECTO FINAL DE DESARROLLO DE APLICACIONES DE ESCRITORIO")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SIVARS_BURGUERS")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCompany("SIVARS BURGUERS COMPANY")]
+[assembly: AssemblyProduct("SIVARS BURGUERS")]
+[assembly: AssemblyCopyright("SIVARS BURGUERS Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
