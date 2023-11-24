@@ -100,7 +100,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnMesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnMesa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMesa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMesa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMesa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMesa.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMesa.ForeColor = System.Drawing.Color.White;
             this.btnMesa.Image = ((System.Drawing.Image)(resources.GetObject("btnMesa.Image")));
@@ -121,7 +122,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarSesion.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
@@ -179,7 +181,8 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.btnReportePorCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnReportePorCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportePorCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReportePorCategoria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnReportePorCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportePorCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportePorCategoria.ForeColor = System.Drawing.Color.White;
             this.btnReportePorCategoria.Location = new System.Drawing.Point(0, 62);
@@ -196,7 +199,8 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.btnReportePorSemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnReportePorSemana.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportePorSemana.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReportePorSemana.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnReportePorSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportePorSemana.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportePorSemana.ForeColor = System.Drawing.Color.White;
             this.btnReportePorSemana.Location = new System.Drawing.Point(0, 31);
@@ -213,7 +217,8 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.btnReportePorDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnReportePorDia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportePorDia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReportePorDia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnReportePorDia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportePorDia.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportePorDia.ForeColor = System.Drawing.Color.White;
             this.btnReportePorDia.Location = new System.Drawing.Point(0, 0);
@@ -231,7 +236,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
@@ -251,7 +257,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.White;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
@@ -271,7 +278,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnCobros.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCobros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCobros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCobros.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCobros.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCobros.ForeColor = System.Drawing.Color.White;
             this.btnCobros.Image = ((System.Drawing.Image)(resources.GetObject("btnCobros.Image")));
@@ -291,7 +299,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnOrdenesPendientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnOrdenesPendientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrdenesPendientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrdenesPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrdenesPendientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnOrdenesPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrdenesPendientes.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdenesPendientes.ForeColor = System.Drawing.Color.White;
             this.btnOrdenesPendientes.Image = ((System.Drawing.Image)(resources.GetObject("btnOrdenesPendientes.Image")));
@@ -310,7 +319,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnOrdenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnOrdenes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrdenes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrdenes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrdenes.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdenes.ForeColor = System.Drawing.Color.White;
             this.btnOrdenes.Image = ((System.Drawing.Image)(resources.GetObject("btnOrdenes.Image")));
@@ -330,7 +340,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedido.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPedido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPedido.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedido.ForeColor = System.Drawing.Color.White;
             this.btnPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnPedido.Image")));
@@ -350,7 +361,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnPlatillo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnPlatillo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlatillo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPlatillo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPlatillo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnPlatillo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlatillo.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlatillo.ForeColor = System.Drawing.Color.White;
             this.btnPlatillo.Image = ((System.Drawing.Image)(resources.GetObject("btnPlatillo.Image")));
@@ -371,7 +383,8 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCategorias.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCategorias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCategorias.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategorias.ForeColor = System.Drawing.Color.White;
             this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
@@ -391,11 +404,13 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.Location = new System.Drawing.Point(0, 76);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(0);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnUsuarios.Size = new System.Drawing.Size(160, 39);
@@ -442,7 +457,8 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(117)))));
             this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(60)))), ((int)(((byte)(117)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.Location = new System.Drawing.Point(697, 12);
             this.btnCerrar.Name = "btnCerrar";

@@ -21,14 +21,6 @@ namespace SIVARS_BURGUERS.Interfaz
             InitializeComponent();
             dtPedido.SelectionChanged += new EventHandler(dtPedido_SelectionChanged);
         }
-
-
-        private void ListarUsuario()
-        {
-            cbUsuario.DisplayMember = "Nombre_Empleado";
-            cbUsuario.ValueMember = "idUsuario";
-            cbUsuario.DataSource = p.getDatos("Usuario");
-        }
         private void ListarMesa()
         {
             cbMesa.DisplayMember = "Numero_Mesa";
@@ -66,7 +58,7 @@ namespace SIVARS_BURGUERS.Interfaz
             string dataFecha = fecha.ToString("yyyy-MM-dd");
             txtFecha.Text = dataFecha;
             txtHora.Text = DateTime.Now.ToString("h:mm:ss tt");
-            ListarUsuario();
+            txtUsuario.Text = CacheUsuario.nombre;
             ListarMesa();
             ListarCliente();
             ListarEstado();
@@ -136,7 +128,7 @@ namespace SIVARS_BURGUERS.Interfaz
             cbPago.Text = "";
             cbEstado.Text = "";
             cbCliente.Text = "";
-            cbUsuario.Text = "";
+            txtUsuario.Text = "";
             txtTotal.Text = "";
             ListarCategoria();
             //COLOCAMOS LOS CAMPOS A LIMPIAR
@@ -256,6 +248,7 @@ namespace SIVARS_BURGUERS.Interfaz
                     btnEditar.Visible = false;
                     btnAgregar.Visible = true;
                     txtCantidad.Value = 1;
+                    txtUsuario.Text = CacheUsuario.nombre;
                     // RECALCULA EL TOTAL
                     RecalcularTotal();
 
@@ -311,6 +304,7 @@ namespace SIVARS_BURGUERS.Interfaz
                     txtTotal.Text = TotalPedido.ToString("0.00");
                     RecalcularTotal();
                 }
+                txtCantidad.Value = 1;
                 btnEliminar.Visible = false;
                 btnEditar.Visible = false;
                 btnAgregar.Visible = true;
@@ -360,7 +354,7 @@ namespace SIVARS_BURGUERS.Interfaz
             string dataFecha = fecha.ToString("yyyy-MM-dd");
             p.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
             p.IdMesa = Convert.ToInt32(cbMesa.SelectedValue);
-            p.IdUsuario = Convert.ToInt32(cbUsuario.SelectedValue);
+            p.IdUsuario = CacheUsuario.idUsuario;
             p.IdPago = Convert.ToInt32(cbPago.SelectedValue);
             p.Fecha = dataFecha;
             p.Hora = DateTime.Now.ToString("hh:mm:ss");

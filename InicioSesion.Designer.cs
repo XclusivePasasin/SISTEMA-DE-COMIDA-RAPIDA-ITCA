@@ -113,11 +113,12 @@ namespace SIVARS_BURGUERS
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
             this.btnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.Location = new System.Drawing.Point(456, 270);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(129, 23);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(129, 31);
             this.btnIniciarSesion.TabIndex = 6;
             this.btnIniciarSesion.Text = "Iniciar Sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
