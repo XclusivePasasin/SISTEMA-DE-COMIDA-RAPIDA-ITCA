@@ -16,7 +16,7 @@ namespace SIVARS_BURGUERS.Clases
         private int idMesa;
         private int idEstadoPedido;
         private decimal total;
-        private DateTime fecha;
+        private string  fecha;
         private string hora;
         private int idPago;
 
@@ -24,7 +24,7 @@ namespace SIVARS_BURGUERS.Clases
         {
         }
 
-        public ClsVerPedido(int idPedido, int idUsuario, int idCliente, int idMesa, int idEstadoPedido, decimal total, DateTime fecha, string hora, int idPago)
+        public ClsVerPedido(int idPedido, int idUsuario, int idCliente, int idMesa, int idEstadoPedido, decimal total, string fecha, string hora, int idPago)
         {
             this.idPedido = idPedido;
             this.idUsuario = idUsuario;
@@ -43,7 +43,7 @@ namespace SIVARS_BURGUERS.Clases
         public int IdMesa { get => idMesa; set => idMesa = value; }
         public int IdEstadoPedido { get => idEstadoPedido; set => idEstadoPedido = value; }
         public decimal Total { get => total; set => total = value; }
-        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public string Fecha { get => fecha; set => fecha = value; }
         public string Hora { get => hora; set => hora = value; }
         public int IdPago { get => idPago; set => idPago = value; }
 
@@ -52,21 +52,21 @@ namespace SIVARS_BURGUERS.Clases
         {
             return vp.Consultar(tabla);
         }
-        public DataTable buscarRegistro(DateTime fecha, int idEstadoPeddo)
+        public DataTable buscarRegistro(string fecha, string estado)
         {
-            return vp.Buscar(fecha, idEstadoPeddo);
+            return vp.Buscar(fecha, estado);
         }
         public DataTable TodasOrdenes(string tabla = null)
         {
-            return vp.Consultar(tabla); // Pendiente Agregar DAO
+            return vp.Consultar(tabla); 
         }
         public bool modificarDatos(object datos)
         {
             return vp.Modificar(datos);
         }
-        public DataTable buscarRegistro(string campo, string valorCampo)
+        public DataTable buscarDatos(string campo, string valorCampo)
         {
-            return vp.Buscar(campo, valorCampo);
+            return vp.BuscarMesero(campo, valorCampo);
         }
     }
 }

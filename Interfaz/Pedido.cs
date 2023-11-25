@@ -236,14 +236,16 @@ namespace SIVARS_BURGUERS.Interfaz
                     var data = platillo.Split('$');
                     string Nombre_Platillo = data[0];
                     int nuevaCantidad = Convert.ToInt32(txtCantidad.Value);
-                    // Recalcular el subtotal con la nueva cantidad
-                    double nuevoSubtotal = Subtotal(double.Parse(data[1]), nuevaCantidad);
+                    double nuevoPrecioUnitario = double.Parse(data[1]);
+                    double nuevoSubtotal = Subtotal(nuevoPrecioUnitario, nuevaCantidad);
+
                     DataGridViewRow selectedRow = dtPedido.Rows[selectedCell.RowIndex];
                     selectedRow.Cells["codigo"].Value = cbMenu.SelectedValue;
                     selectedRow.Cells["Platillo"].Value = Nombre_Platillo;
                     selectedRow.Cells["cantidad"].Value = txtCantidad.Text;
+                    selectedRow.Cells["precio"].Value = nuevoPrecioUnitario.ToString("0.00");
                     selectedRow.Cells["subt"].Value = nuevoSubtotal.ToString("0.00");
-                    //LIMPIAMOS LOS CONTROLES LUEGO DE ACTUALIZARLOS    
+
                     cbMenu.SelectedItem = null;
                     LimpiarCampos();
                     btnEliminar.Visible = false;
@@ -251,9 +253,8 @@ namespace SIVARS_BURGUERS.Interfaz
                     btnAgregar.Visible = true;
                     txtCantidad.Value = 1;
                     txtUsuario.Text = CacheUsuario.nombre;
-                    // RECALCULA EL TOTAL
-                    RecalcularTotal();
 
+                    RecalcularTotal();
                 }
             }
         }

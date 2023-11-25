@@ -171,7 +171,7 @@ namespace SIVARS_BURGUERS.Interfaz
                 {
                     campo = "ESTADO";
                 }
-                dtVerPedidos.DataSource = vp.buscarRegistro(campo, txtBuscar.Text);
+                dtVerPedidos.DataSource = vp.buscarDatos(campo, txtBuscar.Text);
             }
             else
             {

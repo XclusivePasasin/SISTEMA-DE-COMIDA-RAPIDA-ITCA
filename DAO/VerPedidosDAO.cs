@@ -39,10 +39,10 @@ namespace SIVARS_BURGUERS.DAO
             {
                 sql = "SELECT * FROM V_VerPedido";
             }
-            SqlConnection con = GetSqlConnection();//Extraer Conexion
+            SqlConnection con = GetSqlConnection();
             try
             {
-                con.Open();//Abrimos La Conexion
+                con.Open();
                 string connectionString = getConnectiontring(); //Extraer Cadena De Conexion
                 adapter = new SqlDataAdapter(sql, connectionString);//Ejecurtar Consulta
                 adapter.Fill(datos);
@@ -96,7 +96,7 @@ namespace SIVARS_BURGUERS.DAO
             }
         }
 
-        public DataTable Buscar(DateTime fecha, int idEstadoPedido)
+        public DataTable Buscar(string fecha, string estado)
         {
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
@@ -110,7 +110,7 @@ namespace SIVARS_BURGUERS.DAO
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@Fecha", fecha);
-                cmd.Parameters.AddWithValue("@Estado", idEstadoPedido);
+                cmd.Parameters.AddWithValue("@Estado", estado);
 
                 adapter.SelectCommand = cmd;
                 adapter.Fill(data);
@@ -126,7 +126,7 @@ namespace SIVARS_BURGUERS.DAO
 
             return data;
         }
-        public DataTable Buscar(string Campo, string ValorCampo)
+        public DataTable BuscarMesero(string Campo, string ValorCampo)
         {
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();

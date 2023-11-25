@@ -184,6 +184,8 @@ INNER JOIN Mesa m ON p.idMesa = m.idMesa
 INNER JOIN Estado_Pedido ep ON p.idEstado_Pedido = ep.idEstado_Pedido
 INNER JOIN Pago pa ON p.idPago = pa.idPago
 GO
+SELECT * FROM V_VerPedido WHERE FECHA = '2023-11-25' AND ESTADO = 'Pendiente'
+GO
 CREATE PROCEDURE ObtenerDatosFactura
     @idPedido INT
 AS
@@ -206,7 +208,6 @@ BEGIN
     INNER JOIN Platillo AS PL ON DP.idPlatillo = PL.idPlatillo
     WHERE P.idPedido = @idPedido;
 END;
-
 GO 
 CREATE VIEW V_VerPedidosCobro
 AS
@@ -226,7 +227,7 @@ INNER JOIN Pago pa ON p.idPago = pa.idPago
 GO
 CREATE VIEW V_DetallesPlatillosPedidos
 AS
-SELECT d.idPedido CODIGO, pa.Nombre_Platillo NOMBRE_PLATILLO, d.Cantidad CANTIDAD,p.Hora HORA FROM Detalle_Pedido d
+SELECT d.idPedido CODIGO, pa.Nombre_Platillo NOMBRE_PLATILLO, d.Cantidad CANTIDAD FROM Detalle_Pedido d
 INNER JOIN Platillo pa ON d.idPlatillo = pa.idPlatillo
 LEFT JOIN Pedido p ON d.idPedido = p.idPedido
 LEFT JOIN Cliente c ON p.idCliente = c.idCliente;

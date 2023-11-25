@@ -132,7 +132,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(160, 48);
             this.btnCerrarSesion.TabIndex = 14;
-            this.btnCerrarSesion.Text = "Cerrar Sesion";
+            this.btnCerrarSesion.Text = " Cerrar Sesion";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -243,7 +243,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.Location = new System.Drawing.Point(0, 420);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(160, 48);
             this.btnReportes.TabIndex = 12;
             this.btnReportes.Text = " Reportes";
@@ -306,7 +306,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnOrdenesPendientes.Image = ((System.Drawing.Image)(resources.GetObject("btnOrdenesPendientes.Image")));
             this.btnOrdenesPendientes.Location = new System.Drawing.Point(0, 271);
             this.btnOrdenesPendientes.Name = "btnOrdenesPendientes";
-            this.btnOrdenesPendientes.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnOrdenesPendientes.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnOrdenesPendientes.Size = new System.Drawing.Size(160, 53);
             this.btnOrdenesPendientes.TabIndex = 8;
             this.btnOrdenesPendientes.Text = " Ordenes Pendientes";
@@ -326,7 +326,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnOrdenes.Image = ((System.Drawing.Image)(resources.GetObject("btnOrdenes.Image")));
             this.btnOrdenes.Location = new System.Drawing.Point(0, 232);
             this.btnOrdenes.Name = "btnOrdenes";
-            this.btnOrdenes.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnOrdenes.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.btnOrdenes.Size = new System.Drawing.Size(160, 39);
             this.btnOrdenes.TabIndex = 7;
             this.btnOrdenes.Text = "Ordenes";
@@ -347,7 +347,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnPedido.Image")));
             this.btnPedido.Location = new System.Drawing.Point(0, 193);
             this.btnPedido.Name = "btnPedido";
-            this.btnPedido.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnPedido.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.btnPedido.Size = new System.Drawing.Size(160, 39);
             this.btnPedido.TabIndex = 6;
             this.btnPedido.Text = "  Pedidos";
@@ -390,7 +390,7 @@ namespace SIVARS_BURGUERS.Interfaz
             this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
             this.btnCategorias.Location = new System.Drawing.Point(0, 115);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCategorias.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnCategorias.Size = new System.Drawing.Size(160, 39);
             this.btnCategorias.TabIndex = 4;
             this.btnCategorias.Text = " Categorias";
