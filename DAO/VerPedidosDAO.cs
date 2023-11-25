@@ -101,7 +101,7 @@ namespace SIVARS_BURGUERS.DAO
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();
             // Utiliza parámetros en la consulta SQL para evitar la inyección de SQL.
-            string sql = "SELECT * FROM V_VerPedido WHERE FECHA = @Fecha AND CLAVE = @IdEstadoPedido";
+            string sql = "SELECT * FROM V_VerPedido WHERE FECHA = @Fecha AND ESTADO = @Estado";
 
             SqlConnection con = GetSqlConnection();
             try
@@ -110,7 +110,7 @@ namespace SIVARS_BURGUERS.DAO
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@Fecha", fecha);
-                cmd.Parameters.AddWithValue("@IdEstadoPedido", idEstadoPedido);
+                cmd.Parameters.AddWithValue("@Estado", idEstadoPedido);
 
                 adapter.SelectCommand = cmd;
                 adapter.Fill(data);

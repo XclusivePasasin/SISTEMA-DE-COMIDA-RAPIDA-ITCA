@@ -178,7 +178,7 @@ EXEC BuscarPedidosPorFechaYEstado '2023-10-31',1;
 GO
 CREATE VIEW V_VerPedido
 AS
-SELECT p.idPedido CODIGO,CONCAT(c.Nombre,' ',c.Apellido) CLIENTE,m.Numero_Mesa MESA, P.Fecha FECHA,p.Hora HORA,ep.Tipo_Estado ESTADO,ep.idEstado_Pedido CLAVE FROM Pedido p 
+SELECT p.idPedido CODIGO,CONCAT(c.Nombre,' ',c.Apellido) CLIENTE,m.Numero_Mesa MESA, P.Fecha FECHA,p.Hora HORA,ep.Tipo_Estado ESTADO FROM Pedido p 
 INNER JOIN Cliente c ON p.idCliente = c.idCliente
 INNER JOIN Mesa m ON p.idMesa = m.idMesa
 INNER JOIN Estado_Pedido ep ON p.idEstado_Pedido = ep.idEstado_Pedido
@@ -226,7 +226,7 @@ INNER JOIN Pago pa ON p.idPago = pa.idPago
 GO
 CREATE VIEW V_DetallesPlatillosPedidos
 AS
-SELECT d.idPedido CODIGO, pa.Nombre_Platillo NOMBRE_PLATILLO, d.Cantidad CANTIDA,p.Hora HORA,CONCAT(c.Nombre,' ',c.Apellido) CLIENTE FROM Detalle_Pedido d
+SELECT d.idPedido CODIGO, pa.Nombre_Platillo NOMBRE_PLATILLO, d.Cantidad CANTIDAD,p.Hora HORA FROM Detalle_Pedido d
 INNER JOIN Platillo pa ON d.idPlatillo = pa.idPlatillo
 LEFT JOIN Pedido p ON d.idPedido = p.idPedido
 LEFT JOIN Cliente c ON p.idCliente = c.idCliente;

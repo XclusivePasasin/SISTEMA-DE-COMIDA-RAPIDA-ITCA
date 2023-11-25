@@ -111,7 +111,7 @@ namespace SIVARS_BURGUERS.DAO
 
         public bool ActualizarCobros(int Codigo)
         {
-            string sql = "UPDATE Pedido SET idEstado_Pedido = 5  WHERE idPedido = " + Codigo;
+            string sql = "UPDATE Pedido SET idEstado_Pedido = 5 WHERE idPedido = " + Codigo + "; UPDATE Mesa SET Estado = 1 WHERE idMesa IN (SELECT idMesa FROM Pedido WHERE idPedido = " + Codigo + ")";
 
             if (Ejecutar(sql))
             {

@@ -81,17 +81,67 @@ namespace SIVARS_BURGUERS.Interfaz
             }
            
         }
+        private int ObtenerEstadoPedido(int idPedido)
+        {
+
+            int estadoActual = 0; 
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-0JUU1TS\\SQLEXPRESS; DataBase=SIVAR_BURGUERS; Integrated Security=True"))
+                {
+                    connection.Open();
+
+                    string sqlQuery = "SELECT idEstado_Pedido FROM Pedido WHERE idPedido = @IdPedido";
+
+                    using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@IdPedido", idPedido);
+                        object result = command.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            estadoActual = Convert.ToInt32(result);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("ERROR AL OBTENER EL ESTADO DEL PEDIDO: " + ex.Message);
+            }
+
+            return estadoActual;
+        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             try
             {
-                vp.IdPedido = Convert.ToInt32(txtCodigoPedido.Text);
-                vp.IdEstadoPedido = Convert.ToInt32(cbEstadoNuevo.SelectedValue);
-                vp.modificarDatos(vp);
-                LimpiarCampos();
-                cargar();
-                btnEditar.Visible = false;
+                int estadoActual = ObtenerEstadoPedido(Convert.ToInt32(txtCodigoPedido.Text));
+
+                if (estadoActual == 5)
+                {
+                    MessageBox.Show("NO SE PUEDE EDITAR EL ESTADO DE ESTE PEDIDO, DEBIDO QUE YA FUE COBRADO.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                    cargar();
+                    // LIMPIAMOS EL DATAGRID DEL DETALLE PEDIDO
+                    ((DataTable)dtDetallesPedido.DataSource).Clear();
+                    btnEditar.Visible = false;
+
+                    return;  
+                }
+                else
+                {
+                    vp.IdPedido = Convert.ToInt32(txtCodigoPedido.Text);
+                    vp.IdEstadoPedido = Convert.ToInt32(cbEstadoNuevo.SelectedValue);
+                    vp.modificarDatos(vp);
+                    LimpiarCampos();
+                    cargar();
+                    // LIMPIAMOS EL DATAGRID DEL DETALLE PEDIDO
+                    ((DataTable)dtDetallesPedido.DataSource).Clear();
+                    btnEditar.Visible = false;
+                }
             }
             catch (Exception err)
             {

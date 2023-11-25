@@ -86,7 +86,8 @@ namespace SIVARS_BURGUERS.Interfaz
                     }
                     else
                     {
-                        lblUltimoPedido.Text = "NO HAY PEDIDOS INGRESADOS";
+                        lblUltimoPedido.Text = "Último Pedido: 0";
+                        txtCodigoPedido.Text = "1";
                     }
                 }
             }
@@ -332,17 +333,20 @@ namespace SIVARS_BURGUERS.Interfaz
 
         private void ActualizarEstadoMesa(int idMesa)
         {
+            int idMesaEspecial = 6;  // ESTA VARIABLE ES PARA ASIGNAR MESAS ESPECIALES Y QUE SU ESTADO NO CAMBIE
+
             string connectionString = "Data Source=DESKTOP-0JUU1TS\\SQLEXPRESS; DataBase=SIVAR_BURGUERS; Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                string sqlQuery = "UPDATE Mesa SET Estado = 0 WHERE idMesa = @IdMesa";
+                string sqlQuery = "UPDATE Mesa SET Estado = 0 WHERE idMesa = @IdMesa AND idMesa <> @MesaEspecial";
 
                 using (SqlCommand command = new SqlCommand(sqlQuery, connection))
                 {
                     command.Parameters.AddWithValue("@IdMesa", idMesa);
+                    command.Parameters.AddWithValue("@MesaEspecial", idMesaEspecial);
                     command.ExecuteNonQuery();
                 }
             }
