@@ -22,12 +22,13 @@ Este proyecto se construyó utilizando las siguientes tecnologías y herramienta
 - **SQL SERVER:** Base de datos para el almacenamiento eficiente de la información.
 
 ## Capturas de Pantalla
-
-[![Inicio-De-Sesion-Captura.png](https://i.postimg.cc/vBn0dDmy/Inicio-De-Sesion-Captura.png)](https://postimg.cc/ph2ffW8c)
 *Captura de pantalla: Inicio de Sesión*
 
-[![Menu-Principal-Captura.png](https://i.postimg.cc/25sxTm7K/Menu-Principal-Captura.png)](https://postimg.cc/67hR5kSr)
+[![Inicio-De-Sesion-Captura.png](https://i.postimg.cc/vBn0dDmy/Inicio-De-Sesion-Captura.png)](https://postimg.cc/ph2ffW8c)
+
 *Captura de pantalla: Menú Principal*
+[![Menu-Principal-Captura.png](https://i.postimg.cc/25sxTm7K/Menu-Principal-Captura.png)](https://postimg.cc/67hR5kSr)
+
 
 ## Instrucciones de Instalación
 
