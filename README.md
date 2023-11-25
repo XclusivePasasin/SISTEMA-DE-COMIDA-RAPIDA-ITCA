@@ -23,8 +23,8 @@ Este proyecto se construyó utilizando las siguientes tecnologías y herramienta
 
 ## Capturas de Pantalla
 
-![Captura de Pantalla 1](GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\Iconos\Inicio De Sesion-Captura.png)
-![Captura de Pantalla 2](GitHub\SISTEMA-DE-COMIDA-RAPIDA-ITCA\Iconos\Menu Principal-Captura)
+![Captura de Pantalla 1](GitHub/SISTEMA-DE-COMIDA-RAPIDA-ITCA/Iconos/Inicio De Sesion-Captura.png)
+![Captura de Pantalla 2](GitHub/SISTEMA-DE-COMIDA-RAPIDA-ITCA/Iconos/Menu Principal-Captura.png)
 
 ## Instrucciones de Instalación
 
