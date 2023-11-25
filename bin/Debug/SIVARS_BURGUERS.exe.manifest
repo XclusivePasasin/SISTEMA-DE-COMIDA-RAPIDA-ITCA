@@ -259,14 +259,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SIVARS_BURGUERS.exe" size="5416992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SIVARS_BURGUERS.exe" size="5417504">
       <assemblyIdentity name="SIVARS_BURGUERS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4S7UZfgQyg28Z4ugDexnGlRnC27MX4fPW5H6Ech6Fz0=</dsig:DigestValue>
+        <dsig:DigestValue>N4ToL5P4F/54pVmGWEKbdrB6ZBQTHZD4O8AJHPKWG4Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

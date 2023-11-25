@@ -1,6 +1,132 @@
+USE[master]
+CREATE DATABASE SIVAR_BURGUERS;
+GO
 USE [SIVAR_BURGUERS];
 GO
---VISTAS PARA LA BASE DE DATOS SIVAR BURGUER'S (DAE)
+CREATE TABLE Usuario
+(
+    idUsuario INT NOT NULL IDENTITY,
+    Contraseña VARCHAR (50) NOT NULL,
+    Nombre_Empleado VARCHAR (100) NOT NULL,
+    Telefono VARCHAR(9),
+	Rol VARCHAR(25),
+    CONSTRAINT PK_USUARIO PRIMARY KEY(idUsuario)
+);
+GO
+CREATE TABLE Mesa
+(
+    idMesa INT NOT NULL IDENTITY,
+    Numero_Mesa VARCHAR(30) NOT NULL,
+	Estado INT NULL,
+    CONSTRAINT PK_MESA PRIMARY KEY(idMesa)
+);
+GO
+CREATE TABLE Pago
+(
+    idPago INT NOT NULL IDENTITY,
+    Tipo_Pago VARCHAR (20) NOT NULL,
+    CONSTRAINT PK_PAGO PRIMARY KEY(idPago)
+);
+GO
+CREATE TABLE Estado_Pedido
+(
+    idEstado_Pedido INT NOT NULL IDENTITY,
+    Tipo_Estado VARCHAR(40),
+    CONSTRAINT PK_ESTADO_PEDIDO PRIMARY KEY(idEstado_Pedido)
+);
+GO
+CREATE TABLE Categoria
+(
+    idCategoria INT NOT NULL IDENTITY,
+    Nombre_Categoria VARCHAR (100) NOT NULL,
+    CONSTRAINT PK_CATEGORIA PRIMARY KEY(idCategoria)
+);
+GO
+CREATE TABLE Platillo
+(
+    idPlatillo INT NOT NULL IDENTITY,
+    Nombre_Platillo VARCHAR (120),
+    Precio DECIMAL (10,2),
+    Descripcion VARCHAR (255),
+	idCategoria INT NULL,
+    CONSTRAINT PK_PLATILLO PRIMARY KEY(idPlatillo)
+);
+GO
+CREATE TABLE Cliente
+(
+    idCliente INT NOT NULL IDENTITY,
+    Nombre VARCHAR (40) NOT NULL,
+    Apellido VARCHAR (50) NULL,
+	Genero VARCHAR(25),
+    CONSTRAINT PK_CLIENTE PRIMARY KEY(idCliente)
+);
+GO
+CREATE TABLE Pedido
+(
+    idPedido INT NOT NULL,
+    idUsuario INT NULL,
+    idCliente INT NULL,
+    idMesa INT NULL,
+    idEstado_Pedido INT NULL,
+    Fecha  VARCHAR(20),
+	Total DECIMAL(10,2),
+    Hora VARCHAR(50),
+	idPago INT NULL,
+    CONSTRAINT PK_PEDIDO PRIMARY KEY(idPedido)
+);
+GO
+CREATE TABLE Detalle_Pedido
+(
+    idDetalle_Pedido INT NOT NULL IDENTITY,
+    idPlatillo INT NULL,
+    idPedido INT NULL,
+    Cantidad INT,
+	Precio DECIMAL(10,2),
+    SubTotal DECIMAL (10,2),
+    CONSTRAINT PK_DETALLE_PEDIDO PRIMARY KEY(idDetalle_Pedido)
+);
+GO
+--CREACION DE LLAVES FORANEAS
+--TABLA PLATILLO 
+ALTER TABLE Platillo
+ADD CONSTRAINT FK_CATEGORIA_PLATILLO FOREIGN KEY (idCategoria) REFERENCES Categoria(idCategoria) ON UPDATE CASCADE ON DELETE CASCADE;
+GO
+--TABLA PEDIDO
+ALTER TABLE Pedido
+ADD CONSTRAINT FK_PEDIDO_USUARIO FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario) ON UPDATE CASCADE ON DELETE CASCADE;
+GO
+ALTER TABLE Pedido
+ADD CONSTRAINT FK_PEDIDO_CLIENTE FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente) ON UPDATE CASCADE ON DELETE CASCADE;
+GO
+ALTER TABLE Pedido
+ADD CONSTRAINT FK_PEDIDO_MESA FOREIGN KEY (idMesa) REFERENCES Mesa(idMesa) ON UPDATE CASCADE ON DELETE CASCADE;
+GO
+ALTER TABLE Pedido
+ADD CONSTRAINT FK_PEDIDO_ESTADO FOREIGN KEY (idEstado_Pedido) REFERENCES Estado_Pedido(idEstado_Pedido) ON UPDATE CASCADE ON DELETE CASCADE;
+GO
+ALTER TABLE Pedido
+ADD CONSTRAINT FK_PEDIDO_PAGO FOREIGN KEY (idPago) REFERENCES Pago(idPago) ON UPDATE CASCADE ON DELETE CASCADE;
+GO
+--TABLA DETALLE PEDIDO
+ALTER TABLE Detalle_Pedido
+ADD CONSTRAINT FK_DETALLE_PEDIDO_PLATILLO FOREIGN KEY (idPlatillo) REFERENCES Platillo(idPlatillo) ON UPDATE CASCADE ON DELETE CASCADE;
+GO
+ALTER TABLE Detalle_Pedido
+ADD CONSTRAINT FK_DETALLE_PEDIDO_PEDIDOS FOREIGN KEY (idPedido) REFERENCES Pedido(idPedido) ON UPDATE CASCADE ON DELETE CASCADE;
+GO
+--INSERTAR DATOS GENERALES
+--PAGO
+INSERT INTO Pago VALUES ('Credito'),('Paypal'),('Efectivo'),('BitCoin');
+--CATEGORIA
+INSERT INTO Categoria VALUES ('Hamburguesas Picantes'),('Hamburguesas Clasicas'),('Bebidas Frias'),('Bebidas Calientes'),('Postres');
+--USUARIO
+INSERT INTO Usuario VALUES ('123','Antonio','7734-2212','Administrador'),('123','Camila','7934-2222','Mesero'),('123','Daniel','5443-4221','Cajero');
+--ESTADO PEDIDO
+INSERT INTO Estado_Pedido VALUES ('Pendiente'),('En Proceso'),('Entregado'),('Cancelado'),('Pagado'),('No Pagado');
+--MESA
+INSERT INTO Mesa  VALUES ('NUMERO 1', 1),('NUMERO 2', 1),('NUMERO 3', 1),('NUMERO 4', 1	),('NUMERO 5', 1),('DELIVERY', 1);
+GO
+--VISTAS PARA LA BASE DE DATOS SIVAR BURGUER'S 
 CREATE VIEW V_Platillo
 AS
 SELECT p.idPlatillo CODIGO,p.Nombre_Platillo NOMBRE,p.Precio PRECIO,p.Descripcion DESCRIPCION,c.Nombre_Categoria CATEGORIA FROM Platillo p
@@ -37,6 +163,7 @@ SELECT dp.idDetalle_Pedido CODIGO,pl.Nombre_Platillo PLATILLO, dp.Cantidad CANTI
 INNER JOIN Pedido p ON dp.idPedido = p.idPedido
 INNER JOIN Platillo pl ON dp.idPlatillo = pl.idPlatillo
 GO
+--CREACION DE PROCEDIMENTOS ALMACENADOS NECESARIOS PARA REALIZAR REPORTES
 CREATE PROCEDURE BuscarPedidosPorFechaYEstado
     @fecha_pedido DATE,
     @id_estado_pedido INT
@@ -164,3 +291,6 @@ BEGIN
     INNER JOIN Categoria AS C ON PL.idCategoria = C.idCategoria
     WHERE C.Nombre_Categoria = @NombreCategoria;
 END
+
+
+

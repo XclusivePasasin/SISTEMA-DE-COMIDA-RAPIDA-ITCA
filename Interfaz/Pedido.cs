@@ -330,6 +330,24 @@ namespace SIVARS_BURGUERS.Interfaz
             }
         }
 
+        private void ActualizarEstadoMesa(int idMesa)
+        {
+            string connectionString = "Data Source=DESKTOP-0JUU1TS\\SQLEXPRESS; DataBase=SIVAR_BURGUERS; Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string sqlQuery = "UPDATE Mesa SET Estado = 0 WHERE idMesa = @IdMesa";
+
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@IdMesa", idMesa);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
         private void btnRegistrarOrden_Click(object sender, EventArgs e)
         {
             int idPedido;
@@ -350,7 +368,6 @@ namespace SIVARS_BURGUERS.Interfaz
                 MessageBox.Show("EL PEDIDO YA EXISTE. INGRESE UN ID DE PEDIDO DIFERENTE.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
             DateTime fecha = DateTime.Now;
             string dataFecha = fecha.ToString("yyyy-MM-dd");
             p.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
@@ -360,6 +377,8 @@ namespace SIVARS_BURGUERS.Interfaz
             p.Fecha = dataFecha;
             p.Hora = DateTime.Now.ToString("hh:mm:ss");
             p.IdEstadoPedido = Convert.ToInt32(cbEstado.SelectedValue);
+            int idMesa = p.IdMesa;
+            ActualizarEstadoMesa(idMesa);
 
             decimal total;
             if (decimal.TryParse(txtTotal.Text, out total) && total > 0)
