@@ -59,6 +59,7 @@ namespace SIVARS_BURGUERS.Interfaz
             txtFecha.Text = dataFecha;
             txtHora.Text = DateTime.Now.ToString("h:mm:ss tt");
             txtUsuario.Text = CacheUsuario.nombre;
+            txtTotal.Text = "0.00";
             ListarMesa();
             ListarCliente();
             ListarEstado();
@@ -80,6 +81,8 @@ namespace SIVARS_BURGUERS.Interfaz
                     {
                         int ultimoPedido = Convert.ToInt32(result);
                         lblUltimoPedido.Text = "Último Pedido: " + ultimoPedido.ToString();
+                        int idPedido = ultimoPedido + 1;
+                        txtCodigoPedido.Text = idPedido.ToString();
                     }
                     else
                     {
@@ -122,13 +125,11 @@ namespace SIVARS_BURGUERS.Interfaz
 
         private void LimpiarCampos()
         {
-            txtCodigoPedido.Text = "";
             cbMesa.Text = "";
             cbEstado.Text = "";
             cbPago.Text = "";
             cbEstado.Text = "";
             cbCliente.Text = "";
-            txtUsuario.Text = "";
             txtTotal.Text = "";
             ListarCategoria();
             //COLOCAMOS LOS CAMPOS A LIMPIAR
@@ -393,6 +394,7 @@ namespace SIVARS_BURGUERS.Interfaz
                             LimpiarCampos();
                             cargar();
                             dtPedido.Rows.Clear();
+                            TotalPedido = 0.0;
                         }
                         else
                         {

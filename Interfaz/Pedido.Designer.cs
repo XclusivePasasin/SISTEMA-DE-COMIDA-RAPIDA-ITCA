@@ -34,6 +34,7 @@ namespace SIVARS_BURGUERS.Interfaz
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.btnRegistrarOrden = new System.Windows.Forms.Button();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.cbPago = new System.Windows.Forms.ComboBox();
@@ -70,7 +71,6 @@ namespace SIVARS_BURGUERS.Interfaz
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblUltimoPedido = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
@@ -79,7 +79,6 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.btnRegistrarOrden);
             this.groupBox1.Controls.Add(this.cbEstado);
@@ -107,10 +106,21 @@ namespace SIVARS_BURGUERS.Interfaz
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Pedido";
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(536, 71);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ReadOnly = true;
+            this.txtUsuario.Size = new System.Drawing.Size(112, 23);
+            this.txtUsuario.TabIndex = 19;
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // btnRegistrarOrden
             // 
             this.btnRegistrarOrden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(154)))), ((int)(((byte)(67)))));
-            this.btnRegistrarOrden.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrarOrden.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarOrden.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarOrden.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarOrden.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarOrden.Image")));
@@ -279,11 +289,13 @@ namespace SIVARS_BURGUERS.Interfaz
             // txtCodigoPedido
             // 
             this.txtCodigoPedido.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtCodigoPedido.ForeColor = System.Drawing.Color.Black;
             this.txtCodigoPedido.Location = new System.Drawing.Point(93, 29);
             this.txtCodigoPedido.Name = "txtCodigoPedido";
+            this.txtCodigoPedido.ReadOnly = true;
             this.txtCodigoPedido.Size = new System.Drawing.Size(111, 23);
             this.txtCodigoPedido.TabIndex = 1;
+            this.txtCodigoPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -297,7 +309,6 @@ namespace SIVARS_BURGUERS.Interfaz
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnEditar);
             this.groupBox2.Controls.Add(this.btnAgregar);
@@ -318,9 +329,11 @@ namespace SIVARS_BURGUERS.Interfaz
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(39)))), ((int)(((byte)(27)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(484, 35);
+            this.btnEliminar.Location = new System.Drawing.Point(484, 49);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(54, 51);
             this.btnEliminar.TabIndex = 26;
@@ -331,9 +344,11 @@ namespace SIVARS_BURGUERS.Interfaz
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Teal;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(418, 35);
+            this.btnEditar.Location = new System.Drawing.Point(418, 49);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(54, 51);
             this.btnEditar.TabIndex = 25;
@@ -344,9 +359,11 @@ namespace SIVARS_BURGUERS.Interfaz
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(154)))), ((int)(((byte)(67)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(350, 35);
+            this.btnAgregar.Location = new System.Drawing.Point(350, 49);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(54, 51);
             this.btnAgregar.TabIndex = 24;
@@ -510,22 +527,13 @@ namespace SIVARS_BURGUERS.Interfaz
             // lblUltimoPedido
             // 
             this.lblUltimoPedido.AutoSize = true;
-            this.lblUltimoPedido.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUltimoPedido.Location = new System.Drawing.Point(586, 9);
+            this.lblUltimoPedido.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimoPedido.ForeColor = System.Drawing.Color.Red;
+            this.lblUltimoPedido.Location = new System.Drawing.Point(560, 9);
             this.lblUltimoPedido.Name = "lblUltimoPedido";
-            this.lblUltimoPedido.Size = new System.Drawing.Size(77, 22);
+            this.lblUltimoPedido.Size = new System.Drawing.Size(71, 19);
             this.lblUltimoPedido.TabIndex = 3;
             this.lblUltimoPedido.Text = "CODIGO";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(536, 71);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.ReadOnly = true;
-            this.txtUsuario.Size = new System.Drawing.Size(112, 23);
-            this.txtUsuario.TabIndex = 19;
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmPedido
             // 
