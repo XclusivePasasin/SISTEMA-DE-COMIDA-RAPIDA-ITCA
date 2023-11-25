@@ -24,9 +24,11 @@ Este proyecto se construyó utilizando las siguientes tecnologías y herramienta
 ## Capturas de Pantalla
 
 *Captura de pantalla: Inicio de Sesión*
+
 [![Inicio-De-Sesion-Captura.png](https://i.postimg.cc/vBn0dDmy/Inicio-De-Sesion-Captura.png)](https://postimg.cc/ph2ffW8c)
 
 *Captura de pantalla: Menú Principal*
+
 [![Menu-Principal-Captura.png](https://i.postimg.cc/25sxTm7K/Menu-Principal-Captura.png)](https://postimg.cc/67hR5kSr)
 
 
